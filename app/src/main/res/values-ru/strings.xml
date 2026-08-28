@@ -526,8 +526,8 @@
     <string name="home_xp_boost_was_active">Бонус ×2 опыта был активен</string>
     <string name="home_xp_boost_active">Бонус ×2 опыта активен — %1$s осталось</string>
     <string name="home_prestige_xp_boost_active">2× %1$s бонус опыта - %2$s осталось</string>
-    <string name="boosts_show_more">+%1$d more boosts (tap to show)</string> <!-- untranslated -->
-    <string name="boosts_show_less">Show less</string> <!-- untranslated -->
+    <string name="boosts_show_more">+%1$d дополнительные бонусы (нажмите, чтобы посмотреть)</string>
+    <string name="boosts_show_less">Показать меньше</string>
     <string name="home_loot">Добыча</string>
     <string name="home_food_consumed">Еда использована</string>
     <string name="home_bones_buried">Кости захоронены</string>
@@ -574,11 +574,11 @@
     <string name="combat_log_you_missed">Вы промахнулись</string>
     <string name="combat_log_kill">☠ %1$s повержен</string>
     <string name="combat_log_player_hit">→ Вы попали по %1$s: %2$d урон</string>
-    <string name="combat_log_player_double_hit">→ Double hit! You strike %1$s twice: %2$d dmg</string> <!-- untranslated -->
+    <string name="combat_log_player_double_hit">→ Двойной удар! Вы наносите %1$s дважды: %2$d урона</string>
     <string name="combat_log_player_miss">→ Вы промахнулись по %1$s</string>
     <string name="combat_log_enemy_hit">← %1$s попал по вам: %2$d урон</string>
     <string name="combat_log_enemy_miss">← %1$s промах</string>
-    <string name="combat_log_ally_hit">→ Your mercenaries hit %1$s: %2$d dmg</string> <!-- untranslated -->
+    <string name="combat_log_ally_hit">→ Ваш наёмник бьёт %1$s: %2$d урона</string>
     <string name="combat_log_heal">✚ Вы съели: +%1$d HP</string>
     <string name="combat_eat_threshold_warning">Рискованно: при низком значении сильный удар может снизить ваше здоровье до 0 очков, прежде чем ваш персонаж поест.</string>
     <string name="combat_rec_level">Рекомендуемый боевой уровень</string>
@@ -1873,10 +1873,10 @@
     <string name="raid_no_mercs">Нет нанятых наемников.</string>
     <string name="merc_camp_open">Нанять наемников</string>
     <string name="merc_camp_title">Лагерь наемников</string>
-    <string name="merc_camp_desc">Contracts last for 24 hours after hiring. A new pool of mercenaries arrives each day.</string> <!-- untranslated -->
+    <string name="merc_camp_desc">Контракты действуют в течение 24 часов с момента найма. Каждый день прибывает новый набор наемников.</string>
     <string name="merc_hire">Нанять</string>
     <string name="merc_dismiss">Уволить</string>
-    <string name="merc_hired">%1$s joins your party for 24 hours.</string> <!-- untranslated -->
+    <string name="merc_hired">%1$s присоединяется к вашему отряду на 24 часа.</string>
     <string name="merc_party_full">Ваша группа полна.</string>
     <string name="merc_already_hired">%1$s уже заключен контракт.</string>
     <string name="merc_not_enough_coins">Не хватает монет, чтобы нанять %1$s.</string>
@@ -1887,7 +1887,7 @@
     <string name="merc_tier_seasoned">Ветеран</string>
     <string name="merc_tier_elite">Чемпион</string>
     <string name="merc_stats">Атк %1$d  Сил %2$d  Защ %3$d  HP %4$d</string>
-    <string name="merc_cost_per_day">%1$s coins</string> <!-- untranslated -->
+    <string name="merc_cost_per_day">%1$s монет</string>
     <string name="merc_bran_the_sellsword_name">Бран Наёмник</string>
     <string name="merc_wren_the_stray_name">Рен Бродяга</string>
     <string name="merc_tam_the_grey_name">Тэм Серый</string>
