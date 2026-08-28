@@ -570,6 +570,7 @@
     <string name="combat_best_arrow">Meilleure flèche</string>
     <string name="combat_arrow_auto">Auto (meilleure disponible)</string>
     <string name="combat_label_arrow">Flèche</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">Choisir l\'équipement</string>
     <string name="combat_enemies">Ennemis</string>
     <string name="combat_no_spells">Aucun sort disponible à votre niveau de magie.</string>
@@ -577,6 +578,8 @@
     <string name="combat_max_hit">dégâts max</string>
     <string name="combat_you_have_runes">(vous avez %1$d %2$s)</string>
     <string name="combat_infinite_runes">(%1$s infinies)</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">Pas de potion</string>
     <string name="combat_req_level">Niveau de combat requis</string>
     <string name="combat_duration">Durée</string>

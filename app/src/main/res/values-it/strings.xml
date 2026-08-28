@@ -569,6 +569,7 @@
     <string name="combat_best_arrow">Miglior freccia</string>
     <string name="combat_arrow_auto">Usa migliore</string>
     <string name="combat_label_arrow">Freccia</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">Seleziona Equipaggiamento</string>
     <string name="combat_enemies">Nemici</string>
     <string name="combat_no_spells">Nessun incantesimo disponibile al tuo livello di magia.</string>
@@ -576,6 +577,8 @@
     <string name="combat_max_hit">danni massimi</string>
     <string name="combat_you_have_runes">(hai %1$d %2$s)</string>
     <string name="combat_infinite_runes">(%1$s infinite)</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">Nessuna pozione</string>
     <string name="combat_req_level">Livello di combattimento richiesto</string>
     <string name="combat_duration">Durata</string>

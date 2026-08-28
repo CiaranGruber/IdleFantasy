@@ -569,6 +569,7 @@
     <string name="combat_best_arrow">最佳箭矢</string>
     <string name="combat_arrow_auto">自动（使用最佳可用）</string>
     <string name="combat_label_arrow">箭矢</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">选择装备方案</string>
     <string name="combat_enemies">敌人</string>
     <string name="combat_no_spells">你的魔法等级不足，暂无法术可用。</string>
@@ -576,6 +577,8 @@
     <string name="combat_max_hit">最大伤害</string>
     <string name="combat_you_have_runes">（你有 %1$d %2$s）</string>
     <string name="combat_infinite_runes">（无限 %1$s）</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">无药水</string>
     <string name="combat_req_level">所需战斗等级</string>
     <string name="combat_duration">持续时间</string>

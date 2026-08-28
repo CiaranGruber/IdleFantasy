@@ -569,6 +569,7 @@
     <string name="combat_best_arrow">Bester Pfeil</string>
     <string name="combat_arrow_auto">Auto (bester verfügbar)</string>
     <string name="combat_label_arrow">Pfeil</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">Loadout auswählen</string>
     <string name="combat_enemies">Feinde</string>
     <string name="combat_no_spells">Für Eure Magiestufe sind keine Zauber verfügbar.</string>
@@ -576,6 +577,8 @@
     <string name="combat_max_hit">maximaler Treffer</string>
     <string name="combat_you_have_runes">(Ihr habt %1$d %2$s)</string>
     <string name="combat_infinite_runes">(unendlich %1$s)</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">Kein Zaubertrank</string>
     <string name="combat_req_level">Erforderliches Kampflevel</string>
     <string name="combat_duration">Dauer</string>

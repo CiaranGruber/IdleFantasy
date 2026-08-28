@@ -597,6 +597,7 @@
     <string name="combat_best_arrow">Best arrow</string> <!-- untranslated -->
     <string name="combat_arrow_auto">Auto (best available)</string> <!-- untranslated -->
     <string name="combat_label_arrow">Saighead</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">Select Loadout</string> <!-- untranslated -->
     <string name="combat_enemies">Naimhde</string>
     <string name="combat_no_spells">No spells available at your magic level.</string> <!-- untranslated -->
@@ -604,6 +605,8 @@
     <string name="combat_max_hit">max hit</string> <!-- untranslated -->
     <string name="combat_you_have_runes">(you have %1$d %2$s)</string> <!-- untranslated -->
     <string name="combat_infinite_runes">(%1$s gan teorainn)</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">Gan Posóid</string>
     <string name="combat_req_level">Required combat level</string> <!-- untranslated -->
     <string name="combat_duration">Fad</string>
