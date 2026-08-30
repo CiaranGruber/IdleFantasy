@@ -587,6 +587,7 @@
     <string name="combat_best_arrow">Лучшая стрела</string>
     <string name="combat_arrow_auto">Авто (лучшая доступная)</string>
     <string name="combat_label_arrow">Стрела</string>
+    <string name="combat_arrow_ranged_str">+%1$d Ranged Strength</string> <!-- untranslated -->
     <string name="combat_select_loadout">Выбрать комплект</string>
     <string name="combat_enemies">Враги</string>
     <string name="combat_no_spells">Нет доступных заклинаний на вашем уровне магии.</string>
@@ -594,6 +595,8 @@
     <string name="combat_max_hit">макс. удар</string>
     <string name="combat_you_have_runes">(у вас %1$d %2$s)</string>
     <string name="combat_infinite_runes">(бесконечно %1$s)</string>
+    <string name="combat_spell_locked">Requires Magic level %1$d</string> <!-- untranslated -->
+    <string name="combat_spell_level_met">Magic level %1$d</string> <!-- untranslated -->
     <string name="combat_no_potion">Без зелья</string>
     <string name="combat_req_level">Требуемый боевой уровень</string>
     <string name="combat_duration">Длительность</string>
