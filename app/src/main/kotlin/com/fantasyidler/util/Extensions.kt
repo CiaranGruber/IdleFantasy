@@ -110,8 +110,8 @@ fun Long.toRelativeTime(): String {
 
 /**
  * Format a raw millisecond duration (not an epoch) as a human-readable string, e.g. "2h 30m",
- * "45m", or "1mo 1w 1d 8h 54m". Zero-valued units are omitted; months are 30 days. Unit
- * suffixes come from string resources so each locale can abbreviate its own way (issue #1399).
+ * "45m", or "4y 1mo 1w 1d 8h 54m". Zero-valued units are omitted; months are 30 days, years 365.
+ * Unit suffixes come from string resources so each locale can abbreviate its own way (issue #1399).
  */
 fun Long.formatDurationMs(context: android.content.Context): String =
     context.withAppLocale().let { ctx -> formatDurationMs { resId, value -> ctx.getString(resId, value) } }
