@@ -350,7 +350,6 @@
     <string name="label_claim_reward">Claim Reward</string> <!-- untranslated -->
     <string name="label_daily">Daily</string> <!-- untranslated -->
     <string name="label_weekly">Weekly</string> <!-- untranslated -->
-    <string name="label_timed">Timed</string> <!-- untranslated -->
     <string name="label_daily_quests">Daily Quests</string> <!-- untranslated -->
     <string name="label_daily_reset">Resets at %1$s</string> <!-- untranslated -->
     <string name="label_weekly_reset">Resets Monday at %1$s</string> <!-- untranslated -->

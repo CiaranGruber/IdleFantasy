@@ -374,7 +374,6 @@
     <string name="label_claim_reward">Claim Reward</string> <!-- untranslated -->
     <string name="label_daily">Laethúil</string>
     <string name="label_weekly">Seachtainiúil</string>
-    <string name="label_timed">Ama</string>
     <string name="label_daily_quests">Toraíochtaí Laethúla</string>
     <string name="label_daily_reset">Resets at %1$s</string> <!-- untranslated -->
     <string name="label_weekly_reset">Resets Monday at %1$s</string> <!-- untranslated -->

@@ -69,7 +69,7 @@
     <string name="bestiary_chance_header">几率</string>
     <string name="label_completion_progress">%3$s %1$d / %2$d</string>
     <string name="achievements_progress_bar">已获取</string>
-    <string name="bestiary_progress_bar">"已遇见 "</string>
+    <string name="bestiary_progress_bar">已遇见</string>
     <string name="bestiary_always_drops">必定掉落</string>
     <string name="bestiary_rare_drops">稀有掉落</string>
     <string name="bestiary_common_loot">常见战利品</string>
@@ -346,7 +346,6 @@
     <string name="label_claim_reward">领取奖励</string>
     <string name="label_daily">每日</string>
     <string name="label_weekly">每周</string>
-    <string name="label_timed">限时</string>
     <string name="label_daily_quests">每日任务</string>
     <string name="label_daily_reset">%1$s 重置</string>
     <string name="label_weekly_reset">每周一 %1$s 重置</string>
@@ -510,8 +509,8 @@
     <string name="guild_progress_dailies_only">Complete %1$d/%2$d daily requests to advance</string> <!-- untranslated -->
     <string name="home_died_message">你阵亡了，失去了大部分收获。</string>
     <string name="home_xp_boost_was_active">2 倍经验加成已生效</string>
-    <string name="home_xp_boost_active">2 倍经验加成生效中 — 剩余 %1$s</string>
-    <string name="home_prestige_xp_boost_active">2× %1$s XP Boost - %2$s remaining</string> <!-- untranslated -->
+    <string name="home_xp_boost_active">2 倍经验加成生效中 - 剩余 %1$s</string>
+    <string name="home_prestige_xp_boost_active">2× %1$s XP - %2$s</string> <!-- untranslated -->
     <string name="boosts_show_more">+%1$d more boosts (tap to show)</string> <!-- untranslated -->
     <string name="boosts_show_less">Show less</string> <!-- untranslated -->
     <string name="home_loot">战利品</string>

@@ -360,7 +360,6 @@
     <string name="label_claim_reward">Odbierz nagrodę</string>
     <string name="label_daily">Dzienne</string>
     <string name="label_weekly">Tygodniowe</string>
-    <string name="label_timed">Czasowe</string>
     <string name="label_daily_quests">Zadania dzienne</string>
     <string name="label_daily_reset">Odnawia się o %1$s</string>
     <string name="label_weekly_reset">Odnawia się w poniedziałek o %1$s</string>
@@ -524,8 +523,8 @@
     <string name="guild_progress_dailies_only">Complete %1$d/%2$d daily requests to advance</string> <!-- untranslated -->
     <string name="home_died_message">Zginąłeś i straciłeś większość zdobyczy.</string>
     <string name="home_xp_boost_was_active">Wzmocnienie 2× PD wszystkich umiejętności było aktywne</string>
-    <string name="home_xp_boost_active">2× PD wszystkie umiejętności — %1$s</string>
-    <string name="home_prestige_xp_boost_active">2× PD %1$s — %2$s</string> <!-- untranslated -->
+    <string name="home_xp_boost_active">2× PD wszystkie umiejętności - %1$s</string>
+    <string name="home_prestige_xp_boost_active">2× PD %1$s - %2$s</string>
     <string name="boosts_show_more">+%1$d więcej wzmocnień (dotknij, aby wyświetlić)</string>
     <string name="boosts_show_less">Pokaż mniej</string>
     <string name="home_loot">Łupy</string>

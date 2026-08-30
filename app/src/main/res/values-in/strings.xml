@@ -339,7 +339,6 @@
     <string name="label_claim_reward">Klaim Hadiah</string>
     <string name="label_daily">Harian</string>
     <string name="label_weekly">Mingguan</string>
-    <string name="label_timed">Waktu</string>
     <string name="label_daily_quests">Tugas Harian</string>
     <string name="label_daily_reset">Direset pada pukul %1$s</string>
     <string name="label_weekly_reset">Reset Dihari Senin jam %1$s</string>
@@ -503,8 +502,8 @@
     <string name="guild_progress_dailies_only">Complete %1$d/%2$d daily requests to advance</string> <!-- untranslated -->
     <string name="home_died_message">Anda meninggal dan kehilangan sebagian besar keuntungan Anda.</string>
     <string name="home_xp_boost_was_active">Peningkat XP 2× semua skill sedang aktif</string>
-    <string name="home_xp_boost_active">2× XP semua skill — %1$s</string>
-    <string name="home_prestige_xp_boost_active">2× XP %1$s — %2$s</string> <!-- untranslated -->
+    <string name="home_xp_boost_active">2× XP semua skill - %1$s</string>
+    <string name="home_prestige_xp_boost_active">2× %1$s XP - %2$s</string> <!-- untranslated -->
     <string name="boosts_show_more">+%1$d more boosts (tap to show)</string> <!-- untranslated -->
     <string name="boosts_show_less">Show less</string> <!-- untranslated -->
     <string name="home_loot">Jarahan</string>

@@ -346,7 +346,6 @@
     <string name="label_claim_reward">Réclamer la récompense</string>
     <string name="label_daily">Quotidien</string>
     <string name="label_weekly">Hebdomadaire</string>
-    <string name="label_timed">Temporaire</string>
     <string name="label_daily_quests">Quêtes quotidiennes</string>
     <string name="label_daily_reset">Se réinitialise à %1$s</string>
     <string name="label_weekly_reset">Se réinitialise le lundi à %1$s</string>
@@ -510,8 +509,8 @@
     <string name="guild_progress_dailies_only">Compléter %1$d/%2$d requêtes quotidiennes pour avancer</string>
     <string name="home_died_message">Vous êtes mort et avez perdu la majorité de vos gains.</string>
     <string name="home_xp_boost_was_active">Le bonus d’XP ×2 de toutes les compétences était actif</string>
-    <string name="home_xp_boost_active">×2 XP toutes les compétences — %1$s</string>
-    <string name="home_prestige_xp_boost_active">×2 XP %1$s — %2$s</string>
+    <string name="home_xp_boost_active">×2 XP toutes les compétences - %1$s</string>
+    <string name="home_prestige_xp_boost_active">×2 XP %1$s - %2$s</string>
     <string name="boosts_show_more">+%1$d more boosts (tap to show)</string> <!-- untranslated -->
     <string name="boosts_show_less">Show less</string> <!-- untranslated -->
     <string name="home_loot">Butin</string>

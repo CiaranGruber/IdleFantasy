@@ -69,7 +69,7 @@
     <string name="bestiary_chance_header">Chance</string> <!-- untranslated -->
     <string name="label_completion_progress">%1$d / %2$d %3$s</string>
     <string name="achievements_progress_bar">edinildi</string>
-    <string name="bestiary_progress_bar">%1$d / %2$d encountered</string> <!-- untranslated -->
+    <string name="bestiary_progress_bar">encountered</string> <!-- untranslated -->
     <string name="bestiary_always_drops">Her zaman düşer</string>
     <string name="bestiary_rare_drops">Nadir düşüşler</string>
     <string name="bestiary_common_loot">Yaygın ganimet</string>
@@ -346,7 +346,6 @@
     <string name="label_claim_reward">Ödülü Al</string>
     <string name="label_daily">Günlük</string>
     <string name="label_weekly">Haftalık</string>
-    <string name="label_timed">Süreli</string>
     <string name="label_daily_quests">Günlük Görevler</string>
     <string name="label_daily_reset">%1$s vaktinde sıfırlanır</string>
     <string name="label_weekly_reset">Her Pazartesi %1$s vaktinde sıfırlanır</string>
@@ -510,8 +509,8 @@
     <string name="guild_progress_dailies_only">Complete %1$d/%2$d daily requests to advance</string> <!-- untranslated -->
     <string name="home_died_message">Öldün ve kazanımlarının çoğunu kaybettin.</string>
     <string name="home_xp_boost_was_active">Tüm beceriler XP 2× artışı etkindi</string>
-    <string name="home_xp_boost_active">2× XP tüm beceriler — %1$s</string>
-    <string name="home_prestige_xp_boost_active">2× XP %1$s — %2$s</string> <!-- untranslated -->
+    <string name="home_xp_boost_active">2× XP tüm beceriler - %1$s</string>
+    <string name="home_prestige_xp_boost_active">2× %1$s XP - %2$s</string> <!-- untranslated -->
     <string name="boosts_show_more">+%1$d more boosts (tap to show)</string> <!-- untranslated -->
     <string name="boosts_show_less">Show less</string> <!-- untranslated -->
     <string name="home_loot">Ganimet</string>
