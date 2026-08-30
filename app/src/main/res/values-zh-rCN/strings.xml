@@ -1929,7 +1929,6 @@
     <string name="seasonal_event_complete">完成！</string>
     <string name="seasonal_bounty_board_title">赏金板</string>
     <string name="seasonal_expedition_title">远征</string>
-    <string name="seasonal_boss_title">突袭Boss</string>
     <string name="seasonal_go_to_combat">前往战斗</string>
     <string name="seasonal_minigame_hint">在余烬熄灭前命中 %1$d / %2$d 个！</string>
     <string name="seasonal_minigame_round">第 %1$d / %2$d 轮——命中：%3$d</string>

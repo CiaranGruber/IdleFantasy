@@ -1930,7 +1930,6 @@
     <string name="seasonal_event_complete">Terminé !</string>
     <string name="seasonal_bounty_board_title">Tableau des primes</string>
     <string name="seasonal_expedition_title">Expédition</string>
-    <string name="seasonal_boss_title">Boss de Raid</string>
     <string name="seasonal_go_to_combat">Aller au combat</string>
     <string name="seasonal_minigame_hint">Touchez %1$d braises sur %2$d avant qu\'elles ne s\'éteignent !</string>
     <string name="seasonal_minigame_round">Manche %1$d / %2$d — Réussites : %3$d</string>

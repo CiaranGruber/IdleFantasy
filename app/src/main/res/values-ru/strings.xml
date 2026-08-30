@@ -1951,7 +1951,6 @@
     <string name="seasonal_event_complete">Завершено!</string>
     <string name="seasonal_bounty_board_title">Доска заданий</string>
     <string name="seasonal_expedition_title">Экспедиция</string>
-    <string name="seasonal_boss_title">Рейдовый босс</string>
     <string name="seasonal_go_to_combat">В бой</string>
     <string name="seasonal_minigame_hint">Попадите по %1$d из %2$d угольков, пока они не погасли!</string>
     <string name="seasonal_minigame_round">Раунд %1$d / %2$d — Попаданий: %3$d</string>

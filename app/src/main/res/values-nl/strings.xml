@@ -1929,7 +1929,6 @@
     <string name="seasonal_event_complete">Voltooid!</string>
     <string name="seasonal_bounty_board_title">Beloningsbord</string>
     <string name="seasonal_expedition_title">Expeditie</string>
-    <string name="seasonal_boss_title">Raidboss</string>
     <string name="seasonal_go_to_combat">Naar Gevecht</string>
     <string name="seasonal_minigame_hint">Raak %1$d van de %2$d sintels voordat ze doven!</string>
     <string name="seasonal_minigame_round">Ronde %1$d / %2$d — Raak: %3$d</string>

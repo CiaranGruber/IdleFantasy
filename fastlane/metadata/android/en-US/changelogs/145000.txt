@@ -1,0 +1,5 @@
+• The notification icon in the status bar is now a clean shield silhouette instead of a distorted white blob
+• Changing the loadout when starting a slayer task is now remembered app-wide like the Combat screen's picker, instead of resetting for every task (thanks for the report)
+• Queued boss fights in Up Next now show the boss's own icon instead of a generic gamepad when the boss has no portrait art yet (thanks for the report)
+• The enemy panel in the combat log no longer shows the old emoji next to the enemy name; the portrait at the top of the page already covers it (thanks for the report)
+• The seasonal event screen now calls its boss a Boss instead of a Raid Boss, since raid bosses are their own thing now (thanks for the report)

@@ -1921,7 +1921,6 @@
     <string name="seasonal_event_complete">Selesai!</string>
     <string name="seasonal_bounty_board_title">Papan Buruan</string>
     <string name="seasonal_expedition_title">Ekspedisi</string>
-    <string name="seasonal_boss_title">Bos Raid</string>
     <string name="seasonal_go_to_combat">Ke Combat</string>
     <string name="seasonal_minigame_hint">Kenai %1$d dari %2$d bara sebelum padam!</string>
     <string name="seasonal_minigame_round">Ronde %1$d / %2$d — Kena: %3$d</string>

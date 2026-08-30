@@ -1929,7 +1929,6 @@
     <string name="seasonal_event_complete">¡Completado!</string>
     <string name="seasonal_bounty_board_title">Tablón de Recompensas</string>
     <string name="seasonal_expedition_title">Expedición</string>
-    <string name="seasonal_boss_title">Jefe de Incursión</string>
     <string name="seasonal_go_to_combat">Ir a Combate</string>
     <string name="seasonal_minigame_hint">¡Acierta %1$d de %2$d brasas antes de que se apaguen!</string>
     <string name="seasonal_minigame_round">Ronda %1$d / %2$d — Aciertos: %3$d</string>

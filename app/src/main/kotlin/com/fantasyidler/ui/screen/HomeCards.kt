@@ -345,6 +345,7 @@ internal fun QueueCard(
     activeSessionXpGain: Long,
     towerCurrentFloor: Int,
     showEndTime: Boolean = true,
+    bossEmoji: (String) -> String? = { null },
     onRemove: (Int) -> Unit,
     onMove: (Int, Int) -> Unit,
 ) {
@@ -491,7 +492,9 @@ internal fun QueueCard(
                             action.skillName == "boss" -> BossIcon(
                                 bossId        = action.activityKey,
                                 modifier      = Modifier.size(20.dp),
-                                fallbackEmoji = emoji,
+                                // skillEmoji("boss") is the 🎮 fallback; prefer the boss's own
+                                // emoji for bosses without sprite art (issue #1614).
+                                fallbackEmoji = bossEmoji(action.activityKey) ?: emoji,
                             )
                             iconRes != null -> Image(
                                 painter            = painterResource(iconRes),
