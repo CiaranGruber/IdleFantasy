@@ -122,12 +122,14 @@ internal fun Long.formatDurationMs(unitString: (Int, Long) -> String): String {
     var rem = totalSeconds / 60
     if (rem == 0L) return unitString(R.string.duration_seconds, totalSeconds)
     val minutesPerDay = 24L * 60
-    val months = rem / (30 * minutesPerDay); rem %= 30 * minutesPerDay
-    val weeks  = rem / (7 * minutesPerDay);  rem %= 7 * minutesPerDay
-    val days   = rem / minutesPerDay;        rem %= minutesPerDay
+    val years  = rem / (365 * minutesPerDay); rem %= 365 * minutesPerDay  // this does allow 1y 12mo 4 days, which is acceptable
+    val months = rem / (30 * minutesPerDay);  rem %= 30 * minutesPerDay
+    val weeks  = rem / (7 * minutesPerDay);   rem %= 7 * minutesPerDay
+    val days   = rem / minutesPerDay;         rem %= minutesPerDay
     val hours  = rem / 60
     val minutes = rem % 60
     return buildList {
+        if (years   > 0) add(unitString(R.string.duration_years, years))
         if (months  > 0) add(unitString(R.string.duration_months, months))
         if (weeks   > 0) add(unitString(R.string.duration_weeks, weeks))
         if (days    > 0) add(unitString(R.string.duration_days, days))
