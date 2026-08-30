@@ -807,13 +807,11 @@ private fun CombatSkillsTab(
                 Column {
                     Text(GameStrings.skillDesc(context, key))
                     onOpenPrestige?.let { cb ->
-                        Spacer(Modifier.height(8.dp))
                         TextButton(
                             onClick = {
                                 tappedSkill = null
                                 cb(key)
-                            },
-                            contentPadding = PaddingValues(0.dp),
+                            }
                         ) {
                             Text(stringResource(R.string.prestige_skill_tree))
                         }
