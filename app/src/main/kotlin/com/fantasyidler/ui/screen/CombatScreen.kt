@@ -794,7 +794,7 @@ private fun CombatSkillsTab(
     totalDefenseBonus: Int,
     skillPrestigeLevels: Map<String, Int> = emptyMap(),
     combatPrestigeBonus: Map<String, Int> = emptyMap(),
-    onOpenPrestige: ((String) -> Unit)? = null,
+    onOpenPrestige: (String) -> Unit = {},
 ) {
     val context = LocalContext.current
     var tappedSkill by remember { mutableStateOf<String?>(null) }
@@ -802,22 +802,19 @@ private fun CombatSkillsTab(
     tappedSkill?.let { key ->
         AlertDialog(
             onDismissRequest = { tappedSkill = null },
-            title = { Text(GameStrings.skillName(context, key)) },
-            text  = {
-                Column {
-                    Text(GameStrings.skillDesc(context, key))
-                    onOpenPrestige?.let { cb ->
-                        TextButton(
-                            onClick = {
-                                tappedSkill = null
-                                cb(key)
-                            }
-                        ) {
-                            Text(stringResource(R.string.prestige_skill_tree))
-                        }
+            title = {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(GameStrings.skillName(context, key))
+                    TextButton(onClick = { tappedSkill = null; onOpenPrestige(key) }) {
+                        Text(stringResource(R.string.prestige_skill_tree))
                     }
                 }
             },
+            text  = { Text(GameStrings.skillDesc(context, key)) },
             confirmButton = {
                 TextButton(onClick = { tappedSkill = null }) {
                     Text(stringResource(R.string.btn_close))
@@ -841,7 +838,7 @@ private fun CombatSkillsTab(
                 gearBonus     = gearBonus,
                 prestigeLevel = skillPrestigeLevels[key] ?: 0,
                 prestigeBonus = combatPrestigeBonus[key] ?: 0,
-                onOpenPrestige = onOpenPrestige?.let { cb -> { cb(key) } },
+                onOpenPrestige = onOpenPrestige.let { cb -> { cb(key) } },
                 onClick       = { tappedSkill = key },
             )
         }

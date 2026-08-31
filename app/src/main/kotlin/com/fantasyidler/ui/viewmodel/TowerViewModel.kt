@@ -410,6 +410,7 @@ class TowerViewModel @Inject constructor(
                     durationMs       = result.durationMs,
                     skillDisplayName = "Infinite Tower: Floor $floor",
                     alarmOffsetMs    = alarmOffsetMs,
+                    weaponSlot       = activeWeaponSlot,
                 )
             } catch (e: Exception) {
                 _extra.update { it.copy(snackbarMessage = context.withAppLocale().getString(R.string.skill_session_start_failed, e.message ?: "")) }
@@ -534,7 +535,7 @@ class TowerViewModel @Inject constructor(
             val xpForRepo = if (grantXp) totalXpPerSkill.mapValues { (_, xp) -> (xp * towerXpMult).toLong() } else emptyMap()
             coinsGained   = (coinsGained * towerCoinMult).toLong()
 
-            playerRepo.applyMultiSkillResults(xpForRepo, allItems, coinsGained)
+            playerRepo.applyMultiSkillResults(xpForRepo, allItems, coinsGained, sessionId = session.sessionId)
 
             val skillLevels = json.decodeFromString<Map<String, Int>>(playerRepo.getOrCreatePlayer().skillLevels)
             val rangedLevel = skillLevels[Skills.RANGED] ?: 1
