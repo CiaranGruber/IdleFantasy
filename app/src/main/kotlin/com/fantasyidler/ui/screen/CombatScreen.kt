@@ -358,6 +358,7 @@ fun CombatScreen(
                             totalStrengthBonus  = state.totalStrengthBonus,
                             totalDefenseBonus   = state.totalDefenseBonus,
                             skillPrestigeLevels = state.skillPrestigeLevels,
+                            combatPrestigeBonus = state.combatPrestigeBonus,
                             onOpenPrestige      = onNavigateToPrestige,
                         )
                     }
