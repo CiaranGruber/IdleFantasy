@@ -676,7 +676,7 @@ private fun CombatGearTab(
         val loadoutStyle = EquipSlot.combatStyleForSlot(activeWeaponSlot ?: "")
         if (loadoutStyle == "ranged" || loadoutStyle == "magic") {
             item {
-                Column(Modifier.padding(vertical = 12.dp)) {
+                Column(Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
                     if (loadoutStyle == "ranged") {
                         ArrowLoadoutPicker(
                             selectedArrowKey = selectedArrowKey,
@@ -1209,19 +1209,3 @@ private fun DungeonRow(
 
 /** Dungeons within this many levels of the recommendation are still enterable. */
 internal const val UNLOCK_TOLERANCE = 5
-
-/** Arrow tiers from best to worst — mirrors CombatViewModel.ARROW_TIERS. */
-internal val ARROW_TIERS = listOf(
-    "runite_arrow", "adamantite_arrow", "mithril_arrow",
-    "steel_arrow", "iron_arrow", "bronze_arrow",
-)
-
-/** Ranged strength each arrow tier contributes — mirrors CombatViewModel.ARROW_STRENGTH_BONUS. */
-internal val ARROW_STRENGTH_BONUS = mapOf(
-    "bronze_arrow"     to 7,
-    "iron_arrow"       to 10,
-    "steel_arrow"      to 16,
-    "mithril_arrow"    to 22,
-    "adamantite_arrow" to 31,
-    "runite_arrow"     to 49,
-)
