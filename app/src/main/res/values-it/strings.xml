@@ -102,6 +102,7 @@
     <string name="label_coming_soon">In arrivo</string>
     <string name="label_time_remaining">Tempo rimanente</string>
     <!-- Translator note: compact duration units; English puts the letter(s) right after the number -->
+    <string name="duration_years">%1$dy</string> <!-- untranslated -->
     <string name="duration_months">%1$dme</string>
     <string name="duration_weeks">%1$dsett</string>
     <string name="duration_days">%1$dg</string>
