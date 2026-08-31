@@ -803,7 +803,21 @@ private fun CombatSkillsTab(
         AlertDialog(
             onDismissRequest = { tappedSkill = null },
             title = { Text(GameStrings.skillName(context, key)) },
-            text  = { Text(GameStrings.skillDesc(context, key)) },
+            text  = {
+                Column {
+                    Text(GameStrings.skillDesc(context, key))
+                    onOpenPrestige?.let { cb ->
+                        TextButton(
+                            onClick = {
+                                tappedSkill = null
+                                cb(key)
+                            }
+                        ) {
+                            Text(stringResource(R.string.prestige_skill_tree))
+                        }
+                    }
+                }
+            },
             confirmButton = {
                 TextButton(onClick = { tappedSkill = null }) {
                     Text(stringResource(R.string.btn_close))
