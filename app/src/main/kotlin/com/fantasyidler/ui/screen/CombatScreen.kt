@@ -111,7 +111,7 @@ fun CombatScreen(
     val invState         by inventoryVm.uiState.collectAsState()
     val context           = LocalContext.current
     var showMercCamp     by remember { mutableStateOf(false) }
-    val visibleDungeons   = remember(state.unlockedDungeons) {
+    val visibleDungeons   = remember(state.unlockedDungeons, viewModel.dungeonList) {
         viewModel.dungeonList.filter { !it.loreUnlockOnly || it.name in state.unlockedDungeons }
     }
     LaunchedEffect(initialDungeonKey, initialBossKey) {
