@@ -6,6 +6,10 @@ Idle Fantasy has 23 skills split across four categories: gathering, crafting, su
 
 All skills cap at **level 99**.
 
+## Quest Categories
+
+Quest indicators appear as small superscripted icons next to skill names showing active quest progress. See [Quest Categories](QuestCategories.md) for documentation of the quest category icons.
+
 ## Prestige
 
 Once a skill reaches level 99 you can prestige it. Prestiging resets the skill back to level 1 and awards **3 prestige points** to spend in that skill's upgrade tree. Equipment that no longer meets its requirements after the reset is swapped for the best valid replacement you own. The skill also gets a **48 hour 2x XP boost** after prestiging, so the climb back up is fast.

@@ -54,8 +54,6 @@ PAGE_HIERARCHY: PageHierarchy = PageHierarchy()
 
 def add_static_pages():
     """Registers all static wiki pages."""
-    # Todo: Add combat page with strategy information explaining what attack, etc, does - link in boss and enemy pages
-
     # Add pages not in the hierarchy
     PAGE_DIRECTORY.update({
         "sidebar": PageInfo("Sidebar", "_Sidebar.md", gen_sidebar)
@@ -71,6 +69,7 @@ def add_static_pages():
         ]],
         ["Skills", False, [
             ("skills", PageInfo("Skills", "Skills.md", gen_skills)),
+            ("quest_icons", PageInfo("Quest Icons", "QuestIcons.md", gen_quest_icons)),
             ["Gathering", False, [
                 ("mining", PageInfo(skill_name("mining"), "Mining.md", gen_mining, skill_icon_path("mining"))),
                 ("fishing", PageInfo(skill_name("fishing"), "Fishing.md", gen_fishing, skill_icon_path("fishing"))),
@@ -817,6 +816,14 @@ def gen_skills() -> str:
     return get_template("skills/skills").format(
         skills_table=table(["Skill", "Category", "Description"], rows),
         prestige_race_tables=gen_prestige_race_tables(),
+    )
+
+
+def gen_quest_icons() -> str:
+    return get_template("skills/quest_icons").format(
+        skills_link=link("skills"),
+        guilds_link=link("guilds"),
+        quests_link=link("quests"),
     )
 
 
