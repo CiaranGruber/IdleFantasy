@@ -72,7 +72,7 @@
     <string name="agility_novice_course_name">Percorso per Novizi</string>
     <string name="agility_novice_course_desc">Un percorso leggermente più impegnativo con ostacoli semplici.</string>
     <string name="agility_apprentice_course_name">Percorso per Apprendisti</string>
-    <string name="agility_apprentice_course_desc">Un percorso intermedio che richiede una certa destrezza.</string>n
+    <string name="agility_apprentice_course_desc">Un percorso intermedio che richiede una certa destrezza.</string>
     <string name="agility_intermediate_course_name">Percorso Intermedio</string>
     <string name="agility_intermediate_course_desc">Un percorso moderatamente difficile con ostacoli insidiosi.</string>
     <string name="agility_advanced_course_name">Percorso Avanzato</string>
