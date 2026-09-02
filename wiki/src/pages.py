@@ -54,8 +54,6 @@ PAGE_HIERARCHY: PageHierarchy = PageHierarchy()
 
 def add_static_pages():
     """Registers all static wiki pages."""
-    # Todo: Add combat page with strategy information explaining what attack, etc, does - link in boss and enemy pages
-
     # Add pages not in the hierarchy
     PAGE_DIRECTORY.update({
         "sidebar": PageInfo("Sidebar", "_Sidebar.md", gen_sidebar)
@@ -71,7 +69,7 @@ def add_static_pages():
         ]],
         ["Skills", False, [
             ("skills", PageInfo("Skills", "Skills.md", gen_skills)),
-            ("quest_categories", PageInfo("Quest Categories", "QuestCategories.md", gen_quest_categories)),
+            ("quest_icons", PageInfo("Quest Icons", "QuestIcons.md", gen_quest_icons)),
             ["Gathering", False, [
                 ("mining", PageInfo(skill_name("mining"), "Mining.md", gen_mining, skill_icon_path("mining"))),
                 ("fishing", PageInfo(skill_name("fishing"), "Fishing.md", gen_fishing, skill_icon_path("fishing"))),
@@ -821,11 +819,8 @@ def gen_skills() -> str:
     )
 
 
-def gen_quest_categories() -> str:
-    # Todo: Quest categories (names + emoji) are currently hardcoded in the template, mirroring
-    #  the QuestCategory enum in CraftingViewModel.kt. These should be extracted into XML/JSON
-    #  data files (as with other lists) so the wiki can generate this table from game data.
-    return get_template("skills/quest_categories").format(
+def gen_quest_icons() -> str:
+    return get_template("skills/quest_icons").format(
         skills_link=link("skills"),
         guilds_link=link("guilds"),
         quests_link=link("quests"),
