@@ -1108,7 +1108,7 @@
     <string name="item_tower_cape_name">Mantello della Torre</string>
     <string name="item_tower_cape_desc">Mantello tessuto dal potere della Torre.</string>
     <string name="item_mining_cape_desc" formatted="false">Ricompensa per aver raggiunto il livello 99 come minatore. Fornisce un bonus del 10% per sessione.</string>
-    <string name="item_construction_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornice un bonus di 5% per sessione.</string>
+    <string name="item_construction_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% per sessione.</string>
     <string name="item_mining_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% per sessione.</string>
     <string name="item_fishing_cape_desc" formatted="false">Ricompensa per aver raggiunto il livello 99 come pescatore. Fornisce un bonus del 10% per sessione.</string>
     <string name="item_fishing_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% per sessione.</string>
@@ -1150,10 +1150,10 @@
     <string name="item_defense_cape_desc" formatted="false">Ricompensa per aver raggiunto il liv. 99 in difesa. Fornisce un bonus del 10% all\'XP guadagnata.</string>
     <string name="item_warriors_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus del 5% all\'XP guadagnata per Mischia, Forza e Difesa.</string>
     <string name="item_ranged_cape_desc" formatted="false">Ricompensa per aver raggiunto il liv. 99 in attacco a distanza. Fornisce un bonus del 10% all\'XP guadagnata.</string>
-    <string name="item_archers_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornice un bonus di 5% all\'XP guadagnata.</string>
+    <string name="item_archers_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% all\'XP guadagnata.</string>
     <string name="item_magic_cape_desc" formatted="false">Ricompensa per aver raggiunto il liv. 99 in magia. Fornisce un bonus del 10% all\'XP guadagnata.</string>
-    <string name="item_mages_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornice un bonus di 5% all\'XP guadagnata.</string>
-    <string name="item_slayer_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornice un bonus di 5% all\'XP guadagnata.</string>
+    <string name="item_mages_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% all\'XP guadagnata.</string>
+    <string name="item_slayer_guild_cape_desc" formatted="false">Ricompensa per aver raggiunto il massimo rango della gilda. Fornisce un bonus di 5% all\'XP guadagnata.</string>
     <string name="item_hp_cape_desc" formatted="false">Ricompensa per aver raggiunto il liv. 99 in salute. Fornisce un bonus del 10% all\'XP guadagnata.</string>
     <string name="item_deep_iron_pickaxe_desc">Forgiato dal metallo degli anfratti più profondi della Miniera Crollata. Nessun colpo va a vuoto.</string>
     <string name="item_dwarven_pickaxe_desc">Un capolavoro della maestria nanica. Il miglior piccone mai creato.</string>
@@ -1184,7 +1184,7 @@
     <string name="item_iron_tinderbox_desc">Acciarino in ferro.</string>
     <string name="item_steel_tinderbox_desc">Acciarino in acciaio.</string>
     <string name="item_mithril_tinderbox_desc">Acciarino in mithril.</string>
-    <string name="item_adamantite_tinderbox_desc">Acciairino in adamantio.</string>
+    <string name="item_adamantite_tinderbox_desc">Acciarino in adamantio.</string>
     <string name="item_runite_tinderbox_desc">Acciarino in runite.</string>
     <string name="item_dwarven_tinderbox_desc">Acciarino creato da esperti fabbri nani. Ogni fiamma si accende istantaneamente.</string>
     <string name="item_divine_tinderbox_desc">Acciarino benedetto da luce divina. Anche la più piccola scintilla accende un fuoco.</string>

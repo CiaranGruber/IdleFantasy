@@ -475,7 +475,7 @@
     <string name="item_diamond_necklace_name">钻石项链</string>
     <string name="item_ancient_treasure_name">古代宝藏</string>
     <string name="item_seaweed_name">海藻</string>
-    <string name="item_old_boot_name">旧鞋子</string>
+    <string name="item_old_boot_name">旧靴子</string>
     <string name="item_pearl_name">珍珠</string>
     <string name="item_black_pearl_name">黑珍珠</string>
     <string name="item_nature_rune_name">自然符文</string>
@@ -668,7 +668,7 @@
     <string name="item_strongmans_sigil_name">力士印记</string>
     <string name="item_strongmans_sigil_desc">刻有力士冠军标记的沉重铁环，提升力量。</string>
     <string name="item_carnival_cape_name">嘉年华披风</string>
-    <string name="item_carnival_cape_desc" formatted="false">嘉年华赢家披着的鲜亮斗篷。参与嘉年华活动时，获得的奖券数量提升 5% </string>
+    <string name="item_carnival_cape_desc" formatted="false">嘉年华赢家披着的鲜亮斗篷。参与嘉年华活动时，获得的奖券数量提升 5%</string>
 
     <!-- Herblore potions -->
     <string name="item_attack_brew_name">攻击药剂</string>
@@ -1107,54 +1107,54 @@
     <string name="item_kraken_tentacle_desc">盘旋触手戒指，传导海妖的奥术力量。</string>
     <string name="item_tower_cape_name">高塔披风</string>
     <string name="item_tower_cape_desc">散发着高塔能量的飘逸披风。</string>
-    <string name="item_mining_cape_desc" formatted="false">采矿等级达到 99 级时授予，每轮采矿采集的矿石获取量 + 10% </string>
+    <string name="item_mining_cape_desc" formatted="false">采矿等级达到 99 级时授予，每轮采矿采集的矿石获取量 + 10%</string>
     <string name="item_construction_guild_cape_desc" formatted="false">建造者公会等级达到 10 级即可获得，每轮制作可多产出 5% 家具</string>
-    <string name="item_mining_guild_cape_desc" formatted="false">采矿公会等级达到 10 级即可获得，每轮采矿矿石产出提升 5% </string>
-    <string name="item_fishing_cape_desc" formatted="false">钓鱼等级达到 99 级时授予，每轮垂钓渔获量提升 10% </string>
-    <string name="item_fishing_guild_cape_desc" formatted="false">钓鱼公会等级达到 10 级即可获得，每轮垂钓渔获量提升 5% </string>
-    <string name="item_woodcutting_cape_desc" formatted="false">伐木等级达到 99 级时授予，每轮伐木获得的原木产出 + 10% </string>
-    <string name="item_woodcutting_guild_cape_desc" formatted="false">伐木公会等级达到 10 级即可获得，每轮伐木原木产出 + 5% </string>
-    <string name="item_farming_cape_desc" formatted="false">农耕等级达到 99 级时授予，每轮种植收获产出 + 10% </string>
-    <string name="item_farming_guild_cape_desc" formatted="false">农耕公会等级达到 10 级即可获得，每轮种植收获产出 + 5% </string>
+    <string name="item_mining_guild_cape_desc" formatted="false">采矿公会等级达到 10 级即可获得，每轮采矿矿石产出提升 5%</string>
+    <string name="item_fishing_cape_desc" formatted="false">钓鱼等级达到 99 级时授予，每轮垂钓渔获量提升 10%</string>
+    <string name="item_fishing_guild_cape_desc" formatted="false">钓鱼公会等级达到 10 级即可获得，每轮垂钓渔获量提升 5%</string>
+    <string name="item_woodcutting_cape_desc" formatted="false">伐木等级达到 99 级时授予，每轮伐木获得的原木产出 + 10%</string>
+    <string name="item_woodcutting_guild_cape_desc" formatted="false">伐木公会等级达到 10 级即可获得，每轮伐木原木产出 + 5%</string>
+    <string name="item_farming_cape_desc" formatted="false">农耕等级达到 99 级时授予，每轮种植收获产出 + 10%</string>
+    <string name="item_farming_guild_cape_desc" formatted="false">农耕公会等级达到 10 级即可获得，每轮种植收获产出 + 5%</string>
     <string name="item_thieving_cape_name">盗窃披风</string>
-    <string name="item_thieving_cape_desc" formatted="false">偷窃等级达到 99 级时授予，每轮偷窃的成功概率 + 10% </string>
-    <string name="item_thieving_guild_cape_desc" formatted="false">盗贼公会等级达到 10 级即可获得，每轮扒窃的成功概率 + 5% </string>
-    <string name="item_smithing_cape_desc" formatted="false">锻造等级达到 99 级时授予，每轮锻造制品产出 + 10% </string>
-    <string name="item_smithing_guild_cape_desc" formatted="false">锻造公会等级达到 10 级即可获得，每轮锻造制品产出 + 5% </string>
-    <string name="item_cooking_cape_desc" formatted="false">烹饪等级达到 99 级时授予，每轮烹饪食物产出 + 10% </string>
-    <string name="item_cooking_guild_cape_desc" formatted="false">烹饪公会等级达到 10 级即可获得，每轮烹饪食物产出 + 5% </string>
-    <string name="item_fletching_cape_desc" formatted="false">制箭等级达到 99 级时授予，每轮制作箭矢产出 + 10% </string>
-    <string name="item_fletching_guild_cape_desc" formatted="false">制箭公会等级达到 10 级即可获得，每轮制作箭矢产出 + 5% </string>
-    <string name="item_crafting_cape_desc" formatted="false">制作等级达到 99 级时授予。每轮工艺制作物品产出 + 10% </string>
-    <string name="item_crafting_guild_cape_desc" formatted="false">制作公会等级达到 10 级即可获得。每轮工艺制作物品产出 + 5% </string>
-    <string name="item_firemaking_cape_desc" formatted="false">生火等级达到 99 级时授予，每轮生火灰烬产出 + 10% </string>
-    <string name="item_firemaking_guild_cape_desc" formatted="false">生火公会等级达到 10 级即可获得，每轮生火灰烬产出 + 5% </string>
-    <string name="item_runecrafting_cape_desc" formatted="false">符文制作等级达到 99 级时授予。每轮制符符文产出 + 10% </string>
-    <string name="item_runecrafting_guild_cape_desc" formatted="false">符文制作公会等级达到 10 级即可获得，每轮制符符文产出 + 5% </string>
+    <string name="item_thieving_cape_desc" formatted="false">偷窃等级达到 99 级时授予，每轮偷窃的成功概率 + 10%</string>
+    <string name="item_thieving_guild_cape_desc" formatted="false">盗贼公会等级达到 10 级即可获得，每轮扒窃的成功概率 + 5%</string>
+    <string name="item_smithing_cape_desc" formatted="false">锻造等级达到 99 级时授予，每轮锻造制品产出 + 10%</string>
+    <string name="item_smithing_guild_cape_desc" formatted="false">锻造公会等级达到 10 级即可获得，每轮锻造制品产出 + 5%</string>
+    <string name="item_cooking_cape_desc" formatted="false">烹饪等级达到 99 级时授予，每轮烹饪食物产出 + 10%</string>
+    <string name="item_cooking_guild_cape_desc" formatted="false">烹饪公会等级达到 10 级即可获得，每轮烹饪食物产出 + 5%</string>
+    <string name="item_fletching_cape_desc" formatted="false">制箭等级达到 99 级时授予，每轮制作箭矢产出 + 10%</string>
+    <string name="item_fletching_guild_cape_desc" formatted="false">制箭公会等级达到 10 级即可获得，每轮制作箭矢产出 + 5%</string>
+    <string name="item_crafting_cape_desc" formatted="false">制作等级达到 99 级时授予。每轮工艺制作物品产出 + 10%</string>
+    <string name="item_crafting_guild_cape_desc" formatted="false">制作公会等级达到 10 级即可获得。每轮工艺制作物品产出 + 5%</string>
+    <string name="item_firemaking_cape_desc" formatted="false">生火等级达到 99 级时授予，每轮生火灰烬产出 + 10%</string>
+    <string name="item_firemaking_guild_cape_desc" formatted="false">生火公会等级达到 10 级即可获得，每轮生火灰烬产出 + 5%</string>
+    <string name="item_runecrafting_cape_desc" formatted="false">符文制作等级达到 99 级时授予。每轮制符符文产出 + 10%</string>
+    <string name="item_runecrafting_guild_cape_desc" formatted="false">符文制作公会等级达到 10 级即可获得，每轮制符符文产出 + 5%</string>
     <string name="item_herblore_cape_name">草药学披风</string>
-    <string name="item_herblore_cape_desc" formatted="false">草药学等级达到 99 级时授予，每轮炼制药剂产出 + 10% </string>
-    <string name="item_herblore_guild_cape_desc" formatted="false">草药学公会等级达到 10 级即可获得，每轮炼制药剂产出 + 5% </string>
+    <string name="item_herblore_cape_desc" formatted="false">草药学等级达到 99 级时授予，每轮炼制药剂产出 + 10%</string>
+    <string name="item_herblore_guild_cape_desc" formatted="false">草药学公会等级达到 10 级即可获得，每轮炼制药剂产出 + 5%</string>
     <string name="item_construction_cape_name">建筑披风</string>
-    <string name="item_construction_cape_desc" formatted="false">建造等级达到 99 级时授予，每轮建造物件产出 + 10% </string>
-    <string name="item_prayer_cape_desc" formatted="false">祈祷等级达到 99 级时授予，你生效的祝福效果增强 10% </string>
-    <string name="item_prayer_guild_cape_desc" formatted="false">祈祷公会等级达到 10 级即可获得，你生效的祝福效果增强 5% </string>
+    <string name="item_construction_cape_desc" formatted="false">建造等级达到 99 级时授予，每轮建造物件产出 + 10%</string>
+    <string name="item_prayer_cape_desc" formatted="false">祈祷等级达到 99 级时授予，你生效的祝福效果增强 10%</string>
+    <string name="item_prayer_guild_cape_desc" formatted="false">祈祷公会等级达到 10 级即可获得，你生效的祝福效果增强 5%</string>
     <string name="item_mercantile_cape_name">商业披风</string>
-    <string name="item_mercantile_cape_desc" formatted="false">贸易等级达到 99 级时授予，商店买卖价格与贸易收益提升 10% </string>
-    <string name="item_mercantile_guild_cape_desc" formatted="false">商人公会等级达到 10 级即可获得，商店买卖价格与贸易收益提升 5% </string>
-    <string name="item_agility_cape_desc" formatted="false">敏捷等级达到 99 级时授予，每轮行动获取经验 + 10% </string>
-    <string name="item_agility_guild_cape_desc" formatted="false">敏捷公会等级达到 10 级即可获得，每轮行动获取经验 + 5% </string>
+    <string name="item_mercantile_cape_desc" formatted="false">贸易等级达到 99 级时授予，商店买卖价格与贸易收益提升 10%</string>
+    <string name="item_mercantile_guild_cape_desc" formatted="false">商人公会等级达到 10 级即可获得，商店买卖价格与贸易收益提升 5%</string>
+    <string name="item_agility_cape_desc" formatted="false">敏捷等级达到 99 级时授予，每轮行动获取经验 + 10%</string>
+    <string name="item_agility_guild_cape_desc" formatted="false">敏捷公会等级达到 10 级即可获得，每轮行动获取经验 + 5%</string>
     <string name="item_slayer_cape_name">杀手披风</string>
-    <string name="item_slayer_cape_desc" formatted="false">讨伐等级达到 99 级时授予，屠戮点数获取量 + 10% </string>
-    <string name="item_attack_cape_desc" formatted="false">攻击等级达到 99 级时授予，攻击技能额外经验 + 10% </string>
-    <string name="item_strength_cape_desc" formatted="false">力量等级达到 99 级时授予，力量技能额外经验 + 10% </string>
-    <string name="item_defense_cape_desc" formatted="false">防御等级达到 99 级时授予，防御技能额外经验 + 10% </string>
-    <string name="item_warriors_guild_cape_desc" formatted="false">战士公会等级达到 10 级即可获得，攻击、力量、防御技能额外经验 + 5% </string>
-    <string name="item_ranged_cape_desc" formatted="false">远程等级达到 99 级时授予，远程技能额外经验 + 10% </string>
-    <string name="item_archers_guild_cape_desc" formatted="false">弓手公会等级达到 10 级即可获得，远程技能额外经验 + 5% </string>
-    <string name="item_magic_cape_desc" formatted="false">魔法等级达到 99 级时授予，魔法技能额外经验 + 10% </string>
-    <string name="item_mages_guild_cape_desc" formatted="false">法师公会等级达到 10 级即可获得，魔法技能额外经验 + 5% </string>
-    <string name="item_slayer_guild_cape_desc" formatted="false">杀手公会等级达到 10 级即可获得，讨伐技能额外经验 + 5% </string>
-    <string name="item_hp_cape_desc" formatted="false">生命等级达到 99 级时授予，生命值技能额外经验 + 10% </string>
+    <string name="item_slayer_cape_desc" formatted="false">讨伐等级达到 99 级时授予，屠戮点数获取量 + 10%</string>
+    <string name="item_attack_cape_desc" formatted="false">攻击等级达到 99 级时授予，攻击技能额外经验 + 10%</string>
+    <string name="item_strength_cape_desc" formatted="false">力量等级达到 99 级时授予，力量技能额外经验 + 10%</string>
+    <string name="item_defense_cape_desc" formatted="false">防御等级达到 99 级时授予，防御技能额外经验 + 10%</string>
+    <string name="item_warriors_guild_cape_desc" formatted="false">战士公会等级达到 10 级即可获得，攻击、力量、防御技能额外经验 + 5%</string>
+    <string name="item_ranged_cape_desc" formatted="false">远程等级达到 99 级时授予，远程技能额外经验 + 10%</string>
+    <string name="item_archers_guild_cape_desc" formatted="false">弓手公会等级达到 10 级即可获得，远程技能额外经验 + 5%</string>
+    <string name="item_magic_cape_desc" formatted="false">魔法等级达到 99 级时授予，魔法技能额外经验 + 10%</string>
+    <string name="item_mages_guild_cape_desc" formatted="false">法师公会等级达到 10 级即可获得，魔法技能额外经验 + 5%</string>
+    <string name="item_slayer_guild_cape_desc" formatted="false">杀手公会等级达到 10 级即可获得，讨伐技能额外经验 + 5%</string>
+    <string name="item_hp_cape_desc" formatted="false">生命等级达到 99 级时授予，生命值技能额外经验 + 10%</string>
     <string name="item_deep_iron_pickaxe_desc">用坍塌矿井最深处的矿石锻造，精准度惊人。</string>
     <string name="item_dwarven_pickaxe_desc">大师级矮人镐，有史以来最精良的采矿工具。</string>
     <string name="item_forge_pickaxe_desc">在远古锻炉的火焰中淬炼，最稀有最强大的镐。</string>

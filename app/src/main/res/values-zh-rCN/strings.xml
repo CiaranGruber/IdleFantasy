@@ -1742,6 +1742,8 @@
     <string name="shop_sold_old_equipment">出售旧装备获得 %1$s 金币</string>
     <string name="shop_bulk_sell_total">合计</string>
     <string name="shop_bulk_sell_confirm">全部出售</string>
+    <string name="shop_recent_bulk_sales">Recent bulk sales</string> <!-- untranslated -->
+    <string name="shop_recent_bulk_sales_empty">No bulk sales recorded yet.</string> <!-- untranslated -->
     <string name="shop_xp_boost_activated">2倍经验增益已激活，持续 %1$d 小时！</string>
     <string name="shop_xp_boost_already_active">双倍经验加成已在生效中。</string>
     <string name="shop_xp_boost_weekly_limit">每周限购一次双倍经验加成。每周重置后可再次购买。</string>
@@ -1951,6 +1953,8 @@
     <string name="seasonal_tap">点击！</string>
     <string name="seasonal_claim">领取</string>
     <string name="seasonal_bounty_cooldown">新赏金在 %1$d 分 %2$d 秒后</string>
+    <string name="seasonal_bounty_reroll">Reroll bounty</string> <!-- untranslated -->
+    <string name="seasonal_bounty_reroll_confirm">Swap this bounty for a different one for %1$s coins? Progress on it is lost.</string> <!-- untranslated -->
     <string name="seasonal_go">前往</string>
     <string name="seasonal_event_sunspire_solstice_2026_name">日尖塔夏至节</string>
     <string name="seasonal_event_sunspire_solstice_2026_banner">参与了 2026 日尖塔夏至节</string>
