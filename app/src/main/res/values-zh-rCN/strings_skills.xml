@@ -9,7 +9,7 @@
     <string name="skill_fishing_desc">从水域中捕获鱼类与水生珍宝。</string>
     <string name="skill_woodcutting_name">伐木</string>
     <string name="skill_woodcutting_desc">砍伐树木并收集各种木材。</string>
-    <string name="skill_farming_name">种植</string>
+    <string name="skill_farming_name">农业</string>
     <string name="skill_farming_desc">在你的农田中种植和收获作物。</string>
     <string name="skill_firemaking_name">生火</string>
     <string name="skill_firemaking_desc">焚烧背包中的原木以获得生火经验值。焚烧每根原木还会产生灰烬，可在祈祷技能中撒播以获得额外的祈祷经验值。</string>
