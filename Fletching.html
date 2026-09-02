@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fletching — Idle Fantasy Wiki</title>
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <link rel="icon" type="image/x-icon" href="assets/images/image_7.png">
+  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="icon" type="image/x-icon" href="assets/images/image_8.png">
   <script data-goatcounter="https://idlefantasy.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script>
@@ -24,6 +24,11 @@
       Idle Fantasy Wiki
     </a>
     <span class="site-tagline">Community reference for all skills, combat, and crafting</span>
+    <div id="search" class="search">
+      <input id="search-input" class="search-input" type="search" placeholder="Search…"
+             autocomplete="off" spellcheck="false" aria-label="Search the wiki">
+      <ul id="search-results" class="search-results" hidden></ul>
+    </div>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button>
   </header>
 
@@ -40,6 +45,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Skills</span><ul>
 <li><a href="Skills.html">Skills</a></li>
+<li><a href="QuestIcons.html">Quest Icons</a></li>
 <li class="nav-section"><span class="nav-label">Gathering</span><ul>
 <li><a href="Mining.html">Mining</a></li>
 <li><a href="Fishing.html">Fishing</a></li>
@@ -68,6 +74,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Inventory</span><ul>
 <li><a href="Equipment.html">Equipment</a></li>
+<li><a href="Heirlooms.html">Heirlooms</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Combat</span><ul>
 <li><a href="Combat.html">Combat</a></li>
@@ -75,6 +82,7 @@
 <li><a href="Dungeons.html">Dungeons</a></li>
 <li><a href="Enemies.html">Enemies</a></li>
 <li><a href="Spells.html">Spells</a></li>
+<li><a href="Mercenaries.html">Mercenary Camp</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Town</span><ul>
 <li><a href="Shop.html">Shop</a></li>
@@ -82,6 +90,7 @@
 <li><a href="Guilds.html">Guilds</a></li>
 <li><a href="Buildings.html">Buildings</a></li>
 <li><a href="Carnival.html">Carnival</a></li>
+<li><a href="Housing.html">Housing</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Miscellaneous</span><ul>
 <li><a href="Expeditions.html">Expeditions</a></li>
@@ -90,11 +99,15 @@
 <li><a href="Titles.html">Titles</a></li>
 <li><a href="SeasonalEvents.html">Seasonal Events</a></li>
 </ul></li>
+<li class="nav-section"><span class="nav-label">Guides</span><ul>
+<li><a href="how_to_make_guides.html">How to add strategy guides to the wiki</a></li>
+<li><a href="guide_the_infinite_tower.html">The Infinite Tower</a></li>
+</ul></li>
 </ul>
     </nav>
 
     <main class="content">
-      <h1 id="fletching"><img src='assets/images/image_7.png' alt='' class='text'> Fletching</h1>
+      <h1 id="fletching"><img src='assets/images/image_8.png' alt='' class='text'> Fletching</h1>
 <p>Craft bows and arrows from logs and metal components.</p>
 <table>
 <thead>
@@ -106,179 +119,197 @@
 </tr>
 </thead>
 <tbody>
-<tr id="arrow_shaft">
-<td>Arrow Shaft</td>
+<tr id="arrow_shafts">
+<td>Arrow Shafts</td>
 <td>1</td>
-<td>1× <a href="Woodcutting.html#log">Log</a></td>
+<td>1× <a href="Woodcutting.html#logs">Logs</a></td>
 <td>5</td>
 </tr>
-<tr id="bronze_arrow">
-<td>Bronze Arrow</td>
+<tr id="bronze_arrows">
+<td>Bronze Arrows</td>
 <td>1</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#bronze_arrow_tip">Bronze Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#bronze_arrow_tips">Bronze Arrow Tips</a></td>
 <td>2</td>
 </tr>
 <tr id="staff_of_air">
 <td>Staff of Air</td>
 <td>1</td>
-<td>1× <a href="Woodcutting.html#log">Log</a>, 1000× <a href="Runecrafting.html#air_rune">Air Rune</a></td>
+<td>1× <a href="Woodcutting.html#logs">Logs</a>, 1,000× <a href="Runecrafting.html#air_rune">Air Rune</a></td>
 <td>50</td>
 </tr>
 <tr id="plank">
 <td>Plank</td>
 <td>1</td>
-<td>1× <a href="Woodcutting.html#log">Log</a></td>
+<td>1× <a href="Woodcutting.html#logs">Logs</a></td>
 <td>20</td>
 </tr>
 <tr id="shortbow">
 <td>Shortbow</td>
 <td>5</td>
-<td>1× <a href="Woodcutting.html#log">Log</a></td>
+<td>1× <a href="Woodcutting.html#logs">Logs</a></td>
 <td>10</td>
 </tr>
 <tr id="staff_of_water">
 <td>Staff of Water</td>
 <td>5</td>
-<td>1× <a href="Woodcutting.html#oak_log">Oak Log</a>, 1000× <a href="Runecrafting.html#water_rune">Water Rune</a></td>
+<td>1× <a href="Woodcutting.html#oak_logs">Oak Logs</a>, 1,000× <a href="Runecrafting.html#water_rune">Water Rune</a></td>
 <td>60</td>
 </tr>
 <tr id="staff_of_earth">
 <td>Staff of Earth</td>
 <td>10</td>
-<td>1× <a href="Woodcutting.html#willow_log">Willow Log</a>, 1500× <a href="Runecrafting.html#earth_rune">Earth Rune</a></td>
+<td>1× <a href="Woodcutting.html#willow_logs">Willow Logs</a>, 1,500× <a href="Runecrafting.html#earth_rune">Earth Rune</a></td>
 <td>75</td>
 </tr>
-<tr id="iron_arrow">
-<td>Iron Arrow</td>
+<tr id="iron_arrows">
+<td>Iron Arrows</td>
 <td>15</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#iron_arrow_tip">Iron Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#iron_arrow_tips">Iron Arrow Tips</a></td>
 <td>4</td>
 </tr>
 <tr id="staff_of_fire">
 <td>Staff of Fire</td>
 <td>15</td>
-<td>1× <a href="Woodcutting.html#maple_log">Maple Log</a>, 1500× <a href="Runecrafting.html#fire_rune">Fire Rune</a></td>
+<td>1× <a href="Woodcutting.html#maple_logs">Maple Logs</a>, 1,500× <a href="Runecrafting.html#fire_rune">Fire Rune</a></td>
 <td>90</td>
 </tr>
 <tr id="oak_plank">
 <td>Oak Plank</td>
 <td>15</td>
-<td>1× <a href="Woodcutting.html#oak_log">Oak Log</a></td>
+<td>1× <a href="Woodcutting.html#oak_logs">Oak Logs</a></td>
 <td>40</td>
 </tr>
 <tr id="oak_shortbow">
 <td>Oak Shortbow</td>
 <td>20</td>
-<td>1× <a href="Woodcutting.html#oak_log">Oak Log</a></td>
+<td>1× <a href="Woodcutting.html#oak_logs">Oak Logs</a></td>
 <td>17</td>
 </tr>
 <tr id="staff_of_mind">
 <td>Staff of Mind</td>
 <td>25</td>
-<td>1× <a href="Woodcutting.html#yew_log">Yew Log</a>, 1500× <a href="Runecrafting.html#mind_rune">Mind Rune</a></td>
+<td>1× <a href="Woodcutting.html#yew_logs">Yew Logs</a>, 1,500× <a href="Runecrafting.html#mind_rune">Mind Rune</a></td>
 <td>110</td>
 </tr>
-<tr id="steel_arrow">
-<td>Steel Arrow</td>
+<tr id="steel_arrows">
+<td>Steel Arrows</td>
 <td>30</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#steel_arrow_tip">Steel Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#steel_arrow_tips">Steel Arrow Tips</a></td>
 <td>6</td>
 </tr>
 <tr id="willow_plank">
 <td>Willow Plank</td>
 <td>30</td>
-<td>1× <a href="Woodcutting.html#willow_log">Willow Log</a></td>
+<td>1× <a href="Woodcutting.html#willow_logs">Willow Logs</a></td>
 <td>60</td>
 </tr>
 <tr id="willow_shortbow">
 <td>Willow Shortbow</td>
 <td>35</td>
-<td>1× <a href="Woodcutting.html#willow_log">Willow Log</a></td>
+<td>1× <a href="Woodcutting.html#willow_logs">Willow Logs</a></td>
 <td>34</td>
 </tr>
 <tr id="staff_of_chaos">
 <td>Staff of Chaos</td>
 <td>35</td>
-<td>1× <a href="Woodcutting.html#magic_log">Magic Log</a>, 2000× <a href="Runecrafting.html#chaos_rune">Chaos Rune</a></td>
+<td>1× <a href="Woodcutting.html#magic_logs">Magic Logs</a>, 2,000× <a href="Runecrafting.html#chaos_rune">Chaos Rune</a></td>
 <td>135</td>
 </tr>
-<tr id="mithril_arrow">
-<td>Mithril Arrow</td>
+<tr id="mithril_arrows">
+<td>Mithril Arrows</td>
 <td>45</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#mithril_arrow_tip">Mithril Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#mithril_arrow_tips">Mithril Arrow Tips</a></td>
 <td>8</td>
 </tr>
 <tr id="maple_plank">
 <td>Maple Plank</td>
 <td>45</td>
-<td>1× <a href="Woodcutting.html#maple_log">Maple Log</a></td>
+<td>1× <a href="Woodcutting.html#maple_logs">Maple Logs</a></td>
 <td>90</td>
 </tr>
 <tr id="maple_shortbow">
 <td>Maple Shortbow</td>
 <td>50</td>
-<td>1× <a href="Woodcutting.html#maple_log">Maple Log</a></td>
+<td>1× <a href="Woodcutting.html#maple_logs">Maple Logs</a></td>
 <td>50</td>
 </tr>
 <tr id="staff_of_death">
 <td>Staff of Death</td>
 <td>50</td>
-<td>1× <a href="Woodcutting.html#redwood_log">Redwood Log</a>, 2000× <a href="Runecrafting.html#death_rune">Death Rune</a></td>
+<td>1× <a href="Woodcutting.html#redwood_logs">Redwood Logs</a>, 2,000× <a href="Runecrafting.html#death_rune">Death Rune</a></td>
 <td>170</td>
 </tr>
-<tr id="adamantite_arrow">
-<td>Adamantite Arrow</td>
+<tr id="adamantite_arrows">
+<td>Adamantite Arrows</td>
 <td>60</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#adamantite_arrow_tip">Adamantite Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#adamantite_arrow_tips">Adamantite Arrow Tips</a></td>
 <td>10</td>
 </tr>
 <tr id="yew_plank">
 <td>Yew Plank</td>
 <td>60</td>
-<td>1× <a href="Woodcutting.html#yew_log">Yew Log</a></td>
+<td>1× <a href="Woodcutting.html#yew_logs">Yew Logs</a></td>
 <td>130</td>
 </tr>
 <tr id="yew_shortbow">
 <td>Yew Shortbow</td>
 <td>65</td>
-<td>1× <a href="Woodcutting.html#yew_log">Yew Log</a></td>
+<td>1× <a href="Woodcutting.html#yew_logs">Yew Logs</a></td>
 <td>67</td>
 </tr>
 <tr id="staff_of_blood">
 <td>Staff of Blood</td>
 <td>65</td>
-<td>1× <a href="Woodcutting.html#redwood_log">Redwood Log</a>, 2000× <a href="Runecrafting.html#blood_rune">Blood Rune</a></td>
+<td>1× <a href="Woodcutting.html#redwood_logs">Redwood Logs</a>, 2,000× <a href="Runecrafting.html#blood_rune">Blood Rune</a></td>
 <td>210</td>
 </tr>
 <tr id="yew_longbow">
 <td>Yew Longbow</td>
 <td>70</td>
-<td>1× <a href="Woodcutting.html#yew_log">Yew Log</a></td>
+<td>1× <a href="Woodcutting.html#yew_logs">Yew Logs</a></td>
 <td>75</td>
 </tr>
-<tr id="runite_arrow">
-<td>Runite Arrow</td>
+<tr id="runite_arrows">
+<td>Runite Arrows</td>
 <td>75</td>
-<td>15× <a href="Fletching.html#arrow_shaft" class="active">Arrow Shaft</a>, 15× <a href="Smithing.html#runite_arrow_tip">Runite Arrow Tip</a></td>
+<td>15× <a href="Fletching.html#arrow_shafts" class="active">Arrow Shafts</a>, 15× <a href="Smithing.html#runite_arrow_tips">Runite Arrow Tips</a></td>
 <td>12</td>
 </tr>
 <tr id="magic_plank">
 <td>Magic Plank</td>
 <td>75</td>
-<td>1× <a href="Woodcutting.html#magic_log">Magic Log</a></td>
+<td>1× <a href="Woodcutting.html#magic_logs">Magic Logs</a></td>
 <td>175</td>
 </tr>
 <tr id="magic_shortbow">
 <td>Magic Shortbow</td>
 <td>80</td>
-<td>1× <a href="Woodcutting.html#magic_log">Magic Log</a></td>
+<td>1× <a href="Woodcutting.html#magic_logs">Magic Logs</a></td>
 <td>84</td>
 </tr>
 <tr id="magic_longbow">
 <td>Magic Longbow</td>
 <td>85</td>
-<td>1× <a href="Woodcutting.html#magic_log">Magic Log</a></td>
+<td>1× <a href="Woodcutting.html#magic_logs">Magic Logs</a></td>
 <td>97</td>
+</tr>
+<tr id="redwood_plank">
+<td>Redwood Plank</td>
+<td>85</td>
+<td>1× <a href="Woodcutting.html#redwood_logs">Redwood Logs</a></td>
+<td>230</td>
+</tr>
+<tr id="elven_shortbow">
+<td>Elven Shortbow</td>
+<td>90</td>
+<td>2× <a href="Woodcutting.html#magic_logs">Magic Logs</a></td>
+<td>120</td>
+</tr>
+<tr id="elven_longbow">
+<td>Elven Longbow</td>
+<td>95</td>
+<td>2× <a href="Woodcutting.html#redwood_logs">Redwood Logs</a></td>
+<td>150</td>
 </tr>
 </tbody>
 </table>
@@ -293,6 +324,7 @@
     <a href="https://github.com/tristinbaker/IdleFantasy" target="_blank" rel="noopener">GitHub</a>
   </footer>
 
+  <script src="assets/search-index.js"></script>
   <script>
     (function() {
       // ---- Dark mode ----
@@ -328,6 +360,124 @@
       backdrop.addEventListener('click', closeNav);
       sidebar.addEventListener('click', function(e) {
         if (e.target.tagName === 'A') closeNav();
+      });
+
+      // ---- Search ----
+      var searchBox     = document.getElementById('search');
+      var searchInput   = document.getElementById('search-input');
+      var searchResults = document.getElementById('search-results');
+      var searchIndex   = window.WIKI_SEARCH_INDEX || [];
+      var MAX_RESULTS   = 10;
+      var selected      = -1;
+
+      function hideResults() {
+        searchResults.hidden = true;
+        searchResults.innerHTML = '';
+        selected = -1;
+      }
+
+      // Lower score = better match. -1 = no match.
+      function scoreEntry(entry, query) {
+        var name = entry.n.toLowerCase();
+        if (name === query) return 0;
+        if (name.lastIndexOf(query, 0) === 0) return 1;
+        if (name.indexOf(' ' + query) !== -1) return 2;
+        if (name.indexOf(query) !== -1) return 3;
+        return -1;
+      }
+
+      function updateSelection() {
+        var items = searchResults.children;
+        for (var i = 0; i < items.length; i++)
+          items[i].classList.toggle('selected', i === selected);
+        if (selected >= 0 && items[selected])
+          items[selected].scrollIntoView({ block: 'nearest' });
+      }
+
+      function runSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        if (query.length < 2) { hideResults(); return; }
+        var matches = [];
+        for (var i = 0; i < searchIndex.length; i++) {
+          var s = scoreEntry(searchIndex[i], query);
+          if (s >= 0) matches.push([s, searchIndex[i]]);
+        }
+        matches.sort(function(a, b) {
+          return (a[0] - b[0])                       // better score first
+              || ((b[1].t || 0) - (a[1].t || 0))     // pages before item rows
+              || (a[1].n.length - b[1].n.length)     // shorter names first
+              || a[1].n.localeCompare(b[1].n);
+        });
+        searchResults.innerHTML = '';
+        if (!matches.length) {
+          var empty = document.createElement('li');
+          empty.className = 'search-empty';
+          empty.textContent = 'No results';
+          searchResults.appendChild(empty);
+        }
+        for (var j = 0; j < matches.length && j < MAX_RESULTS; j++) {
+          var entry = matches[j][1];
+          var li = document.createElement('li');
+          var a  = document.createElement('a');
+          a.href = entry.u;
+          var name = document.createElement('span');
+          name.textContent = entry.n;
+          a.appendChild(name);
+          if (entry.p) {
+            var context = document.createElement('span');
+            context.className = 'search-context';
+            context.textContent = entry.p;
+            a.appendChild(context);
+          }
+          li.appendChild(a);
+          searchResults.appendChild(li);
+        }
+        selected = -1;
+        searchResults.hidden = false;
+      }
+
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('focus', function() {
+        if (searchInput.value.trim().length >= 2) runSearch();
+      });
+
+      searchInput.addEventListener('keydown', function(e) {
+        var links = searchResults.querySelectorAll('li > a');
+        if (e.key === 'ArrowDown' && links.length) {
+          e.preventDefault();
+          selected = (selected + 1) % links.length;
+          updateSelection();
+        } else if (e.key === 'ArrowUp' && links.length) {
+          e.preventDefault();
+          selected = (selected - 1 + links.length) % links.length;
+          updateSelection();
+        } else if (e.key === 'Enter' && links.length) {
+          e.preventDefault();
+          links[selected >= 0 ? selected : 0].click();
+        } else if (e.key === 'Escape') {
+          hideResults();
+          searchInput.blur();
+        }
+      });
+
+      // Navigating to a row on the current page: hash change alone won't rerun
+      // :target styling reliably in every browser, so just close the dropdown.
+      searchResults.addEventListener('click', function(e) {
+        if (e.target.closest('a')) hideResults();
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!searchBox.contains(e.target)) hideResults();
+      });
+
+      // Press "/" anywhere to focus search
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput &&
+            !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        }
       });
     })();
   </script>

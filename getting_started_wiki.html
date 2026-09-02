@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Getting Started - Wiki Contributions — Idle Fantasy Wiki</title>
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <link rel="icon" type="image/x-icon" href="assets/images/default_icon.png">
+  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
   <script data-goatcounter="https://idlefantasy.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script>
@@ -24,6 +24,11 @@
       Idle Fantasy Wiki
     </a>
     <span class="site-tagline">Community reference for all skills, combat, and crafting</span>
+    <div id="search" class="search">
+      <input id="search-input" class="search-input" type="search" placeholder="Search…"
+             autocomplete="off" spellcheck="false" aria-label="Search the wiki">
+      <ul id="search-results" class="search-results" hidden></ul>
+    </div>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button>
   </header>
 
@@ -40,6 +45,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Skills</span><ul>
 <li><a href="Skills.html">Skills</a></li>
+<li><a href="QuestIcons.html">Quest Icons</a></li>
 <li class="nav-section"><span class="nav-label">Gathering</span><ul>
 <li><a href="Mining.html">Mining</a></li>
 <li><a href="Fishing.html">Fishing</a></li>
@@ -68,6 +74,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Inventory</span><ul>
 <li><a href="Equipment.html">Equipment</a></li>
+<li><a href="Heirlooms.html">Heirlooms</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Combat</span><ul>
 <li><a href="Combat.html">Combat</a></li>
@@ -75,6 +82,7 @@
 <li><a href="Dungeons.html">Dungeons</a></li>
 <li><a href="Enemies.html">Enemies</a></li>
 <li><a href="Spells.html">Spells</a></li>
+<li><a href="Mercenaries.html">Mercenary Camp</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Town</span><ul>
 <li><a href="Shop.html">Shop</a></li>
@@ -82,6 +90,7 @@
 <li><a href="Guilds.html">Guilds</a></li>
 <li><a href="Buildings.html">Buildings</a></li>
 <li><a href="Carnival.html">Carnival</a></li>
+<li><a href="Housing.html">Housing</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Miscellaneous</span><ul>
 <li><a href="Expeditions.html">Expeditions</a></li>
@@ -90,13 +99,18 @@
 <li><a href="Titles.html">Titles</a></li>
 <li><a href="SeasonalEvents.html">Seasonal Events</a></li>
 </ul></li>
+<li class="nav-section"><span class="nav-label">Guides</span><ul>
+<li><a href="how_to_make_guides.html">How to add strategy guides to the wiki</a></li>
+<li><a href="guide_the_infinite_tower.html">The Infinite Tower</a></li>
+</ul></li>
 </ul>
     </nav>
 
     <main class="content">
       <h1 id="getting-started-wiki-contributions">Getting started - Wiki contributions</h1>
 <p>Great! You want to know how you can contribute to the wiki and make it better over time. While this wiki functions a little differently from most you may have worked on in the past, if you have a little bit of programming knowledge you'll find it easy to work with, and even if you don't have programming knowledge there are still some ways you can help out.</p>
-<p>If you want to make changes to the game itself, check out <a href="getting_started_game.html#how_to_contribute_to_the_game">how to contribute to the game</a>.</p>
+<p>If you want to make changes to the game itself, check out <a href="getting_started_game.html#">how to contribute to the game</a>.</p>
+<p>If you find examples much easier to work with, there are pull request guides available <a href="#pull-request-guides">here</a> where you can see an actual example of editing the wiki.</p>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#how-the-wiki-works">How the wiki works</a></li>
@@ -108,58 +122,113 @@
 <li><a href="#staticdynamically-generated-pages">Static/Dynamically-generated pages</a></li>
 </ul>
 </li>
-<li><a href="#buildingcompiling-the-wiki">Building/Compiling the Wiki</a></li>
+<li><a href="#building-from-source">Building from source</a><ul>
+<li><a href="#1-activate-the-virtual-environment">1. Activate the virtual environment</a></li>
+<li><a href="#2-install-dependencies-required-packages">2. Install dependencies / required packages</a></li>
+<li><a href="#3-usage">3. Usage</a></li>
+</ul>
+</li>
 <li><a href="#wiki-code-structure">Wiki code structure</a></li>
-<li><a href="#contributing-process">Contributing process</a></li>
+<li><a href="#contributing-process">Contributing process</a><ul>
+<li><a href="#pull-request-guides">Pull request guides</a></li>
+</ul>
+</li>
 <li><a href="#additional-topics">Additional topics</a></li>
 </ul>
 <h2 id="how-the-wiki-works">How the wiki works</h2>
-<p>Unlike most wikis which have a collection of pages that require constant maintenance from the community whenever a game is updated, Idle Fantasy relies on a dynamically generated wiki which uses actual game data to generate the individual pages.</p>
+<p>Unlike most wikis which have a collection of pages that require constant maintenance from the community whenever a game is updated, Idle Fantasy relies on a dynamically generated wiki. This uses actual game data to generate the content within the individual pages reducing necessary maintenance of the wiki.</p>
 <p>It uses Markdown to define templates with Python being responsible for the compilation and generation of dynamic content.</p>
-<p>Some content still requires manual maintenance such as strategy guides and some text content however a number of changes in the game is reflected in the wiki.</p>
+<p>Some content still requires manual maintenance such as adding new mechanics, strategy guides and some text content however a number of changes in the game is reflected in the wiki.</p>
 <h2 id="core-terminology">Core terminology</h2>
 <p>To best understand how you can work with the wiki codebase (and also understand the jargon in the docs), it's helpful to go over some core terminology:</p>
 <h3 id="page-directory">Page Directory</h3>
-<p>The page directory is responsible for holding information about all the pages used within the wiki. It gets populated with information about all pages before the actual generation of any content and allows you to refer to other pages when defining page content through the use of a page ID (e.g. for links).</p>
+<p>The page directory is a directory describing all the metadata about the pages in the wiki. It gets populated with information about all pages before the actual generation of any content and allows you to refer to other pages when defining page content through the use of a page ID (e.g. for links).</p>
 <p>Pages are added to the page directory in <code>pages.py</code> under the <code>Page Listings</code> section.</p>
 <h3 id="page-hierarchy">Page Hierarchy</h3>
-<p>The page hierarchy is responsible primarily for controlling the navigation used within the sidebar but also on the home page. It lets you have precise control over how the navigation shows including the ordering of items. When adding pages to the page hierarchy, you can do so by "merging" it with a list using the <code>PageHierarchy.merge()</code> method. You can see examples of this in the generated pages.</p>
-<p>Pages are added to the page hierarchy in <code>pages.py</code> under the <code>Page Listings</code> section.</p>
+<p>The page hierarchy describes the hierarchical navigation used within the sidebar and on the home page. It lets you have precise control over the items in the navigation bar including how items are ordered. When adding pages to the page hierarchy, you can do so by "merging" it with a list using the <code>PageHierarchy.merge()</code> method. You can see examples of this <code>Page Listings</code> section where some dynamic pages are merged.</p>
+<p>Like the directory, pages are added to the page hierarchy in <code>pages.py</code> under the <code>Page Listings</code> section.</p>
 <h3 id="generator-functions">Generator functions</h3>
-<p>Generator functions are responsible for the actual content generation itself. They work by reading game data and filling out a template file based upon the actual content. There are two main ways that generator functions are defined depending on whether you are defining static pages or dynamically-generated pages.</p>
+<p>Generator functions are responsible for the actual content generation itself. They work by reading game data and filling out a template file with the appropriate Markdown. There are two main ways that generator functions are defined depending on whether you are defining static pages or dynamically-generated pages (see <a href="wiki_page_types.html#">Types of Wiki Pages</a>).</p>
 <p>These generator functions are defined in <code>pages.py</code> in the page generation section.</p>
 <h3 id="templates">Templates</h3>
 <p>Templates provide the base formatting for pages within the wiki. Whenever they refer to game content, they'll usually have a field defined like <code>{field}</code> that is then filled in using the <code>string.format()</code> method in Python. These are filled in by the generator functions described previously.</p>
 <h3 id="staticdynamically-generated-pages">Static/Dynamically-generated pages</h3>
-<p>Whenever we refer to static vs dynamically-generated pages this refers not to the content within pages but how the pages are defined. If pages are "hardcoded" in the <code>add_static_pages</code> function, these are static, whereas generated pages will produce an unknown amount of pages like with each individual boss page.</p>
-<p>For more information, see <a href="wiki_page_types.html">Types of Wiki Pages</a>.</p>
-<h2 id="buildingcompiling-the-wiki">Building/Compiling the Wiki</h2>
-<p>To build the wiki, you'll need to set up an appropriate Python environment which you can use to run the wiki compilation. For information about setting up virtual environments, see <a href="https://www.geeksforgeeks.org/python/create-virtual-environment-using-venv-python/">this tutorial</a> (make sure to call it .venv to have it be gitignored).</p>
-<p>Then, make sure you've installed all packages shown in <code>wiki/requirements.txt</code></p>
-<p>From there, you can run the following command to see what you can do (from the project folder):</p>
-<pre><code class="language-bash"># Activate the virtual environment (Only run in Windows terminal)
-.venv/Scripts/activate
-# Activate the virtual environment (Only run in bash terminal)
-source .venv/Scripts/activate
-# See help information for program
-python -m wiki.src -h
+<p>Whenever we refer to static vs dynamically-generated pages, this refers not to the content within pages but how the pages are defined. If pages are "hardcoded" in the <code>add_static_pages</code> function, these are static, whereas generated pages will produce an unknown amount of pages like with each individual boss page for which the number of pages change as bosses are added to the game.</p>
+<p>For more information, see <a href="wiki_page_types.html#">Types of Wiki Pages</a>.</p>
+<h2 id="building-from-source">Building from source</h2>
+<p>To build the wiki, you'll need to set up an appropriate Python environment in the root directory. For information about setting up virtual environments, see <a href="https://www.geeksforgeeks.org/python/create-virtual-environment-using-venv-python/">this tutorial</a>. 
+<em>Make sure to call your virtual environment <code>.venv</code> to have it be gitignored).</em></p>
+<h3 id="1-activate-the-virtual-environment">1. Activate the virtual environment</h3>
+<ul>
+<li>If you are using Mac or Gnu/Linux you are probably POSIX. </li>
+<li>If your shell is missing, see the <a href="https://docs.python.org/3/library/venv.html#how-venvs-work">Python venv documentation</a>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Shell</th>
+<th>Command to activate virtual environment</th>
+</tr>
+</thead>
+<tbody>
+<tr id="posix">
+<td>POSIX</td>
+<td>bash/zsh</td>
+<td><code>$ source .venv/bin/activate</code></td>
+</tr>
+<tr id="windows">
+<td>Windows</td>
+<td>cmd.exe</td>
+<td><code>C:\&gt; .venv\Scripts\activate.bat</code></td>
+</tr>
+<tr id="windows">
+<td>Windows</td>
+<td>Powershell</td>
+<td><code>PS C:\&gt; .venv\Scripts\Activate.ps1</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-install-dependencies-required-packages">2. Install dependencies / required packages</h3>
+<pre><code class="language-bash">pip install -r wiki/requirements.txt
 </code></pre>
+<p>Make sure you've installed all packages shown in <code>wiki/requirements.txt</code>. You can do this by running the above command in root folder for the repository.</p>
+<h3 id="3-usage">3. Usage</h3>
+<p>If you have sucesfully completed the above instructions, you should now be ready to modify and compile the wiki. </p>
+<p>This section contains instruction and detail around the various commands you can use to assist you with this, you can also always see the available commands, and what they do from the command line with the following command:</p>
+<pre><code class="language-bash">python -m wiki.src -h
+</code></pre>
+<h4 id="compiling-the-wiki">Compiling the wiki</h4>
+<pre><code class="language-bash">python -m wiki.src write-html
+</code></pre>
+<p>This is the main command you'll need use, it creates the HTML version of the wiki in <code>out/IdleFantasy-site</code>, and you will need to re-run it every time you make any changes to the source files to update the output. You can then open any of the HTML pages and the website should come up.</p>
+<p>If you're using Pycharm, you can open it using the live preview option, which should update things more seamlessly.</p>
+<h4 id="validating-the-wiki">Validating the wiki</h4>
+<pre><code class="language-bash">python -m wiki.src validity
+</code></pre>
+<p>You can use the above command to validate the wiki and perform several tests that can help you pick up errors.</p>
 <h2 id="wiki-code-structure">Wiki code structure</h2>
 <p>The following code files are used as follows in the wiki:</p>
 <ul>
 <li><code>__main__.py</code> - The main entry point to the wiki program responsible for parsing arguments and top-level management.</li>
-<li><code>page_hierarchy.py</code> - A simple file defining the page hierarchy structure.</li>
 <li><code>pages.py</code> - The primary code responsible for generating all the Markdown pages. This also contains a number of helper functions which you should use where relevant such as <code>link()</code>, etc.</li>
+<li><code>game_data.py</code> - A set of helper functions which retrieve data from the game such as json files and game strings</li>
 <li><code>site.py</code> - The code responsible for generating the Idle Fantasy wiki website based upon the generated Markdown files.</li>
+<li><code>page_hierarchy.py</code> - A simple file defining the page hierarchy structure.</li>
 </ul>
 <h2 id="contributing-process">Contributing process</h2>
 <p>For small contributions (e.g. fixing small mistakes, etc), you can simply fork the repository, make the relevant change and then create a pull request.</p>
 <p>If you notice larger issues/inaccuracies that might take some time to fix, you should create an issue beforehand and mention that you're planning on making the changes. This makes sure that there aren't multiple people working on the same issue (without knowing) and also means that the issue can be referenced/tracked.</p>
 <p>If you want to make a number of new pages or significant changes (especially dynamically-generated ones) in order to improve the wiki, then you should open a discussion to give the opportunity for community involvement.</p>
 <p>Additionally, you might notice a number of #Todo items in the wiki code. These are also great places to look for things that need doing that we maybe just haven't got around to sorting out yet.</p>
+<h3 id="pull-request-guides">Pull request guides</h3>
+<p>The guides below will show you an example of editing the wiki which you might find helpful to wrap your head around how things work:</p>
+<ul>
+<li><a href="https://github.com/tristinbaker/IdleFantasy/pull/1353">Guide: Fixing an out-of-date wiki page</a> - In this detailed guide, I go over editing a couple pages in the wiki. This is probably the most common level of detail you'll need to edit a page.</li>
+</ul>
 <h2 id="additional-topics">Additional topics</h2>
 <ul>
-<li><a href="wiki_page_types.html">Types of Wiki Pages</a> - More information about the different page types</li>
+<li><a href="wiki_page_types.html#">Types of Wiki Pages</a> - More information about the different page types</li>
 </ul>
     </main>
   </div>
@@ -172,6 +241,7 @@ python -m wiki.src -h
     <a href="https://github.com/tristinbaker/IdleFantasy" target="_blank" rel="noopener">GitHub</a>
   </footer>
 
+  <script src="assets/search-index.js"></script>
   <script>
     (function() {
       // ---- Dark mode ----
@@ -207,6 +277,124 @@ python -m wiki.src -h
       backdrop.addEventListener('click', closeNav);
       sidebar.addEventListener('click', function(e) {
         if (e.target.tagName === 'A') closeNav();
+      });
+
+      // ---- Search ----
+      var searchBox     = document.getElementById('search');
+      var searchInput   = document.getElementById('search-input');
+      var searchResults = document.getElementById('search-results');
+      var searchIndex   = window.WIKI_SEARCH_INDEX || [];
+      var MAX_RESULTS   = 10;
+      var selected      = -1;
+
+      function hideResults() {
+        searchResults.hidden = true;
+        searchResults.innerHTML = '';
+        selected = -1;
+      }
+
+      // Lower score = better match. -1 = no match.
+      function scoreEntry(entry, query) {
+        var name = entry.n.toLowerCase();
+        if (name === query) return 0;
+        if (name.lastIndexOf(query, 0) === 0) return 1;
+        if (name.indexOf(' ' + query) !== -1) return 2;
+        if (name.indexOf(query) !== -1) return 3;
+        return -1;
+      }
+
+      function updateSelection() {
+        var items = searchResults.children;
+        for (var i = 0; i < items.length; i++)
+          items[i].classList.toggle('selected', i === selected);
+        if (selected >= 0 && items[selected])
+          items[selected].scrollIntoView({ block: 'nearest' });
+      }
+
+      function runSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        if (query.length < 2) { hideResults(); return; }
+        var matches = [];
+        for (var i = 0; i < searchIndex.length; i++) {
+          var s = scoreEntry(searchIndex[i], query);
+          if (s >= 0) matches.push([s, searchIndex[i]]);
+        }
+        matches.sort(function(a, b) {
+          return (a[0] - b[0])                       // better score first
+              || ((b[1].t || 0) - (a[1].t || 0))     // pages before item rows
+              || (a[1].n.length - b[1].n.length)     // shorter names first
+              || a[1].n.localeCompare(b[1].n);
+        });
+        searchResults.innerHTML = '';
+        if (!matches.length) {
+          var empty = document.createElement('li');
+          empty.className = 'search-empty';
+          empty.textContent = 'No results';
+          searchResults.appendChild(empty);
+        }
+        for (var j = 0; j < matches.length && j < MAX_RESULTS; j++) {
+          var entry = matches[j][1];
+          var li = document.createElement('li');
+          var a  = document.createElement('a');
+          a.href = entry.u;
+          var name = document.createElement('span');
+          name.textContent = entry.n;
+          a.appendChild(name);
+          if (entry.p) {
+            var context = document.createElement('span');
+            context.className = 'search-context';
+            context.textContent = entry.p;
+            a.appendChild(context);
+          }
+          li.appendChild(a);
+          searchResults.appendChild(li);
+        }
+        selected = -1;
+        searchResults.hidden = false;
+      }
+
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('focus', function() {
+        if (searchInput.value.trim().length >= 2) runSearch();
+      });
+
+      searchInput.addEventListener('keydown', function(e) {
+        var links = searchResults.querySelectorAll('li > a');
+        if (e.key === 'ArrowDown' && links.length) {
+          e.preventDefault();
+          selected = (selected + 1) % links.length;
+          updateSelection();
+        } else if (e.key === 'ArrowUp' && links.length) {
+          e.preventDefault();
+          selected = (selected - 1 + links.length) % links.length;
+          updateSelection();
+        } else if (e.key === 'Enter' && links.length) {
+          e.preventDefault();
+          links[selected >= 0 ? selected : 0].click();
+        } else if (e.key === 'Escape') {
+          hideResults();
+          searchInput.blur();
+        }
+      });
+
+      // Navigating to a row on the current page: hash change alone won't rerun
+      // :target styling reliably in every browser, so just close the dropdown.
+      searchResults.addEventListener('click', function(e) {
+        if (e.target.closest('a')) hideResults();
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!searchBox.contains(e.target)) hideResults();
+      });
+
+      // Press "/" anywhere to focus search
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput &&
+            !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        }
       });
     })();
   </script>

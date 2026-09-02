@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Farming — Idle Fantasy Wiki</title>
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <link rel="icon" type="image/x-icon" href="assets/images/image_3.png">
+  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="icon" type="image/x-icon" href="assets/images/image_4.png">
   <script data-goatcounter="https://idlefantasy.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script>
@@ -24,6 +24,11 @@
       Idle Fantasy Wiki
     </a>
     <span class="site-tagline">Community reference for all skills, combat, and crafting</span>
+    <div id="search" class="search">
+      <input id="search-input" class="search-input" type="search" placeholder="Search…"
+             autocomplete="off" spellcheck="false" aria-label="Search the wiki">
+      <ul id="search-results" class="search-results" hidden></ul>
+    </div>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button>
   </header>
 
@@ -40,6 +45,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Skills</span><ul>
 <li><a href="Skills.html">Skills</a></li>
+<li><a href="QuestIcons.html">Quest Icons</a></li>
 <li class="nav-section"><span class="nav-label">Gathering</span><ul>
 <li><a href="Mining.html">Mining</a></li>
 <li><a href="Fishing.html">Fishing</a></li>
@@ -68,6 +74,7 @@
 </ul></li>
 <li class="nav-section"><span class="nav-label">Inventory</span><ul>
 <li><a href="Equipment.html">Equipment</a></li>
+<li><a href="Heirlooms.html">Heirlooms</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Combat</span><ul>
 <li><a href="Combat.html">Combat</a></li>
@@ -75,6 +82,7 @@
 <li><a href="Dungeons.html">Dungeons</a></li>
 <li><a href="Enemies.html">Enemies</a></li>
 <li><a href="Spells.html">Spells</a></li>
+<li><a href="Mercenaries.html">Mercenary Camp</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Town</span><ul>
 <li><a href="Shop.html">Shop</a></li>
@@ -82,6 +90,7 @@
 <li><a href="Guilds.html">Guilds</a></li>
 <li><a href="Buildings.html">Buildings</a></li>
 <li><a href="Carnival.html">Carnival</a></li>
+<li><a href="Housing.html">Housing</a></li>
 </ul></li>
 <li class="nav-section"><span class="nav-label">Miscellaneous</span><ul>
 <li><a href="Expeditions.html">Expeditions</a></li>
@@ -90,12 +99,31 @@
 <li><a href="Titles.html">Titles</a></li>
 <li><a href="SeasonalEvents.html">Seasonal Events</a></li>
 </ul></li>
+<li class="nav-section"><span class="nav-label">Guides</span><ul>
+<li><a href="how_to_make_guides.html">How to add strategy guides to the wiki</a></li>
+<li><a href="guide_the_infinite_tower.html">The Infinite Tower</a></li>
+</ul></li>
 </ul>
     </nav>
 
     <main class="content">
-      <h1 id="farming"><img src='assets/images/image_3.png' alt='' class='text'> Farming</h1>
-<p>Plant seeds in up to <strong>5 patches</strong> and return after the growth time to harvest.</p>
+      <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+  integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs"
+  crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      object-fit: fill;
+      padding: unset;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="farming"><img src='assets/images/image_4.png' alt='' class='text'> Farming</h1>
+<p>Plant seeds in up to <strong>8 patches</strong> and return after the growth time to harvest. A <a href="Buildings.html#garden">Garden</a> building adds up to 2 more patches and the <strong>Grand Monument</strong> provides another additional patch</p>
 <table>
 <thead>
 <tr>
@@ -272,7 +300,7 @@
 </tr>
 </tbody>
 </table>
-<p>Seeds can be purchased from the <strong>Shop</strong> under Seeds &amp; Farming.</p>
+<p>Seeds can be purchased from the <strong>Shop</strong> under Seeds &amp; Farming or by <a href="Thieving.html#">stealing</a> them from NPCs.</p>
 <h2 id="hoes">Hoes</h2>
 <p>Equip a hoe to increase your harvest yield. The bonus is applied on top of the base yield.</p>
 <table>
@@ -284,6 +312,16 @@
 </tr>
 </thead>
 <tbody>
+<tr id="bronze_hoe">
+<td>Bronze Hoe</td>
+<td>1</td>
+<td>+0%</td>
+</tr>
+<tr id="heirloom_hoe">
+<td>Heirloom Hoe</td>
+<td>1</td>
+<td>+350%</td>
+</tr>
 <tr id="iron_hoe">
 <td>Iron Hoe</td>
 <td>10</td>
@@ -321,7 +359,178 @@
 </tr>
 </tbody>
 </table>
-<h2 id="the-magic-bean">The Magic Bean</h2>
+<h3 id="hoe-tier-efficiency-multiplier">Hoe tier efficiency multiplier</h3>
+<p>Depending on the difference in tier between the hoe used for harvesting, and the level required for harvesting crops, you can receive an additional mult to your standard tool efficiency. The effect of this is that when you're harvesting lower tier crops your tool has a much higher efficiency with all the bonuses that entails.</p>
+<p>For normal tools, their tier is determined by their minimum level required to equip. For the <a href="Equipment.html#heirloom_hoe">Heirloom Hoe</a>, its tier is defined by your current farming level. The heirloom's tool efficiency itself is calculated separately as described in <a href="Heirlooms.html#how-heirlooms-grow">Heirlooms</a>.</p>
+<p>For crops, the tier depends on the minimum required level for harvesting the relevant crops.</p>
+<p>The level ranges for each tier are shown below:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Level Range</th>
+<th>Tools</th>
+<th>crops</th>
+</tr>
+</thead>
+<tbody>
+<tr id="1">
+<td>1</td>
+<td>1-14</td>
+<td><a href="Equipment.html#bronze_hoe">Bronze Hoe</a>, <a href="Equipment.html#iron_hoe">Iron Hoe</a></td>
+<td>Potato, Magic Bean, Onion, Cabbage</td>
+</tr>
+<tr id="2">
+<td>2</td>
+<td>15-29</td>
+<td><a href="Equipment.html#steel_hoe">Steel Hoe</a></td>
+<td>Carrot, Tomato, Corn</td>
+</tr>
+<tr id="3">
+<td>3</td>
+<td>30-54</td>
+<td><a href="Equipment.html#mithril_hoe">Mithril Hoe</a>, <a href="Equipment.html#adamantite_hoe">Adamantite Hoe</a></td>
+<td>Pumpkin, Watermelon, Strawberry, Magic Herb</td>
+</tr>
+<tr id="4">
+<td>4</td>
+<td>55-69</td>
+<td><a href="Equipment.html#dwarven_hoe">Dwarven Hoe</a>, <a href="Equipment.html#runite_hoe">Runite Hoe</a></td>
+<td>Dragon Fruit, Golden Wheat</td>
+</tr>
+<tr id="5">
+<td>5</td>
+<td>70-84</td>
+<td></td>
+<td>Spirit Herb</td>
+</tr>
+<tr id="6">
+<td>6</td>
+<td>≥85</td>
+<td><a href="Equipment.html#divine_hoe">Divine Hoe</a></td>
+<td>Celestial Bloom, Starfruit, Void Lotus</td>
+</tr>
+</tbody>
+</table>
+<p>The exact multiplier you get applied to your tool efficiency depends on the tier difference as calculated using the formula: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>i</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>d</mi><mi>i</mi><mi>f</mi><mi>f</mi><mi>e</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><mo>=</mo><mi>t</mi><mi>o</mi><mi>o</mi><mi>l</mi><mtext> </mtext><mi>t</mi><mi>i</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>c</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>s</mi><mtext> </mtext><mi>t</mi><mi>i</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">Tier\ difference = tool\ tier - crops\ tier</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="vertical-align:-0.1944em;height:0.8889em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mspace"> </span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.1076em;">ff</span><span class="mord mathnormal">ere</span><span class="mord mathnormal">n</span><span class="mord mathnormal">ce</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="vertical-align:-0.0833em;height:0.7778em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">oo</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mspace"> </span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">cro</span><span class="mord mathnormal">p</span><span class="mord mathnormal">s</span><span class="mspace"> </span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span></span></span></span>. The tool efficiency is multiplied as per the table below (— indicates no mult applied)</p>
+<table class="small">
+        <thead>
+            <tr>
+                <th colspan="2"></th>
+                <th colspan="6" style="text-align: center">Tool tier</th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+                <th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="6" style="vertical-align: middle">
+                        <span style="writing-mode: vertical-lr; transform: rotate(180deg)">crops Tier</span>
+                    </th>
+<th>1</th>
+                <td>—</td>
+<td>×1.25</td>
+<td>×1.5</td>
+<td>×1.75</td>
+<td>×2.0</td>
+<td>×2.25</td>
+            </tr>
+<tr>
+                <th>2</th>
+                <td>—</td>
+<td>—</td>
+<td>×1.25</td>
+<td>×1.5</td>
+<td>×1.75</td>
+<td>×2.0</td>
+            </tr>
+<tr>
+                <th>3</th>
+                <td>—</td>
+<td>—</td>
+<td>—</td>
+<td>×1.25</td>
+<td>×1.5</td>
+<td>×1.75</td>
+            </tr>
+<tr>
+                <th>4</th>
+                <td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>×1.25</td>
+<td>×1.5</td>
+            </tr>
+<tr>
+                <th>5</th>
+                <td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>×1.25</td>
+            </tr>
+<tr>
+                <th>6</th>
+                <td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2 id="ashes">Ashes</h2>
+<p>Ashes can provide additional bonuses for farming yield which can significantly increase overall yield at higher tiers.</p>
+<table>
+<thead>
+<tr>
+<th>Ash</th>
+<th>Yield bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr id="ashes">
+<td>Ashes</td>
+<td>+10%</td>
+</tr>
+<tr id="oak_ashes">
+<td>Oak Ashes</td>
+<td>+25%</td>
+</tr>
+<tr id="willow_ashes">
+<td>Willow Ashes</td>
+<td>+35%</td>
+</tr>
+<tr id="maple_ashes">
+<td>Maple Ashes</td>
+<td>+50%</td>
+</tr>
+<tr id="yew_ashes">
+<td>Yew Ashes</td>
+<td>+75%</td>
+</tr>
+<tr id="magic_ashes">
+<td>Magic Ashes</td>
+<td>+100%</td>
+</tr>
+<tr id="redwood_ashes">
+<td>Redwood Ashes</td>
+<td>+150%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-magic-bean">🫘 The Magic Bean</h2>
 <p>Deep in the soil of Gielinor, something stirs.</p>
 <p>Farmers whisper of a rare, unusual seed -- unlike any other. It has been known to appear, once in a great while, as a surprise among a harvest. Some say it responds to the earth differently. Some say it grows... impossibly tall.</p>
 <p>Its true nature is unclear. Those who have found one speak only in riddles.</p>
@@ -342,6 +551,7 @@
     <a href="https://github.com/tristinbaker/IdleFantasy" target="_blank" rel="noopener">GitHub</a>
   </footer>
 
+  <script src="assets/search-index.js"></script>
   <script>
     (function() {
       // ---- Dark mode ----
@@ -377,6 +587,124 @@
       backdrop.addEventListener('click', closeNav);
       sidebar.addEventListener('click', function(e) {
         if (e.target.tagName === 'A') closeNav();
+      });
+
+      // ---- Search ----
+      var searchBox     = document.getElementById('search');
+      var searchInput   = document.getElementById('search-input');
+      var searchResults = document.getElementById('search-results');
+      var searchIndex   = window.WIKI_SEARCH_INDEX || [];
+      var MAX_RESULTS   = 10;
+      var selected      = -1;
+
+      function hideResults() {
+        searchResults.hidden = true;
+        searchResults.innerHTML = '';
+        selected = -1;
+      }
+
+      // Lower score = better match. -1 = no match.
+      function scoreEntry(entry, query) {
+        var name = entry.n.toLowerCase();
+        if (name === query) return 0;
+        if (name.lastIndexOf(query, 0) === 0) return 1;
+        if (name.indexOf(' ' + query) !== -1) return 2;
+        if (name.indexOf(query) !== -1) return 3;
+        return -1;
+      }
+
+      function updateSelection() {
+        var items = searchResults.children;
+        for (var i = 0; i < items.length; i++)
+          items[i].classList.toggle('selected', i === selected);
+        if (selected >= 0 && items[selected])
+          items[selected].scrollIntoView({ block: 'nearest' });
+      }
+
+      function runSearch() {
+        var query = searchInput.value.trim().toLowerCase();
+        if (query.length < 2) { hideResults(); return; }
+        var matches = [];
+        for (var i = 0; i < searchIndex.length; i++) {
+          var s = scoreEntry(searchIndex[i], query);
+          if (s >= 0) matches.push([s, searchIndex[i]]);
+        }
+        matches.sort(function(a, b) {
+          return (a[0] - b[0])                       // better score first
+              || ((b[1].t || 0) - (a[1].t || 0))     // pages before item rows
+              || (a[1].n.length - b[1].n.length)     // shorter names first
+              || a[1].n.localeCompare(b[1].n);
+        });
+        searchResults.innerHTML = '';
+        if (!matches.length) {
+          var empty = document.createElement('li');
+          empty.className = 'search-empty';
+          empty.textContent = 'No results';
+          searchResults.appendChild(empty);
+        }
+        for (var j = 0; j < matches.length && j < MAX_RESULTS; j++) {
+          var entry = matches[j][1];
+          var li = document.createElement('li');
+          var a  = document.createElement('a');
+          a.href = entry.u;
+          var name = document.createElement('span');
+          name.textContent = entry.n;
+          a.appendChild(name);
+          if (entry.p) {
+            var context = document.createElement('span');
+            context.className = 'search-context';
+            context.textContent = entry.p;
+            a.appendChild(context);
+          }
+          li.appendChild(a);
+          searchResults.appendChild(li);
+        }
+        selected = -1;
+        searchResults.hidden = false;
+      }
+
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('focus', function() {
+        if (searchInput.value.trim().length >= 2) runSearch();
+      });
+
+      searchInput.addEventListener('keydown', function(e) {
+        var links = searchResults.querySelectorAll('li > a');
+        if (e.key === 'ArrowDown' && links.length) {
+          e.preventDefault();
+          selected = (selected + 1) % links.length;
+          updateSelection();
+        } else if (e.key === 'ArrowUp' && links.length) {
+          e.preventDefault();
+          selected = (selected - 1 + links.length) % links.length;
+          updateSelection();
+        } else if (e.key === 'Enter' && links.length) {
+          e.preventDefault();
+          links[selected >= 0 ? selected : 0].click();
+        } else if (e.key === 'Escape') {
+          hideResults();
+          searchInput.blur();
+        }
+      });
+
+      // Navigating to a row on the current page: hash change alone won't rerun
+      // :target styling reliably in every browser, so just close the dropdown.
+      searchResults.addEventListener('click', function(e) {
+        if (e.target.closest('a')) hideResults();
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!searchBox.contains(e.target)) hideResults();
+      });
+
+      // Press "/" anywhere to focus search
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput &&
+            !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        }
       });
     })();
   </script>
