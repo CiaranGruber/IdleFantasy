@@ -22,7 +22,7 @@ from wiki.src.game_data import STRINGS, load, title, item_name, house_item_name,
     trade_route_name, thieving_npc_name, quest_name, agility_course_name, town_building_name, quest_desc, title_name, \
     pet_name, boss_name, boss_desc, trade_route_desc, pet_desc, item_desc, dungeon_name, dungeon_desc, expedition_name, \
     expedition_desc, seasonal_event_name, seasonal_reward_desc, prestige_effect_desc, tree_name, merc_name, race_name, \
-    carnival_prize_name, carnival_prize_desc
+    carnival_prize_name, carnival_prize_desc, slot_name
 from wiki.src.page_hierarchy import PageHierarchy
 from wiki.src.wiki_logs import LOGGER
 
@@ -1469,16 +1469,8 @@ def gen_equipment() -> str:
     slot_order = ["weapon", "head", "body", "legs", "boots", "cape", "ring", "necklace",
                   "shield", "pickaxe", "axe", "fishing_rod", "hoe",
                   "hammer", "tinderbox", "grappling_hook", "frying_pan", "lockpick"]
-    # Todo: Categories are currently hardcoded in InventoryViewModel and should instead be handled in json files instead (eg. in equipment.json)
-    slot_names = {
-        "weapon": "Weapons", "head": "Helmets", "body": "Chestplates", "legs": "Legs",
-        "boots": "Boots", "cape": "Capes", "ring": "Rings", "necklace": "Necklaces",
-        "shield": "Shields", "pickaxe": "Pickaxes", "axe": "Axes",
-        "fishing_rod": "Fishing Rods", "hoe": "Hoes",
-        "hammer": "Hammers", "tinderbox": "Tinderboxes",
-        "grappling_hook": "Grappling Hooks", "frying_pan": "Frying Pans",
-        "lockpick": "Lockpicks",
-    }
+    # Todo: Categories are currently hardcoded in InventoryViewModel and should instead be handled in json files instead (eg. in equipment.json).
+    # These should replace the current method using slot names
     by_slot: dict[str, list] = {s: [] for s in slot_order}
     for item in equip.values():
         slot = item.get("slot", "other")
@@ -1503,7 +1495,7 @@ def gen_equipment() -> str:
         if not rows:
             continue
         rows.sort(key=lambda r: r[0])
-        sections.append(f"## {slot_names.get(slot, title(slot))}\n\n{table(['Item', 'Atk', 'Str', 'Def', 'Efficiency', 'Requirements'], rows)}")
+        sections.append(f"## {slot_name(slot)}\n\n{table(['Item', 'Atk', 'Str', 'Def', 'Efficiency', 'Requirements'], rows)}")
 
     return get_template("inventory/equipment").format(
         equipment="\n\n".join(sections),
@@ -1553,7 +1545,7 @@ def gen_heirlooms() -> str:
         if efficiency_key:
             tool_rows.append([
                 item_name(key),
-                title(item["slot"]),
+                slot_name(item["slot"]),
                 skill_link(item["heirloom_skill"]),
                 f"{base.get('efficiency', 1.0):.2f}×",
                 f"{item[efficiency_key]:.2f}×",
