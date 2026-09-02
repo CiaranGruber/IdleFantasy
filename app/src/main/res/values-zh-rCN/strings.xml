@@ -122,7 +122,7 @@
     <string name="label_quantity">数量</string>
     <string name="label_price">价格</string>
     <string name="label_available">可用</string>
-    <string name="label_patch">版本</string>
+    <string name="label_patch">田地</string>
     <string name="label_growth_time">生长时间</string>
     <string name="label_ready_to_harvest">可以收获</string>
     <string name="label_empty">空</string>
@@ -212,7 +212,7 @@
     <!-- Translator note: %1$s = formatted XP amount -->
     <string name="format_xp_per_action">每次操作 %1$s 经验</string>
     <!-- Translator note: %1$d = patch number -->
-    <string name="format_patch_number">版本 %1$d</string>
+    <string name="format_patch_number">田地 %1$d</string>
     <!-- Translator note: %1$d = wins, %2$d = losses -->
     <string name="format_arena_record">%1$d 胜 / %2$d 负</string>
     <!-- Translator note: %1$s = skill display name, %2$d = level number -->
@@ -245,8 +245,8 @@
         <item quantity="other">%1$d hours</item>
     </plurals>
     <plurals name="plural_patches">
-        <item quantity="one">%1$d patch</item>
-        <item quantity="other">%1$d patches</item>
+        <item quantity="one">%1$d 田地</item>
+        <item quantity="other">%1$d 田地</item>
     </plurals>
     <plurals name="plural_kills">
         <item quantity="one">%1$d kill</item>
@@ -267,8 +267,8 @@
     <string name="error_level_too_low">你的 %1$s 等级不足。</string>
     <!-- Translator note: %1$s = item display name -->
     <string name="error_inventory_required">你需要 %1$s 才能进行此操作。</string>
-    <string name="error_patch_occupied">这块地已经种了作物。</string>
-    <string name="error_patch_empty">这块地是空的。</string>
+    <string name="error_patch_occupied">这块田地已经种了作物。</string>
+    <string name="error_patch_empty">这块田地是空的。</string>
     <string name="error_crop_not_ready">作物还未成熟。</string>
     <string name="error_quest_active">你已有正在进行的任务。</string>
     <string name="error_quest_requirements_not_met">你未满足此任务的要求。</string>
@@ -1813,7 +1813,7 @@
     <string name="monument_stage_3_name">雕像</string>
     <string name="monument_stage_4_name">镀金</string>
     <string name="monument_stage_5_name">永恒之火</string>
-    <string name="monument_stage_1_reward">+1 农田</string>
+    <string name="monument_stage_1_reward">+1 田地</string>
     <string name="monument_stage_2_reward">解锁每日纪念碑触摸</string>
     <string name="monument_stage_3_reward">教堂祝福延长6小时</string>
     <string name="monument_stage_4_reward" formatted="false">+1 action queue slot, and the Golden Goose takes roost (+10% coin drops)</string> <!-- untranslated -->
@@ -2113,7 +2113,7 @@
     <string name="title_seasonal_champion_of">%1$s 冠军</string>
     <string name="title_seasonal_requirement">完成 %1$s 季节活动</string>
     <string name="home_welcome_greeting">欢迎回来，</string>
-    <string name="home_welcome_name">欢迎回来，%1$s</string>
+    <string name="home_welcome_name">%1$s</string>
     <string name="home_welcome_title">%1$s！</string>
 
     <!-- Pet names and descriptions -->
