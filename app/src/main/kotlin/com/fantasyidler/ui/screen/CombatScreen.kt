@@ -94,7 +94,6 @@ import com.fantasyidler.ui.theme.ScaledSheetContent
 import com.fantasyidler.ui.viewmodel.CombatViewModel
 import com.fantasyidler.ui.viewmodel.InventoryViewModel
 import com.fantasyidler.ui.viewmodel.combatLevelFrom
-import com.fantasyidler.ui.viewmodel.slotDisplayName
 import com.fantasyidler.ui.viewmodel.xpProgressFraction
 import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.formatXp
@@ -668,7 +667,7 @@ private fun CombatGearTab(
         item {
             val weaponSlot = activeWeaponSlot ?: EquipSlot.WEAPON_ATK
             EquipSlotRow(
-                slotName  = slotDisplayName(context, weaponSlot),
+                slotName  = GameStrings.slotName(context, weaponSlot),
                 itemKey   = equipped[weaponSlot],
                 xpLabel   = weaponXpLabel(allEquipment[equipped[weaponSlot]]?.combatStyle, context),
                 equipment = allEquipment[equipped[weaponSlot]],
@@ -706,7 +705,7 @@ private fun CombatGearTab(
         item { SlotSectionHeader(stringResource(R.string.profile_combat_gear)) }
         items(EquipSlot.ARMOR_SLOTS) { slot ->
             EquipSlotRow(
-                slotName  = slotDisplayName(context, slot),
+                slotName  = GameStrings.slotName(context, slot),
                 itemKey   = equipped[slot],
                 equipment = allEquipment[equipped[slot]],
                 heirloomXp = heirloomXp,
