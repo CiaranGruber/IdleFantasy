@@ -735,6 +735,7 @@ def gen_getting_started_wiki() -> str:
         page_types_link=link("wiki_page_types"),
         table_of_contents="{table_of_contents}",
         editing_a_page_link=github_pull_request_link(1353, "Guide: Fixing an out-of-date wiki page"),
+        adding_quest_icons_page=github_pull_request_link(1669, "PR: Adding the quest icons page to the wiki"),
         game_contribution_link=link("getting_started_game", "how to contribute to the game")
     )
     return page.format(table_of_contents=f"## Table of contents\n\n{gen_table_of_contents(page)}")
