@@ -71,6 +71,7 @@ def add_static_pages():
         ]],
         ["Skills", False, [
             ("skills", PageInfo("Skills", "Skills.md", gen_skills)),
+            ("quest_categories", PageInfo("Quest Categories", "QuestCategories.md", gen_quest_categories)),
             ["Gathering", False, [
                 ("mining", PageInfo(skill_name("mining"), "Mining.md", gen_mining, skill_icon_path("mining"))),
                 ("fishing", PageInfo(skill_name("fishing"), "Fishing.md", gen_fishing, skill_icon_path("fishing"))),
@@ -817,6 +818,17 @@ def gen_skills() -> str:
     return get_template("skills/skills").format(
         skills_table=table(["Skill", "Category", "Description"], rows),
         prestige_race_tables=gen_prestige_race_tables(),
+    )
+
+
+def gen_quest_categories() -> str:
+    # Todo: Quest categories (names + emoji) are currently hardcoded in the template, mirroring
+    #  the QuestCategory enum in CraftingViewModel.kt. These should be extracted into XML/JSON
+    #  data files (as with other lists) so the wiki can generate this table from game data.
+    return get_template("skills/quest_categories").format(
+        skills_link=link("skills"),
+        guilds_link=link("guilds"),
+        quests_link=link("quests"),
     )
 
 
