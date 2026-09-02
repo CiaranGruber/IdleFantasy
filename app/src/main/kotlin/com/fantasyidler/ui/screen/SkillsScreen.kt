@@ -1,5 +1,6 @@
 package com.fantasyidler.ui.screen
 
+import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -81,6 +82,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import com.fantasyidler.ui.screen.MercantileSheetContent
 import com.fantasyidler.ui.viewmodel.CraftingViewModel
 import com.fantasyidler.ui.viewmodel.SheetQuestSource
 import com.fantasyidler.ui.viewmodel.SheetQuestSummary
@@ -449,8 +451,8 @@ fun SkillActivitySheet(
                     is SheetState.Thieving -> ThievingSheet(
                         guildDailyButton  = dailyBanner,
                         npcs              = sheet.npcs,
-                        thievingLevel     = state.skillLevels[com.fantasyidler.data.model.Skills.THIEVING] ?: 1,
-                        currentXp         = state.skillXp[com.fantasyidler.data.model.Skills.THIEVING] ?: 0L,
+                        thievingLevel     = state.skillLevels[Skills.THIEVING] ?: 1,
+                        currentXp         = state.skillXp[Skills.THIEVING] ?: 0L,
                         isStarting        = state.startingSession,
                         hasActiveSession  = state.anySessionActive,
                         isQueueFull       = state.queueSize >= state.maxQueueSize,
@@ -639,7 +641,7 @@ private fun GuildDailySheetBanner(
 private fun SkillsTabContent(
     state: SkillsUiState,
     viewModel: SkillsViewModel,
-    context: android.content.Context,
+    context: Context,
     listState: LazyListState = rememberLazyListState(),
     onNavigateToSlayer: () -> Unit = {},
     onNavigateToBoneAltar: () -> Unit = {},

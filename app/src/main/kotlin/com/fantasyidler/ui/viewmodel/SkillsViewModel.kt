@@ -50,9 +50,12 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
+import kotlin.random.Random
 import javax.inject.Inject
 import android.content.Context
 import com.fantasyidler.R
+import com.fantasyidler.data.model.OwnedPet
+import com.fantasyidler.data.model.QuestProgress
 import com.fantasyidler.util.GameStrings
 import dagger.hilt.android.qualifiers.ApplicationContext
 
@@ -830,7 +833,7 @@ class SkillsViewModel @Inject constructor(
                 try {
                     val result = simulate()
                     val framesJson = json.encodeToString(
-                        json.serializersModule.serializer<List<com.fantasyidler.data.model.SessionFrame>>(),
+                        json.serializersModule.serializer<List<SessionFrame>>(),
                         result.frames,
                     )
                     sessionRepo.startSession(
@@ -924,7 +927,7 @@ class SkillsViewModel @Inject constructor(
     fun abandonSession() {
         viewModelScope.launch {
             val session = sessionRepo.getActiveSession() ?: return@launch
-            val frames: List<com.fantasyidler.data.model.SessionFrame> = json.decodeFromString(session.frames)
+            val frames: List<SessionFrame> = json.decodeFromString(session.frames)
             if (session.skillName == Skills.MERCANTILE) {
                 val coinCost = gameData.tradeRoutes.firstOrNull { it.id == session.activityKey }?.coinCost?.toLong() ?: 0L
                 if (coinCost > 0) playerRepo.addCoins(coinCost)
@@ -1000,7 +1003,7 @@ class SkillsViewModel @Inject constructor(
 
     private fun computeItemFills(
         itemKey: String,
-        questProgress: Map<String, com.fantasyidler.data.model.QuestProgress>,
+        questProgress: Map<String, QuestProgress>,
         flags: PlayerFlags,
     ): List<QuestFillSuggestion> {
         val fills = mutableListOf<QuestFillSuggestion>()
@@ -1060,7 +1063,7 @@ class SkillsViewModel @Inject constructor(
     }
 
     private fun computePrayerFills(
-        questProgress: Map<String, com.fantasyidler.data.model.QuestProgress>,
+        questProgress: Map<String, QuestProgress>,
         flags: PlayerFlags,
     ): List<QuestFillSuggestion> {
         val fills = mutableListOf<QuestFillSuggestion>()
@@ -1123,7 +1126,7 @@ class SkillsViewModel @Inject constructor(
     )
 
     private fun computeSheetQuests(
-        questProgress: List<com.fantasyidler.data.model.QuestProgress>,
+        questProgress: List<QuestProgress>,
         flags: PlayerFlags,
         skillLevels: Map<String, Int>,
     ): Map<String, List<SheetQuestSummary>> {
@@ -1248,7 +1251,7 @@ class SkillsViewModel @Inject constructor(
     } ?: 1
 
     private fun computeActiveQuests(
-        questProgress: List<com.fantasyidler.data.model.QuestProgress>,
+        questProgress: List<QuestProgress>,
         flags: PlayerFlags,
         inventory: Map<String, Int>,
     ): Map<String, List<QuestIndicator>> {
@@ -1418,7 +1421,7 @@ class SkillsViewModel @Inject constructor(
     private fun petBoostFor(petsJson: String, skillKey: String, ironman: Boolean = false): Int {
         if (ironman) return 0
         val pets = try {
-            json.decodeFromString<List<com.fantasyidler.data.model.OwnedPet>>(petsJson)
+            json.decodeFromString<List<OwnedPet>>(petsJson)
         } catch (_: Exception) {
             return 0
         }
@@ -1432,7 +1435,7 @@ class SkillsViewModel @Inject constructor(
         if (saveChance <= 0f) return totalQty
         var toConsume = 0
         for (u in 0 until totalQty) {
-            if (kotlin.random.Random.nextFloat() >= saveChance) toConsume++
+            if (Random.nextFloat() >= saveChance) toConsume++
         }
         return toConsume
     }

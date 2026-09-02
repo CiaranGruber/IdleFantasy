@@ -1,5 +1,7 @@
 package com.fantasyidler.ui.screen
 
+import android.content.Context
+import android.text.format.DateUtils
 import androidx.compose.foundation.background
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -77,6 +79,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
+import com.fantasyidler.data.model.BulkSellReceipt
 import com.fantasyidler.ui.viewmodel.BulkSellPreview
 import com.fantasyidler.ui.viewmodel.ShopEntry
 import com.fantasyidler.ui.viewmodel.ShopTransaction
@@ -86,7 +89,7 @@ import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.formatCoins
 import com.fantasyidler.util.formatQuantity
 
-private fun localizedCategory(context: android.content.Context, raw: String): String {
+private fun localizedCategory(context: Context, raw: String): String {
     val resId = when (raw) {
         "Ores & Materials" -> R.string.shop_cat_ores_and_materials
         "Logs & Wood"      -> R.string.shop_cat_logs_and_wood
@@ -361,7 +364,7 @@ private fun SellList(
     inventory: Map<String, Int>,
     equipped: Map<String, String?>,
     lockedItems: Set<String>,
-    context: android.content.Context,
+    context: Context,
     compactNumbers: Boolean = false,
     keepOneOfEach: Boolean = false,
     priceFor: (String) -> Int,
@@ -371,7 +374,7 @@ private fun SellList(
     onSellJunk: () -> Unit,
     onSellOldEquipment: () -> Unit,
     onKeepOneChange: (Boolean) -> Unit,
-    receipts: List<com.fantasyidler.data.model.BulkSellReceipt> = emptyList(),
+    receipts: List<BulkSellReceipt> = emptyList(),
 ) {
     var query by remember { mutableStateOf("") }
     var selectedCategory by remember { mutableStateOf<String?>(null) }
@@ -392,7 +395,7 @@ private fun SellList(
                         receipts.forEachIndexed { index, receipt ->
                             if (index > 0) Spacer(Modifier.height(12.dp))
                             Text(
-                                text  = android.text.format.DateUtils.getRelativeTimeSpanString(receipt.atMs).toString(),
+                                text  = DateUtils.getRelativeTimeSpanString(receipt.atMs).toString(),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )

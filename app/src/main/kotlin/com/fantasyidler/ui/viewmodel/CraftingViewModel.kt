@@ -1,19 +1,18 @@
 package com.fantasyidler.ui.viewmodel
 
-import com.fantasyidler.util.withAppLocale
-
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.fantasyidler.R
 import com.fantasyidler.data.model.EquipSlot
+import com.fantasyidler.data.model.OwnedPet
 import com.fantasyidler.data.model.PlayerFlags
-import com.fantasyidler.repository.BoostRepository
-import com.fantasyidler.repository.ChurchRepository
-import com.fantasyidler.repository.blessingPrayerCapeMult
+import com.fantasyidler.data.model.QuestProgress
 import com.fantasyidler.data.model.QueuedAction
 import com.fantasyidler.data.model.SessionFrame
 import com.fantasyidler.data.model.Skills
-import com.fantasyidler.data.json.HerbloreRecipe
-import com.fantasyidler.data.model.QuestProgress
+import com.fantasyidler.repository.BoostRepository
+import com.fantasyidler.repository.ChurchRepository
 import com.fantasyidler.repository.DailyQuestRepository
 import com.fantasyidler.repository.GameDataRepository
 import com.fantasyidler.repository.GuildRepository
@@ -23,24 +22,25 @@ import com.fantasyidler.repository.SeasonalEventRepository
 import com.fantasyidler.repository.SessionRepository
 import com.fantasyidler.repository.TownRepository
 import com.fantasyidler.repository.WeeklyQuestRepository
+import com.fantasyidler.repository.blessingPrayerCapeMult
 import com.fantasyidler.simulator.SkillSimulator
 import com.fantasyidler.simulator.XpTable
+import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.craftDurationEfficiency
-import kotlinx.serialization.serializer
+import com.fantasyidler.util.withAppLocale
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import com.fantasyidler.util.GameStrings
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.serializer
+import kotlin.random.Random
 import javax.inject.Inject
-import android.content.Context
-import com.fantasyidler.R
-import dagger.hilt.android.qualifiers.ApplicationContext
 
 // ---------------------------------------------------------------------------
 // Quest fill suggestion (shown in CraftSheet when quests match the recipe)
@@ -396,7 +396,7 @@ class CraftingViewModel @Inject constructor(
     private fun petBoostFor(petsJson: String, skillKey: String, ironman: Boolean = false): Int {
         if (ironman) return 0
         val pets = try {
-            json.decodeFromString<List<com.fantasyidler.data.model.OwnedPet>>(petsJson)
+            json.decodeFromString<List<OwnedPet>>(petsJson)
         } catch (_: Exception) {
             return 0
         }
@@ -491,7 +491,7 @@ class CraftingViewModel @Inject constructor(
             val petDropKey = if (recipe.skillName == Skills.COOKING) null
                 else gameData.pets.values.firstOrNull { it.boostedSkill == recipe.skillName }?.id
             val petDropped = petDropKey != null &&
-                (0 until 60).any { kotlin.random.Random.nextDouble() < 1.0 / 1000.0 }
+                (0 until 60).any { Random.nextDouble() < 1.0 / 1000.0 }
             val craftedItems = mutableMapOf(outputKey to recipe.outputQty * qty)
             if (petDropped) craftedItems[petDropKey!!] = 1
             val frames = listOf(
@@ -800,7 +800,7 @@ class CraftingViewModel @Inject constructor(
             val (item, totalQty) = entries[i]
             var toConsume = 0
             for (u in 0 until totalQty) {
-                if (kotlin.random.Random.nextFloat() >= saveChance) toConsume++
+                if (Random.nextFloat() >= saveChance) toConsume++
             }
             if (toConsume > 0) result[item] = toConsume
         }
@@ -811,7 +811,7 @@ class CraftingViewModel @Inject constructor(
         if (saveChance <= 0f) return totalQty
         var toConsume = 0
         for (u in 0 until totalQty) {
-            if (kotlin.random.Random.nextFloat() >= saveChance) toConsume++
+            if (Random.nextFloat() >= saveChance) toConsume++
         }
         return toConsume
     }

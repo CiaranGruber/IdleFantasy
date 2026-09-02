@@ -90,6 +90,7 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -269,7 +270,7 @@ fun HomeScreen(
                         summary.noteLines.forEach { note ->
                             Text(
                                 text = note,
-                                style = MaterialTheme.typography.bodySmall.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
+                                style = MaterialTheme.typography.bodySmall.copy(fontStyle = FontStyle.Italic),
                                 color = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.padding(vertical = 2.dp),
                             )

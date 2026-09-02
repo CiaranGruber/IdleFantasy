@@ -1,5 +1,6 @@
 package com.fantasyidler.ui.screen
 
+import android.graphics.Color as AndroidColor
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
@@ -397,7 +398,7 @@ private fun ColorPickerSheet(
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val initialHsv = remember(initial) {
-        FloatArray(3).also { android.graphics.Color.colorToHSV(initial.toArgb(), it) }
+        FloatArray(3).also { AndroidColor.colorToHSV(initial.toArgb(), it) }
     }
     var hue by remember { mutableStateOf(initialHsv[0]) }
     var sat by remember { mutableStateOf(initialHsv[1]) }
@@ -472,7 +473,7 @@ private fun ColorPickerSheet(
                     // Only complete 6- or 8-digit values apply; partial input while
                     // typing must never land as a garbage or transparent colour.
                     val parsed = ColorContrast.parseHexColorOrNull(text)?.let { Color(it) } ?: return
-                    val hsv = FloatArray(3).also { android.graphics.Color.colorToHSV(parsed.toArgb(), it) }
+                    val hsv = FloatArray(3).also { AndroidColor.colorToHSV(parsed.toArgb(), it) }
                     hue = hsv[0]; sat = hsv[1]; value = hsv[2]
                     onPick(parsed)
                 }

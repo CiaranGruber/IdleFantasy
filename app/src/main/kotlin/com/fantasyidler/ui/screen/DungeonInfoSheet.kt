@@ -133,7 +133,7 @@ internal fun DungeonInfoSheet(
     onDismiss: () -> Unit,
 ) {
     val context    = LocalContext.current
-    var tappedEnemyKey by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf<String?>(null) }
+    var tappedEnemyKey by remember { mutableStateOf<String?>(null) }
 
     tappedEnemyKey?.let { enemyKey ->
         val enemy = enemies[enemyKey]
