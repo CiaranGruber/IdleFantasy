@@ -720,6 +720,7 @@
     <string name="quest_legend_title">Iconos de misiones</string>
     <string name="quest_legend_daily">Misión diaria</string>
     <string name="quest_legend_weekly">Misión semanal</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Diaria del gremio</string>
     <string name="quest_legend_guild">Misión del gremio</string>
     <string name="quest_legend_quest">Misión</string>

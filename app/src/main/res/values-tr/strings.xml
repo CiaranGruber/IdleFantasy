@@ -720,6 +720,7 @@
     <string name="quest_legend_title">Görev simgeleri</string>
     <string name="quest_legend_daily">Günlük görev</string>
     <string name="quest_legend_weekly">Haftalık görev</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Lonca günlük görevi</string>
     <string name="quest_legend_guild">Lonca görevi</string>
     <string name="quest_legend_quest">Görev</string>

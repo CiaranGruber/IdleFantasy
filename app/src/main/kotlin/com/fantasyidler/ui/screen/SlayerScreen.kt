@@ -127,9 +127,10 @@ fun SlayerScreen(
 
     if (showQuestsDialog) {
         val sections = listOf(
-            SheetQuestSource.GUILD  to R.string.guild_daily_button,
-            SheetQuestSource.DAILY  to R.string.label_daily,
-            SheetQuestSource.WEEKLY to R.string.label_weekly,
+            SheetQuestSource.GUILD    to R.string.guild_daily_button,
+            SheetQuestSource.DAILY    to R.string.label_daily,
+            SheetQuestSource.WEEKLY   to R.string.label_weekly,
+            SheetQuestSource.SEASONAL to R.string.seasonal_bounty_board_title,
         ).mapNotNull { (source, labelRes) ->
             quests.filter { it.source == source }.takeIf { it.isNotEmpty() }?.let { labelRes to it }
         }
@@ -157,17 +158,21 @@ fun SlayerScreen(
                             }
                             Column {
                                 Text(
-                                    text       = GameStrings.questName(context, quest.questId, quest.questName),
+                                    text       = when (quest.source) {
+                                        SheetQuestSource.SEASONAL -> GameStrings.seasonalBountyName(context, quest.questId, quest.questName)
+                                        else                      -> GameStrings.questName(context, quest.questId, quest.questName)
+                                    },
                                     style      = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.SemiBold,
                                 )
                                 Spacer(Modifier.height(2.dp))
                                 Text(
                                     text  = when (quest.source) {
-                                        SheetQuestSource.GUILD  -> localizedQuestDesc(quest.type, quest.target, quest.amount, quest.guild)
-                                        SheetQuestSource.DAILY  -> buildDailyObjective(context, quest.guild, quest.target, quest.amount, quest.description)
-                                        SheetQuestSource.WEEKLY -> GameStrings.questDesc(context, quest.questId)
+                                        SheetQuestSource.GUILD    -> localizedQuestDesc(quest.type, quest.target, quest.amount, quest.guild)
+                                        SheetQuestSource.DAILY    -> buildDailyObjective(context, quest.guild, quest.target, quest.amount, quest.description)
+                                        SheetQuestSource.WEEKLY   -> GameStrings.questDesc(context, quest.questId)
                                             .takeIf { it.isNotBlank() } ?: quest.description
+                                        SheetQuestSource.SEASONAL -> GameStrings.seasonalBountyHint(context, quest.questId, quest.description)
                                     },
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,

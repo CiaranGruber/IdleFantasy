@@ -56,6 +56,20 @@ class SeasonalEventRepository @Inject constructor(
         }
     }
 
+    /** Returns currently active bounty tasks (excluding slots on cooldown), or empty if no event or bounty pillar is active. */
+    fun getActiveBounties(
+        flags: PlayerFlags,
+        inventory: Map<String, Int> = emptyMap(),
+        now: Long = System.currentTimeMillis(),
+    ): List<SeasonalBountyTaskWithProgress> {
+        val event = activeEvent() ?: return emptyList()
+        if ("bounty" !in event.pillars) return emptyList()
+        return bountyTasksWithProgress(event, flags, inventory).filter { bp ->
+            val cooldown = bp.cooldownUntilMs
+            cooldown == null || now >= cooldown
+        }
+    }
+
     // -------------------------------------------------------------------------
     // Bounty Board — 3 slots (one per task type), each independently rotating to
     // a new same-type task [SeasonalEventData.bountyRotationMs] after it's claimed.

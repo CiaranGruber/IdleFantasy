@@ -712,6 +712,7 @@
     <string name="quest_legend_title">Ikon quest</string>
     <string name="quest_legend_daily">Quest harian</string>
     <string name="quest_legend_weekly">Quest mingguan</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Harian guild</string>
     <string name="quest_legend_guild">Quest guild</string>
     <string name="quest_legend_quest">Quest</string> <!-- untranslated -->

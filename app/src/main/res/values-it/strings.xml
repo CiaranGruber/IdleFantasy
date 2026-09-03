@@ -720,6 +720,7 @@
     <string name="quest_legend_title">Icone delle missioni</string>
     <string name="quest_legend_daily">Missione giornaliera</string>
     <string name="quest_legend_weekly">Missione settimanale</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Giornaliera di gilda</string>
     <string name="quest_legend_guild">Missione di gilda</string>
     <string name="quest_legend_quest">Missione</string>

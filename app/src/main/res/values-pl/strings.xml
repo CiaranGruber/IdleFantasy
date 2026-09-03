@@ -736,6 +736,7 @@
     <string name="quest_legend_title">Ikony zadań</string>
     <string name="quest_legend_daily">Zadanie dzienne</string>
     <string name="quest_legend_weekly">Zadanie tygodniowe</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Dzienne gildii</string>
     <string name="quest_legend_guild">Zadanie gildii</string>
     <string name="quest_legend_quest">Zadanie</string>
