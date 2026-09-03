@@ -51,6 +51,7 @@ import com.fantasyidler.data.json.EquipmentData
 import com.fantasyidler.data.json.SpellData
 import com.fantasyidler.data.model.EquipSlot
 import com.fantasyidler.ui.viewmodel.CombatViewModel.Companion.MAX_DUNGEON_REPEAT_COUNT
+import com.fantasyidler.ui.viewmodel.combatLevelFrom
 import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.toTitleCase
 
@@ -121,7 +122,7 @@ internal fun DungeonInfoSheet(
             )
         }
     }
-    val combatLvl  = combatLevel(skillLevels)
+    val combatLvl  = combatLevelFrom(skillLevels)
     val canEnter   = combatLvl >= dungeon.recommendedLevel - UNLOCK_TOLERANCE
     val combatStyle = when (equippedWeapon?.combatStyle) {
         "ranged"   -> "ranged"
