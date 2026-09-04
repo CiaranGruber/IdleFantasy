@@ -53,6 +53,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
+import com.fantasyidler.data.model.CombatGuilds
 import com.fantasyidler.data.model.Skills
 import com.fantasyidler.repository.GuildDailyWithProgress
 import com.fantasyidler.repository.GuildQuestWithProgress
@@ -66,6 +67,8 @@ import com.fantasyidler.util.formatCoins
  */
 private val NAVIGABLE_SKILL_GUILDS = setOf(
     Skills.SMITHING, Skills.COOKING, Skills.FLETCHING, Skills.CRAFTING, Skills.HERBLORE, Skills.CONSTRUCTION,
+    Skills.SLAYER, Skills.PRAYER, Skills.MERCANTILE, Skills.FARMING,
+    CombatGuilds.ARCHERS, CombatGuilds.MAGES, CombatGuilds.WARRIORS,
 )
 
 @Composable

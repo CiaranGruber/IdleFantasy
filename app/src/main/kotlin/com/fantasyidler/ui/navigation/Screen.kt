@@ -50,6 +50,7 @@ sealed class Screen(
         selectedIcon = Icons.Filled.Shield,
     ) {
         const val gearRoute = "combat/gear"
+        const val dungeonsRoute = "combat/dungeons"
         const val presetDungeonRoute = "combat/preset_dungeon/{dungeonKey}"
         fun presetDungeonRoute(key: String) = "combat/preset_dungeon/$key"
         const val presetBossRoute = "combat/preset_boss/{bossKey}"

@@ -104,6 +104,7 @@ fun CombatScreen(
     viewModel:          CombatViewModel    = hiltViewModel(),
     inventoryVm:        InventoryViewModel = hiltViewModel(),
     startOnGear:        Boolean            = false,
+    startOnDungeons:    Boolean            = false,
     initialDungeonKey:  String?            = null,
     initialBossKey:     String?            = null,
     onNavigateToTower:  () -> Unit         = {},
@@ -170,7 +171,7 @@ fun CombatScreen(
         else
             stringResource(R.string.label_skills)
         if (combatSession != null) {
-            var savedPage by rememberSaveable { mutableIntStateOf(if (startOnGear) 2 else 0) }
+            var savedPage by rememberSaveable { mutableIntStateOf(if (startOnGear) 2 else if (startOnDungeons) 1 else 0) }
             val pagerState = rememberPagerState(initialPage = savedPage, pageCount = { 4 })
             LaunchedEffect(Unit) {
                 if (pagerState.currentPage != savedPage) pagerState.scrollToPage(savedPage)

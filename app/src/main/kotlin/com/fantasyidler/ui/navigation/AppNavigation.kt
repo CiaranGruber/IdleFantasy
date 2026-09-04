@@ -43,8 +43,9 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.fantasyidler.data.model.CombatGuilds
+import com.fantasyidler.data.model.Skills
 import com.fantasyidler.notification.SessionNotificationManager
 import com.fantasyidler.ui.screen.AppBannerHost
 import com.fantasyidler.ui.screen.BoneAltarScreen
@@ -272,6 +273,7 @@ fun AppNavigation(
                 )
             }
             paneComposable(Screen.Combat.gearRoute) { CombatScreen(startOnGear = true) }
+            paneComposable(Screen.Combat.dungeonsRoute) { CombatScreen(startOnDungeons = true) }
             paneComposable(
                 route     = Screen.Combat.presetDungeonRoute,
                 arguments = listOf(navArgument("dungeonKey") { type = NavType.StringType }),
@@ -374,7 +376,13 @@ fun AppNavigation(
             paneComposable(Screen.GuildDetail.route) { entry ->
                 GuildDetailScreen(
                     onBack             = { if (navController.currentBackStackEntry == entry) navController.popBackStack() },
-                    onNavigateToSkill  = { skill -> navController.navigate(Screen.Skills.routeWithSkill(skill)) },
+                    onNavigateToSkill  = { skill ->
+                        when (skill) {
+                            Skills.SLAYER -> navController.navigate(Screen.Slayer.route)
+                            in CombatGuilds.ALL -> navController.navigate(Screen.Combat.dungeonsRoute)
+                            else -> navController.navigate(Screen.Skills.routeWithSkill(skill))
+                        }
+                    },
                 )
             }
             paneComposable(Screen.Church.route) { entry ->
