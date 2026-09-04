@@ -71,7 +71,7 @@ import com.fantasyidler.util.formatDurationMs
 private val TIER_NUMERALS = listOf("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")
 
 private fun nodeDisplayName(context: Context, skill: String, pathKey: String, tier: Int): String =
-    "${GameStrings.prestigePathDisplayName(context, skill, pathKey)} ${TIER_NUMERALS.getOrElse(tier - 1) { "$tier" }}"
+    "${GameStrings.prestigePathName(context, skill, pathKey)} ${TIER_NUMERALS.getOrElse(tier - 1) { "$tier" }}"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -411,7 +411,7 @@ private fun PathBranch(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text  = GameStrings.prestigePathDisplayName(context, skill, path.key),
+                text  = GameStrings.prestigePathName(context, skill, path.key),
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
                 color = if (racesLock != null && playerRace !in racesLock)
