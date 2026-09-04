@@ -969,6 +969,7 @@
     <string name="guild_no_dailies">Completa missioni della gilda per sbloccare le richieste del giorno.</string>
     <string name="guild_dailies_all_done">Hai completato tutte le richieste giornaliere. Torna dopo l\'orario di ripristino.</string>
     <string name="guild_contribute_inventory">Contribuisci con i tuoi oggetti (%1$d disponibile)</string>
+    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s per la %4$s.</string>
     <string name="guild_quest_desc_kill">Sconfiggi %1$d nemici in combattimento %2$s.</string>
     <string name="guild_quest_desc_prayer">Seppellisci %1$d ossa per la %2$s.</string>

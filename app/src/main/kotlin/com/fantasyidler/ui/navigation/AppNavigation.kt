@@ -227,6 +227,17 @@ fun AppNavigation(
                     onNavigateToPrestige  = { skill -> navController.navigate(Screen.PrestigeDetail.createRoute(skill)) },
                 )
             }
+            paneComposable(
+                route     = Screen.Skills.openSkillRoute,
+                arguments = listOf(navArgument("openSkill") { type = NavType.StringType }),
+            ) { entry ->
+                SkillsScreen(
+                    openSkill             = entry.arguments?.getString("openSkill"),
+                    onNavigateToSlayer    = { navController.navigate(Screen.Slayer.route) },
+                    onNavigateToBoneAltar = { navController.navigate(Screen.BoneAltar.route) },
+                    onNavigateToPrestige  = { skill -> navController.navigate(Screen.PrestigeDetail.createRoute(skill)) },
+                )
+            }
             paneComposable(Screen.Farming.route) { entry ->
                 FarmingScreen(onBack = { if (navController.currentBackStackEntry == entry) navController.popBackStack() })
             }
@@ -362,7 +373,8 @@ fun AppNavigation(
             }
             paneComposable(Screen.GuildDetail.route) { entry ->
                 GuildDetailScreen(
-                    onBack = { if (navController.currentBackStackEntry == entry) navController.popBackStack() },
+                    onBack             = { if (navController.currentBackStackEntry == entry) navController.popBackStack() },
+                    onNavigateToSkill  = { skill -> navController.navigate(Screen.Skills.routeWithSkill(skill)) },
                 )
             }
             paneComposable(Screen.Church.route) { entry ->
