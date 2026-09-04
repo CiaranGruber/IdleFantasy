@@ -127,6 +127,7 @@
     <string name="label_ready_to_harvest">Готово к сбору</string>
     <string name="label_empty">Пусто</string>
     <string name="inventory_sort_quantity">Количество</string>
+    <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
 
     <string name="inventory_cat_weapons">Оружие</string>
     <string name="inventory_cat_armour">Броня</string>
@@ -488,6 +489,8 @@
     <string name="settings_source_code">Исходный код</string>
 
     <string name="settings_source_open">Открыть</string>
+    <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+    <string name="settings_discord">Discord</string> <!-- untranslated -->
 
 
 
@@ -756,6 +759,7 @@
 
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">Нет материалов</string>
+    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
 
     <string name="crafting_effects">Эффекты</string>
@@ -810,6 +814,7 @@
     <string name="character_race_elf">Эльф</string>
     <string name="character_race_dwarf">Дварф</string>
     <string name="character_race_orc">Орк</string>
+    <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
 
     <string name="character_race_gnome">Гном</string>
 
@@ -1807,6 +1812,7 @@
     <string name="bonus_coin_return">+%1$d%% возврат монет</string>
     <string name="bonus_tower">Башня</string>
     <string name="bonus_builder_discount_detail" formatted="false">Скидка 0.5% на модернизацию здания каждый уровень</string>
+    <string name="bonus_xp">+%1$d%% XP</string> <!-- untranslated -->
 
     <string name="bonus_coin_drops">+%1$d%% выпадения монет</string>
     <string name="bonus_hp">+%1$d HP</string> <!-- untranslated -->

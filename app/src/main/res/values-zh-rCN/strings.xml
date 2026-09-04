@@ -127,6 +127,7 @@
     <string name="label_ready_to_harvest">可以收获</string>
     <string name="label_empty">空</string>
     <string name="inventory_sort_quantity">数量</string>
+    <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
 
     <string name="inventory_cat_weapons">武器</string>
     <string name="inventory_cat_armour">护甲</string>
@@ -472,6 +473,8 @@
     <string name="settings_source_code">源代码</string>
 
     <string name="settings_source_open">打开</string>
+    <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+    <string name="settings_discord">Discord</string> <!-- untranslated -->
 
 
 
@@ -738,6 +741,7 @@
 
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">材料不足</string>
+    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
 
     <string name="crafting_effects">效果</string>
@@ -792,6 +796,7 @@
     <string name="character_race_elf">精灵</string>
     <string name="character_race_dwarf">矮人</string>
     <string name="character_race_orc">兽人</string>
+    <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
 
     <string name="character_race_gnome">侏儒</string>
 
@@ -1785,6 +1790,7 @@
     <string name="bonus_coin_return">+%1$d%% 金币回报</string>
     <string name="bonus_tower">塔楼</string>
     <string name="bonus_builder_discount_detail" formatted="false">0.5% off building upgrade costs per level</string> <!-- untranslated -->
+    <string name="bonus_xp">+%1$d%% XP</string> <!-- untranslated -->
 
     <string name="bonus_coin_drops">+%1$d%% 金币掉落</string>
     <string name="bonus_hp">+%1$d 生命值</string>

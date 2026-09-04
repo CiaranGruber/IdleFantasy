@@ -460,7 +460,7 @@ private fun RingTossCard(gameState: ActiveGameState, difficulty: Difficulty, vie
                             drawStopIndicator = {},
                             progress         = { position },
                             modifier         = Modifier.fillMaxWidth().height(24.dp).clip(RoundedCornerShape(4.dp)),
-                            color            = if (inZone) Color(0xFFF44336) else MaterialTheme.colorScheme.primary,
+                            color            = if (inZone) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
                             trackColor       = MaterialTheme.colorScheme.surfaceVariant,
                         )
                         // Drawn after the indicator so its opaque track doesn't hide this marker.
@@ -552,7 +552,7 @@ private fun HammerStrikeCard(gameState: ActiveGameState, difficulty: Difficulty,
                         progress   = { power },
                         modifier   = Modifier.fillMaxWidth().height(28.dp).clip(RoundedCornerShape(4.dp)),
                         color      = when {
-                            power >= perfectThreshold -> Color(0xFFF44336)
+                            power >= perfectThreshold -> MaterialTheme.colorScheme.error
                             power >= goodThreshold    -> MaterialTheme.colorScheme.primary
                             else                      -> MaterialTheme.colorScheme.primary
                         },
@@ -561,7 +561,7 @@ private fun HammerStrikeCard(gameState: ActiveGameState, difficulty: Difficulty,
                     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                         Text(stringResource(R.string.carnival_hammer_miss_zone), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Text(stringResource(R.string.carnival_hammer_good_zone), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
-                        Text(stringResource(R.string.carnival_hammer_perfect_zone), style = MaterialTheme.typography.bodySmall, color = Color(0xFFF44336))
+                        Text(stringResource(R.string.carnival_hammer_perfect_zone), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
                     }
                     Button(
                         onClick  = { haptic.performHapticFeedback(HapticFeedbackType.LongPress); viewModel.submitHammerStrike(power) },

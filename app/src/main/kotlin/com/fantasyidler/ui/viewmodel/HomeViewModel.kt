@@ -862,6 +862,7 @@ class HomeViewModel @Inject constructor(
                 loot         = loot,
             )
             acc.dailyKills[session.activityKey] = (acc.dailyKills[session.activityKey] ?: 0) + 1
+            acc.combinedKills[session.activityKey] = (acc.combinedKills[session.activityKey] ?: 0) + 1
             playerRepo.recordWeeklyProgress("boss", session.activityKey, 1)
             guildRepo.recordGuildCombat(mapOf(session.activityKey to 1), frames.lastOrNull()?.combatStyle?.ifEmpty { "melee" } ?: "melee")
             seasonalEventRepo.recordCombat(mapOf(session.activityKey to 1))
@@ -1331,6 +1332,7 @@ class HomeViewModel @Inject constructor(
                             }
                             for ((item, qty) in loot) combinedItems[item] = (combinedItems[item] ?: 0) + qty
                             combinedCoins += coins
+                            combinedKills[session.activityKey] = (combinedKills[session.activityKey] ?: 0) + 1
                         }
                     }
                     "combat" -> {

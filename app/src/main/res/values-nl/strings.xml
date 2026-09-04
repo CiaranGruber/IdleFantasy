@@ -127,6 +127,7 @@
     <string name="label_ready_to_harvest">Klaar om te oogsten</string>
     <string name="label_empty">Leeg</string>
     <string name="inventory_sort_quantity">Hoeveelheid</string>
+    <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
 
     <string name="inventory_cat_weapons">Wapens</string>
     <string name="inventory_cat_armour">Uitrusting</string>
@@ -472,6 +473,8 @@
     <string name="settings_source_code">Broncode</string>
 
     <string name="settings_source_open">Open</string> <!-- untranslated -->
+    <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+    <string name="settings_discord">Discord</string> <!-- untranslated -->
 
 
 
@@ -738,6 +741,7 @@
 
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">Geen materialen</string>
+    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
 
     <string name="crafting_effects">Effecten</string>
@@ -792,6 +796,7 @@
     <string name="character_race_elf">Elf</string> <!-- untranslated -->
     <string name="character_race_dwarf">Dwerg</string>
     <string name="character_race_orc">Ork</string>
+    <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
 
     <string name="character_race_gnome">Gnoom</string>
 
@@ -1785,6 +1790,7 @@
     <string name="bonus_coin_return">+%1$d%% muntteruggave</string>
     <string name="bonus_tower">Tower</string> <!-- untranslated -->
     <string name="bonus_builder_discount_detail" formatted="false">0.5% off building upgrade costs per level</string> <!-- untranslated -->
+    <string name="bonus_xp">+%1$d%% XP</string> <!-- untranslated -->
 
     <string name="bonus_coin_drops">+%1$d%% coin drops</string> <!-- untranslated -->
     <string name="bonus_hp">+%1$d HP</string> <!-- untranslated -->
