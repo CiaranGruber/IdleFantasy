@@ -128,7 +128,6 @@
     <string name="label_empty">Vide</string>
     <string name="inventory_sort_quantity">Quantité</string>
     <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
-
     <string name="inventory_cat_weapons">Armes</string>
     <string name="inventory_cat_armour">Armures</string>
     <string name="inventory_cat_tools">Outils</string>
@@ -477,10 +476,8 @@
 
     <string name="settings_source_open">Ouvrir</string>
     <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+
     <string name="settings_discord">Discord</string> <!-- untranslated -->
-
-
-
 
     <string name="settings_exported_ok">Sauvegarde exportée</string>
     <string name="settings_imported_ok">Sauvegarde importée avec succès</string>
@@ -746,9 +743,8 @@
 
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">Pas de matériaux</string>
-    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
-
+    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
     <string name="crafting_effects">Effets</string>
     <!-- Translator note: %1$d = total XP -->
     <string name="crafting_xp_total">+%1$d XP au total</string>
@@ -802,7 +798,6 @@
     <string name="character_race_dwarf">Nain</string>
     <string name="character_race_orc">Orque</string>
     <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
-
     <string name="character_race_gnome">Gnome</string>
 
     <!-- ===== CharacterCustomizationSheet ===== -->
@@ -1796,7 +1791,6 @@
     <string name="bonus_tower">Tour</string>
     <string name="bonus_builder_discount_detail" formatted="false">0.5% en moins sur le coût d\'amélioration de bâtiments</string>
     <string name="bonus_xp">+%1$d%% XP</string> <!-- untranslated -->
-
     <string name="bonus_coin_drops">+%1$d%% pièces obtenues</string>
     <string name="bonus_hp">+%1$d PV</string>
     <string name="snackbar_added_to_queue">Ajouté à la file d\'attente : %1$s.</string>
