@@ -14,7 +14,7 @@ import kotlinx.coroutines.sync.withLock
 
 data class SeasonalBountyTaskWithProgress(
     val task: SeasonalBountyTaskData,
-    /** For "turn_in" tasks this is how many of the target the player currently holds (capped at the ask). */
+    /** For "turn_in" tasks this is how many of the target the player currently holds. */
     val progress: Int,
     /** Non-null while this slot is waiting for a new task to rotate in after a claim. */
     val cooldownUntilMs: Long?,
@@ -49,7 +49,7 @@ class SeasonalEventRepository @Inject constructor(
             val task = byId[taskId] ?: return@mapIndexedNotNull null
             SeasonalBountyTaskWithProgress(
                 task            = task,
-                progress        = if (task.type == "turn_in") minOf(inventory[task.target] ?: 0, task.amount)
+                progress        = if (task.type == "turn_in") inventory[task.target] ?: 0
                                   else flags.seasonalBountyProgress[taskId] ?: 0,
                 cooldownUntilMs = flags.seasonalBountySlotCooldownUntil[index.toString()],
             )
