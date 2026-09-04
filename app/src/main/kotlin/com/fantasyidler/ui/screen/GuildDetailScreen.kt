@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
@@ -24,6 +26,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Switch
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -44,19 +47,26 @@ import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
+import com.fantasyidler.data.model.Skills
 import com.fantasyidler.repository.GuildDailyWithProgress
 import com.fantasyidler.repository.GuildQuestWithProgress
 import com.fantasyidler.ui.viewmodel.GuildDetailViewModel
 import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.dailyResetClockTime
 import com.fantasyidler.util.formatCoins
+
+/**
+ * TEMP: guilds works for the following and have not figured out how to deal with the other guilds yet.
+ */
+private val NAVIGABLE_SKILL_GUILDS = setOf(
+    Skills.SMITHING, Skills.COOKING, Skills.FLETCHING, Skills.CRAFTING, Skills.HERBLORE, Skills.CONSTRUCTION,
+)
 
 @Composable
 internal fun localizedQuestDesc(type: String, target: String, amount: Int, guild: String): String {
@@ -85,6 +95,7 @@ internal fun localizedQuestDesc(type: String, target: String, amount: Int, guild
 @Composable
 fun GuildDetailScreen(
     onBack: () -> Unit = {},
+    onNavigateToSkill: (String) -> Unit = {},
     viewModel: GuildDetailViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
@@ -177,6 +188,7 @@ fun GuildDetailScreen(
                         hideCompleted = state.hideCompleted,
                         onClaim       = { viewModel.claimGuildQuest(it) },
                         onContribute  = { viewModel.contributeFarmingQuest(it) },
+                        onNavigateToSkill = onNavigateToSkill,
                     )
                     else -> GuildDailiesTab(
                         dailies       = state.dailies,
@@ -186,6 +198,7 @@ fun GuildDetailScreen(
                         hideCompleted = state.hideCompleted,
                         onClaim       = { viewModel.claimGuildDaily(it) },
                         onContribute  = { viewModel.contributeFarmingDaily(it) },
+                        onNavigateToSkill = onNavigateToSkill,
                     )
                 }
             }
@@ -275,6 +288,7 @@ private fun GuildQuestsTab(
     hideCompleted: Boolean = false,
     onClaim: (String) -> Unit,
     onContribute: (String) -> Unit,
+    onNavigateToSkill: (String) -> Unit,
 ) {
     val visibleQuests = if (hideCompleted) quests.filter { !it.completed } else quests
     LazyColumn(Modifier.fillMaxSize()) {
@@ -294,12 +308,13 @@ private fun GuildQuestsTab(
         } else {
             items(visibleQuests, key = { it.quest.id }) { qwp ->
                 GuildQuestRow(
-                    qwp          = qwp,
-                    guildLevel   = guildLevel,
-                    inventoryQty = if (qwp.quest.guild == "farming" && qwp.quest.type == "gather")
+                    qwp             = qwp,
+                    guildLevel      = guildLevel,
+                    inventoryQty    = if (qwp.quest.guild == "farming" && qwp.quest.type == "gather")
                         inventory[qwp.quest.target] ?: 0 else 0,
-                    onClaim      = { onClaim(qwp.quest.id) },
-                    onContribute = { onContribute(qwp.quest.id) },
+                    onClaim         = { onClaim(qwp.quest.id) },
+                    onContribute    = { onContribute(qwp.quest.id) },
+                    onNavigateToSkill = onNavigateToSkill,
                 )
                 HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
             }
@@ -315,6 +330,7 @@ private fun GuildQuestRow(
     inventoryQty: Int = 0,
     onClaim: () -> Unit,
     onContribute: () -> Unit = {},
+    onNavigateToSkill: (String) -> Unit = {},
 ) {
     val locked   = guildLevel < qwp.quest.guildLevelRequired
     val dimColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
@@ -338,7 +354,17 @@ private fun GuildQuestRow(
                 style      = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.SemiBold,
                 color      = if (locked) dimColor else MaterialTheme.colorScheme.onSurface,
+                modifier   = Modifier.weight(1f),
             )
+            if (qwp.quest.guild in NAVIGABLE_SKILL_GUILDS) {
+                TextButton(
+                    onClick        = { onNavigateToSkill(qwp.quest.guild) },
+                    modifier       = Modifier.heightIn(max = 24.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
+                ) {
+                    Text(stringResource(R.string.guild_go_to_skill))
+                }
+            }
         }
         Spacer(Modifier.height(2.dp))
         Text(
@@ -414,6 +440,7 @@ private fun GuildDailiesTab(
     hideCompleted: Boolean = false,
     onClaim: (String) -> Unit,
     onContribute: (String) -> Unit,
+    onNavigateToSkill: (String) -> Unit,
 ) {
     val visibleDailies = if (hideCompleted) dailies.filter { !it.claimed } else dailies
     LazyColumn(Modifier.fillMaxSize()) {
@@ -436,11 +463,12 @@ private fun GuildDailiesTab(
         } else {
             items(visibleDailies, key = { it.template.id }) { dwp ->
                 GuildDailyCard(
-                    dwp          = dwp,
-                    inventoryQty = if (dwp.template.guild == "farming" && dwp.template.type == "gather")
+                    dwp             = dwp,
+                    inventoryQty    = if (dwp.template.guild == "farming" && dwp.template.type == "gather")
                         inventory[dwp.template.target] ?: 0 else 0,
-                    onClaim      = { onClaim(dwp.template.id) },
-                    onContribute = { onContribute(dwp.template.id) },
+                    onClaim         = { onClaim(dwp.template.id) },
+                    onContribute    = { onContribute(dwp.template.id) },
+                    onNavigateToSkill = onNavigateToSkill,
                 )
                 HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
             }
@@ -465,6 +493,7 @@ private fun GuildDailyCard(
     inventoryQty: Int = 0,
     onClaim: () -> Unit,
     onContribute: () -> Unit = {},
+    onNavigateToSkill: (String) -> Unit = {},
 ) {
     val isComplete = dwp.progress >= dwp.template.amount
     val isClaimed  = dwp.claimed
@@ -474,11 +503,23 @@ private fun GuildDailyCard(
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 12.dp),
     ) {
-        Text(
-            text       = GameStrings.questName(LocalContext.current, dwp.template.id, dwp.template.name),
-            style      = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.SemiBold,
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text       = GameStrings.questName(LocalContext.current, dwp.template.id, dwp.template.name),
+                style      = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.SemiBold,
+                modifier   = Modifier.weight(1f),
+            )
+            if (dwp.template.guild in NAVIGABLE_SKILL_GUILDS) {
+                TextButton(
+                    onClick        = { onNavigateToSkill(dwp.template.guild) },
+                    modifier       = Modifier.heightIn(max = 24.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
+                ) {
+                    Text(stringResource(R.string.guild_go_to_skill))
+                }
+            }
+        }
         Spacer(Modifier.height(2.dp))
         Text(
             text  = localizedQuestDesc(dwp.template.type, dwp.template.target, dwp.template.amount, dwp.template.guild),

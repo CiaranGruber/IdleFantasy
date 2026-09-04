@@ -985,6 +985,7 @@
     <string name="guild_no_dailies">Ukończ zadania gildii, by odblokować codzienne prośby.</string>
     <string name="guild_dailies_all_done">Wszystkie dzisiejsze codzienne prośby zostały wykonane. Wróć po codziennym resetowaniu.</string>
     <string name="guild_contribute_inventory">Wnieś z ekwipunku (dostępnych: %1$d)</string>
+    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s dla %4$s.</string>
     <string name="guild_quest_desc_kill">Pokonaj %1$d wrogów, używając walki %2$s.</string>
     <string name="guild_quest_desc_prayer">Zakop %1$d kości dla %2$s.</string>
