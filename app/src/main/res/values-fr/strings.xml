@@ -724,6 +724,7 @@
     <string name="quest_legend_title">Icônes de quêtes</string>
     <string name="quest_legend_daily">Quête quotidienne</string>
     <string name="quest_legend_weekly">Quête hebdomadaire</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Quotidienne de guilde</string>
     <string name="quest_legend_guild">Quête de guilde</string>
     <string name="quest_legend_quest">Quête</string>

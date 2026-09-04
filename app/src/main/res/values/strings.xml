@@ -720,6 +720,7 @@
     <string name="quest_legend_title">Quest icons</string>
     <string name="quest_legend_daily">Daily quest</string>
     <string name="quest_legend_weekly">Weekly quest</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string>
     <string name="quest_legend_guild_daily">Guild daily</string>
     <string name="quest_legend_guild">Guild quest</string>
     <string name="quest_legend_quest">Quest</string>

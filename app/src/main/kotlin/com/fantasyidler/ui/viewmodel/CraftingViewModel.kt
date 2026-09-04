@@ -19,6 +19,7 @@ import com.fantasyidler.repository.GameDataRepository
 import com.fantasyidler.repository.GuildRepository
 import com.fantasyidler.repository.PlayerRepository
 import com.fantasyidler.repository.QuestRepository
+import com.fantasyidler.data.json.SeasonalBountyTaskData
 import com.fantasyidler.repository.SeasonalEventRepository
 import com.fantasyidler.repository.SessionRepository
 import com.fantasyidler.repository.TownRepository
@@ -52,6 +53,7 @@ data class QuestFillSuggestion(val label: String, val qty: Int)
 enum class QuestCategory(val emoji: String) {
     DAILY("⏰"),
     WEEKLY("📅"),
+    SEASONAL("🎯"),
     GUILD_DAILY("⚒️"),
     GUILD("🏰"),
     MAIN("📜"),
@@ -62,7 +64,11 @@ data class QuestIndicator(
     val isCompletable: Boolean,
     /** Source quest id, used to dedupe skill-row counts when one quest spans many activities. */
     val questId: String = "",
-)
+    /** Custom emoji override (e.g. seasonal event's iconEmoji), falling back to category.emoji. */
+    val customEmoji: String? = null,
+) {
+    val emoji: String get() = customEmoji ?: category.emoji
+}
 
 // ---------------------------------------------------------------------------
 // Unified recipe model (normalises all 4 recipe types for display + crafting)
@@ -640,11 +646,10 @@ class CraftingViewModel @Inject constructor(
 
         // Seasonal Event Bounty Board
         seasonalEventRepo.activeEvent()?.let { event ->
-            for (taskProgress in seasonalEventRepo.bountyTasksWithProgress(event, flags)) {
-                if (taskProgress.cooldownUntilMs != null) continue
-                val task = taskProgress.task
+            for (bounty in seasonalEventRepo.getActiveBounties(flags)) {
+                val task = bounty.task
                 if (task.type != "craft" || task.target != recipe.outputKey) continue
-                val remaining = task.amount - taskProgress.progress
+                val remaining = task.amount - bounty.progress
                 if (remaining > 0)
                     fills += QuestFillSuggestion(GameStrings.seasonalEventName(context, event.id, event.displayName), ceilDiv(remaining, recipe.outputQty))
             }
@@ -671,6 +676,12 @@ class CraftingViewModel @Inject constructor(
         val guildPool = gameData.guildDailyPool.associateBy { it.id }
         val activeGuildDailyIds = flags.guildDailyIds.filter { it !in flags.guildDailyClaimed }
         val completedIds = progressById.entries.filter { it.value.completed }.map { it.key }.toSet()
+
+        // 6. Seasonal Event Bounties (pre-computed before loop for performance)
+        val seasonalEmoji = seasonalEventRepo.activeEvent()?.iconEmoji ?: QuestCategory.SEASONAL.emoji
+        val activeSeasonalBounties = seasonalEventRepo.getActiveBounties(flags)
+            .filter { it.task.type == "craft" && it.progress < it.task.amount }
+            .map { it.task to (it.task.amount - it.progress) }
 
         for (recipe in allRecipes) {
             val key = recipe.outputKey
@@ -773,6 +784,14 @@ class CraftingViewModel @Inject constructor(
                 if (matches) {
                     val neededCrafts = ceilDiv(remaining, recipe.outputQty)
                     indicators.add(QuestIndicator(QuestCategory.GUILD_DAILY, max >= neededCrafts))
+                }
+            }
+
+            // 6. Seasonal Event Bounties
+            for ((task, remaining) in activeSeasonalBounties) {
+                if (task.target == key) {
+                    val neededCrafts = ceilDiv(remaining, recipe.outputQty)
+                    indicators.add(QuestIndicator(QuestCategory.SEASONAL, max >= neededCrafts, task.id, seasonalEmoji))
                 }
             }
 

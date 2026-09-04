@@ -723,6 +723,7 @@
     <string name="quest_legend_title">Quest-Symbole</string>
     <string name="quest_legend_daily">Tägliche Quest</string>
     <string name="quest_legend_weekly">Wöchentliche Quest</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Gilden-Tagesquest</string>
     <string name="quest_legend_guild">Gildenquest</string>
     <string name="quest_legend_quest">Aufgabe</string>

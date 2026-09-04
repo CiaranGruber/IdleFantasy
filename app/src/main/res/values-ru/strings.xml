@@ -741,6 +741,7 @@
     <string name="quest_legend_title">Значки заданий</string>
     <string name="quest_legend_daily">Ежедневное задание</string>
     <string name="quest_legend_weekly">Еженедельное задание</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Ежедневное задание гильдии</string>
     <string name="quest_legend_guild">Задание гильдии</string>
     <string name="quest_legend_quest">Задание</string>

@@ -723,6 +723,7 @@
     <string name="quest_legend_title">Ícones de missões</string>
     <string name="quest_legend_daily">Missão diária</string>
     <string name="quest_legend_weekly">Missão semanal</string>
+    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
     <string name="quest_legend_guild_daily">Diária da guilda</string>
     <string name="quest_legend_guild">Missão da guilda</string>
     <string name="quest_legend_quest">Missão</string>
