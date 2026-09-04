@@ -522,7 +522,7 @@ private fun CombatSelectionList(
     onTower: () -> Unit = {},
     onOpenMercCamp: () -> Unit = {},
 ) {
-    val combatLvl = combatLevel(skillLevels)
+    val combatLvl = combatLevelFrom(skillLevels)
 
     LazyColumn(modifier.fillMaxSize()) {
         item { CombatSectionHeader(stringResource(R.string.label_dungeons_tab)) }

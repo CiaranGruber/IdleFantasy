@@ -1702,9 +1702,11 @@ class HomeViewModel @Inject constructor(
 fun combatLevelFrom(levels: Map<String, Int>): Int {
     val atk = levels[Skills.ATTACK]    ?: 1
     val str = levels[Skills.STRENGTH]  ?: 1
+    val ran = levels[Skills.RANGED]    ?: 1
+    val mag = levels[Skills.MAGIC]     ?: 1
     val def = levels[Skills.DEFENSE]   ?: 1
     val hp  = levels[Skills.HITPOINTS] ?: 1
-    return (((atk + str) * 0.325) + (def + hp) * 0.25).toInt().coerceAtLeast(1)
+    return (0.65 * maxOf((atk + str) / 2, ran, mag) + (def + hp) * 0.25).toInt().coerceAtLeast(1)
 }
 
 // Sums only canonical skills: saves from before v1.1.5 can carry a stale "combat"
