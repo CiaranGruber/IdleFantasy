@@ -1706,7 +1706,9 @@ fun combatLevelFrom(levels: Map<String, Int>): Int {
     val mag = levels[Skills.MAGIC]     ?: 1
     val def = levels[Skills.DEFENSE]   ?: 1
     val hp  = levels[Skills.HITPOINTS] ?: 1
-    return (0.65 * maxOf((atk + str) / 2, ran, mag) + (def + hp) * 0.25).toInt().coerceAtLeast(1)
+    // 2.0, not 2: integer division would drop the half level an odd atk+str kept under
+    // the old 0.325 * (atk + str) formula, lowering some melee players' combat level.
+    return (0.65 * maxOf((atk + str) / 2.0, ran.toDouble(), mag.toDouble()) + (def + hp) * 0.25).toInt().coerceAtLeast(1)
 }
 
 // Sums only canonical skills: saves from before v1.1.5 can carry a stale "combat"
