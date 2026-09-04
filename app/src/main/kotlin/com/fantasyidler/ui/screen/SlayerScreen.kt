@@ -1,5 +1,6 @@
 package com.fantasyidler.ui.screen
 
+import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -733,7 +734,7 @@ private fun SlayerWeaponPickerSheet(
     onWeaponSelected: (String) -> Unit,
     onConfirm: () -> Unit,
     onDismiss: () -> Unit,
-    context: android.content.Context,
+    context: Context,
 ) {
     Column(
         modifier = Modifier

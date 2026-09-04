@@ -86,7 +86,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.rememberCoroutineScope
+import com.fantasyidler.data.json.EquipmentData
 import com.fantasyidler.simulator.CarnivalSimulator
+import com.fantasyidler.ui.viewmodel.AppraisalPair
 import com.fantasyidler.ui.viewmodel.CarnivalUiState
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -697,7 +699,7 @@ private fun ItemAppraisalCard(
     gameState: ActiveGameState,
     difficulty: Difficulty,
     quad: AppraisalQuad?,
-    pair: com.fantasyidler.ui.viewmodel.AppraisalPair?,
+    pair: AppraisalPair?,
     viewModel: CarnivalViewModel,
 ) {
     GameCard(R.string.carnival_item_appraisal, R.string.carnival_active_appraisal_desc) {
@@ -984,7 +986,7 @@ private fun HigherOrLowerCard(gameState: ActiveGameState, difficulty: Difficulty
 
 @Composable
 private fun PrizeShopTab(
-    state: com.fantasyidler.ui.viewmodel.CarnivalUiState,
+    state: CarnivalUiState,
     viewModel: CarnivalViewModel,
 ) {
     Column(
@@ -1012,7 +1014,7 @@ private fun PrizeRow(
     prize: CarnivalPrize,
     tickets: Int,
     alreadyOwned: Boolean,
-    equipData: com.fantasyidler.data.json.EquipmentData?,
+    equipData: EquipmentData?,
     onRedeem: () -> Unit,
 ) {
     val context = LocalContext.current

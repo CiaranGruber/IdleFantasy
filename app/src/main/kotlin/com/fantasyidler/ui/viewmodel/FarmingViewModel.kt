@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.fantasyidler.R
 import com.fantasyidler.data.json.CropData
 import com.fantasyidler.data.model.FarmingPatch
+import com.fantasyidler.data.model.PlayerFlags
+import com.fantasyidler.data.model.QuestProgress
 import com.fantasyidler.data.model.Skills
 import com.fantasyidler.repository.FarmingRepository
 import com.fantasyidler.repository.GameDataRepository
@@ -109,7 +111,7 @@ class FarmingViewModel @Inject constructor(
         val levels: Map<String, Int>  = json.decodeFromString(player.skillLevels)
         val xpMap:  Map<String, Long> = json.decodeFromString(player.skillXp)
         val inv:    Map<String, Int>  = json.decodeFromString(player.inventory)
-        val flags = try { json.decodeFromString<com.fantasyidler.data.model.PlayerFlags>(player.flags) } catch (_: Exception) { com.fantasyidler.data.model.PlayerFlags() }
+        val flags = try { json.decodeFromString<PlayerFlags>(player.flags) } catch (_: Exception) { PlayerFlags() }
 
         val farmingLevel = levels[Skills.FARMING] ?: 1
         val farmingXp    = xpMap[Skills.FARMING]  ?: 0L
@@ -259,8 +261,8 @@ class FarmingViewModel @Inject constructor(
     fun snackbarConsumed()      = _extra.update { it.copy(snackbarMessage = null) }
 
     private fun computeQuestIndicators(
-        questProgress: List<com.fantasyidler.data.model.QuestProgress>,
-        flags: com.fantasyidler.data.model.PlayerFlags,
+        questProgress: List<QuestProgress>,
+        flags: PlayerFlags,
     ): Map<String, List<QuestIndicator>> {
         val result = mutableMapOf<String, MutableList<QuestIndicator>>()
         val progressById = questProgress.associateBy { it.questId }
