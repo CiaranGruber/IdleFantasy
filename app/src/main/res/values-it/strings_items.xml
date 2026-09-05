@@ -1241,7 +1241,7 @@
     <string name="item_earth_strike_name">Colpo della Terra</string>
     <string name="item_earth_strike_desc">Semplice magia d\'elemento Terra.</string>
     <string name="item_earth_bolt_name">Dardo della Terra</string>
-    <string name="item_earth_bolt_desc">Magia d\\\'elemento Terra intermedia.</string>
+    <string name="item_earth_bolt_desc">Magia d\'elemento Terra intermedia.</string>
     <string name="item_earth_blast_name">Esplosione della Terra</string>
     <string name="item_earth_blast_desc">Potente magia d\\\'elemento Terra.</string>
     <string name="item_earth_wave_name">Ondata della Terra</string>
@@ -1281,7 +1281,7 @@
     <string name="item_blood_strike_name">Colpo del Sangue</string>
     <string name="item_blood_strike_desc">Semplice magia d\'elemento Sangue.</string>
     <string name="item_blood_bolt_name">Dardo del Sangue</string>
-    <string name="item_blood_bolt_desc">Magia d\\\'elemento Sange intermedia.</string>
+    <string name="item_blood_bolt_desc">Magia d\\\'elemento Sangue intermedia.</string>
     <string name="item_blood_blast_name">Esplosione del Sangue</string>
     <string name="item_blood_blast_desc">Potente magia d\\\'elemento Sangue.</string>
     <string name="item_blood_wave_name">Ondata del Sangue</string>
