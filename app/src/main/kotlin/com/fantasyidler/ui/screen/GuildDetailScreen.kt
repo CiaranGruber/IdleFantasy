@@ -53,7 +53,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
-import com.fantasyidler.data.model.Skills
 import com.fantasyidler.repository.GuildDailyWithProgress
 import com.fantasyidler.repository.GuildQuestWithProgress
 import com.fantasyidler.ui.viewmodel.GuildDetailViewModel
@@ -61,12 +60,6 @@ import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.dailyResetClockTime
 import com.fantasyidler.util.formatCoins
 
-/**
- * TEMP: guilds works for the following and have not figured out how to deal with the other guilds yet.
- */
-private val NAVIGABLE_SKILL_GUILDS = setOf(
-    Skills.SMITHING, Skills.COOKING, Skills.FLETCHING, Skills.CRAFTING, Skills.HERBLORE, Skills.CONSTRUCTION,
-)
 
 @Composable
 internal fun localizedQuestDesc(type: String, target: String, amount: Int, guild: String): String {
@@ -356,14 +349,12 @@ private fun GuildQuestRow(
                 color      = if (locked) dimColor else MaterialTheme.colorScheme.onSurface,
                 modifier   = Modifier.weight(1f),
             )
-            if (qwp.quest.guild in NAVIGABLE_SKILL_GUILDS) {
-                TextButton(
-                    onClick        = { onNavigateToSkill(qwp.quest.guild) },
-                    modifier       = Modifier.heightIn(max = 24.dp),
-                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
-                ) {
-                    Text(stringResource(R.string.guild_go_to_skill))
-                }
+            TextButton(
+                onClick        = { onNavigateToSkill(qwp.quest.guild) },
+                modifier       = Modifier.heightIn(max = 24.dp),
+                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
+            ) {
+                Text(stringResource(R.string.guild_go_to_skill))
             }
         }
         Spacer(Modifier.height(2.dp))
@@ -510,14 +501,12 @@ private fun GuildDailyCard(
                 fontWeight = FontWeight.SemiBold,
                 modifier   = Modifier.weight(1f),
             )
-            if (dwp.template.guild in NAVIGABLE_SKILL_GUILDS) {
-                TextButton(
-                    onClick        = { onNavigateToSkill(dwp.template.guild) },
-                    modifier       = Modifier.heightIn(max = 24.dp),
-                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
-                ) {
-                    Text(stringResource(R.string.guild_go_to_skill))
-                }
+            TextButton(
+                onClick        = { onNavigateToSkill(dwp.template.guild) },
+                modifier       = Modifier.heightIn(max = 24.dp),
+                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
+            ) {
+                Text(stringResource(R.string.guild_go_to_skill))
             }
         }
         Spacer(Modifier.height(2.dp))
