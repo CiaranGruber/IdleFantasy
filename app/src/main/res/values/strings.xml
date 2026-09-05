@@ -970,6 +970,7 @@
     <string name="guild_no_dailies">Complete guild quests to unlock daily requests.</string>
     <string name="guild_dailies_all_done">All of today\'s daily requests are complete. Come back after the daily reset.</string>
     <string name="guild_contribute_inventory">Contribute from inventory (%1$d available)</string>
+    <string name="guild_go_to_skill">Go to Skill</string>
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s for the %4$s.</string>
     <string name="guild_quest_desc_kill">Defeat %1$d enemies using %2$s combat.</string>
     <string name="guild_quest_desc_prayer">Bury %1$d bones for the %2$s.</string>

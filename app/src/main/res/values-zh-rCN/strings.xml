@@ -970,6 +970,7 @@
     <string name="guild_no_dailies">完成公会任务以解锁每日请求。</string>
     <string name="guild_dailies_all_done">今天的所有日常任务都完成了。日常重置后再来吧。</string>
     <string name="guild_contribute_inventory">从背包捐献（可用 %1$d）</string>
+    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
     <string name="guild_quest_desc_gather">为 %4$s %1$s %2$d 个 %3$s。</string>
     <string name="guild_quest_desc_kill">使用 %2$s 战斗击败 %1$d 个敌人。</string>
     <string name="guild_quest_desc_prayer">为 %2$s 掩埋 %1$d 根骸骨。</string>

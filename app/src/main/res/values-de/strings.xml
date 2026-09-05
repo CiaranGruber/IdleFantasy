@@ -970,6 +970,7 @@
     <string name="guild_no_dailies">Schließt Gildenmissionen ab, um Tagesaufgaben freizuschalten. (Oder Ihr habt Eure Tagesaufgaben schon erfüllt.)</string>
     <string name="guild_dailies_all_done">Alle heutigen täglichen Aufgaben sind erledigt. Schau nach dem täglichen Reset wieder vorbei.</string>
     <string name="guild_contribute_inventory">Aus Inventar beisteuern (%1$d verfügbar)</string>
+    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s für die %4$s.</string>
     <string name="guild_quest_desc_kill">Besiegt %1$d Feinde im %2$s-Kampf.</string>
     <string name="guild_quest_desc_prayer">Vergrabt %1$d Knochen für die %2$s.</string>

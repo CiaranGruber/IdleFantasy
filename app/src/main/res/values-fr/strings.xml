@@ -971,6 +971,7 @@
     <string name="guild_no_dailies">Terminez des quêtes de guilde pour débloquer les requêtes quotidiennes.</string>
     <string name="guild_dailies_all_done">Toutes les requêtes quotidiennes sont finies. Revenez après la réinitialisation quotidienne.</string>
     <string name="guild_contribute_inventory">Contribuer depuis l\'inventaire (%1$d disponible)</string>
+    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s pour la %4$s.</string>
     <string name="guild_quest_desc_kill">Éliminez %1$d ennemis en combat %2$s.</string>
     <string name="guild_quest_desc_prayer">Enterrez %1$d os pour la %2$s.</string>
