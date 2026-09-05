@@ -2,3 +2,4 @@
 • The Combat screen's Gear tab now has its own translatable label, separate from the Profile Gear tab, so languages can translate each context correctly
 • The live combat log and kill tally now track exactly which enemy is being fought as types change mid-minute: kill counts no longer jump between enemy types or go down, and the enemy card and log name the right enemy
 • Notification bubbles no longer get stuck on screen when the same message arrives several times in a row (like rapidly queueing the same session); repeats now fold into the bubble already showing
+• Guild quests and daily requests now have a Go to Skill button that jumps straight to the matching skill, dungeon list, or Slayer master
