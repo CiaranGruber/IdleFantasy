@@ -60,7 +60,7 @@
     <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Compagni</string>
     <string name="label_achievements">Obbiettivi</string>
-    <string name="label_locations">Luoghi</string>
+    <string name="label_locations">Dove si trova</string>
     <string name="label_bestiary">Bestiario</string>
     <string name="label_enemies">Nemici</string>
     <string name="label_bosses">Boss</string>
@@ -128,7 +128,7 @@
     <string name="label_ready_to_harvest">Pronta per la raccolta</string>
     <string name="label_empty">Vuota</string>
     <string name="inventory_sort_quantity">Quantità</string>
-    <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
+    <string name="inventory_sort_az">A-Z</string>
     <string name="inventory_cat_weapons">Armi</string>
     <string name="inventory_cat_armour">Armature</string>
     <string name="inventory_cat_tools">Utensili</string>
@@ -476,9 +476,9 @@
     <string name="settings_source_code">Codice Sorgente</string>
 
     <string name="settings_source_open">Apri</string>
-    <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+    <string name="settings_wiki">Wiki</string>
 
-    <string name="settings_discord">Discord</string> <!-- untranslated -->
+    <string name="settings_discord">Discord</string>
 
     <string name="settings_exported_ok">Salvataggio esportato</string>
     <string name="settings_imported_ok">Salvataggio importato con successo</string>
@@ -721,7 +721,7 @@
     <string name="quest_legend_title">Icone delle missioni</string>
     <string name="quest_legend_daily">Missione giornaliera</string>
     <string name="quest_legend_weekly">Missione settimanale</string>
-    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
+    <string name="quest_legend_seasonal">Evento Stagionale</string>
     <string name="quest_legend_guild_daily">Giornaliera di gilda</string>
     <string name="quest_legend_guild">Missione di gilda</string>
     <string name="quest_legend_quest">Missione</string>
@@ -744,7 +744,7 @@
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">No materiale</string>
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
-    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
+    <string name="crafting_produces">= %1$d %2$s</string>
     <string name="crafting_effects">Effetti</string>
     <!-- Translator note: %1$d = total XP -->
     <string name="crafting_xp_total">+%1$d XP totali</string>
@@ -797,7 +797,7 @@
     <string name="character_race_elf">Elfo</string>
     <string name="character_race_dwarf">Nano</string>
     <string name="character_race_orc">Orco</string>
-    <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
+    <string name="character_race_halfling">Halfling</string>
     <string name="character_race_gnome">Gnomo</string>
 
     <!-- ===== CharacterCustomizationSheet ===== -->
@@ -1790,7 +1790,7 @@
     <string name="bonus_coin_return">+%1$d%% ritorno in monete</string>
     <string name="bonus_tower">Torre</string>
     <string name="bonus_builder_discount_detail" formatted="false">Sconto del 0,5% agli edifici per ogni livello</string>
-    <string name="bonus_xp">+%1$d%% XP</string> <!-- untranslated -->
+    <string name="bonus_xp">+%1$d%% XP</string>
     <string name="bonus_coin_drops">+%1$d%% monete</string>
     <string name="bonus_hp">+%1$d PS</string>
     <string name="snackbar_added_to_queue">Aggiunto alla coda: %1$s.</string>
@@ -1845,7 +1845,7 @@
     <string name="title_patron_of_the_realm_requirement">Completa il Grande Monumento</string>
     <string name="item_gilded_full_helmet_name">Elmo Dorato</string>
     <string name="item_gilded_platebody_name">Corazza Dorata</string>
-    <string name="item_gilded_kiteshield_name">Scudo Dorato</string>
+    <string name="item_gilded_kiteshield_name">Granscudo Dorato</string>
     <string name="boss_coin_cap_remaining">Ricompense monetarie complete rimaste per questo boss: %1$d</string>
     <string name="boss_coin_cap_spent">Riceverai meno monete fino a domani</string>
     <string name="bestiary_coin_cap_label">Dopo %1$d uccisioni/giorno</string>
