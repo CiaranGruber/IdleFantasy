@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Vida</string>
     <string name="label_inventory">Inventario</string>
     <string name="label_equipment">Equipamiento</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Mascotas</string>
     <string name="label_achievements">Logros</string>
     <string name="label_locations">Locations</string> <!-- untranslated -->

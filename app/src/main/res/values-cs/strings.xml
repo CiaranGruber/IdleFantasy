@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Zdraví</string>
     <string name="label_inventory">Inventář</string>
     <string name="label_equipment">Výbava</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Mazlíčci</string>
     <string name="label_achievements">Úspěchy</string>
     <string name="label_locations">Místa</string>

@@ -192,7 +192,7 @@ fun CombatScreen(
                     Tab(
                         selected = pagerState.currentPage == 2,
                         onClick  = { scope.launch { pagerState.animateScrollToPage(2) } },
-                        text     = { Text(stringResource(R.string.label_equipment)) },
+                        text     = { Text(stringResource(R.string.label_combat_equipment)) },
                     )
                     Tab(
                         selected = pagerState.currentPage == 3,
@@ -299,7 +299,7 @@ fun CombatScreen(
                     Tab(
                         selected = pagerState.currentPage == 1,
                         onClick  = { scope.launch { pagerState.animateScrollToPage(1) } },
-                        text     = { Text(stringResource(R.string.label_equipment)) },
+                        text     = { Text(stringResource(R.string.label_combat_equipment)) },
                     )
                     Tab(
                         selected = pagerState.currentPage == 2,

@@ -57,6 +57,7 @@
     <string name="label_hitpoints">生命值</string>
     <string name="label_inventory">背包</string>
     <string name="label_equipment">装备</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">宠物</string>
     <string name="label_achievements">成就</string>
     <string name="label_locations">地点</string>

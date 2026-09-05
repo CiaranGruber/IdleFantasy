@@ -57,6 +57,7 @@
     <string name="label_hitpoints">נקודות פגיעה</string>
     <string name="label_inventory">מלאי</string>
     <string name="label_equipment">ציוד</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">חיות מחמד</string>
     <string name="label_achievements">הישגים</string>
     <string name="label_locations">מקומות</string>

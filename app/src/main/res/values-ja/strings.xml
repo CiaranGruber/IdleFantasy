@@ -57,6 +57,7 @@
     <string name="label_hitpoints">HP</string>
     <string name="label_inventory">インベントリ</string>
     <string name="label_equipment">装備</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">ペット</string>
     <string name="label_achievements">実績</string>
     <string name="label_locations">ロケーション</string>

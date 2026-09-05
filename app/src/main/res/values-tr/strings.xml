@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Sağlık</string>
     <string name="label_inventory">Envanter</string>
     <string name="label_equipment">Ekipman</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Evcil Hayvanlar</string>
     <string name="label_achievements">Başarımlar</string>
     <string name="label_locations">Bölgeler</string>

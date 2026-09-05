@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Hitpoints</string>
     <string name="label_inventory">Inventory</string>
     <string name="label_equipment">Gear</string>
+    <string name="label_combat_equipment">Gear</string>
     <string name="label_pets">Pets</string>
     <string name="label_achievements">Achievements</string>
     <string name="label_locations">Locations</string>

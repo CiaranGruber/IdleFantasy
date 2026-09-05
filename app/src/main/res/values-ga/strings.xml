@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Hitpoints</string> <!-- untranslated -->
     <string name="label_inventory">Fardal</string>
     <string name="label_equipment">Trealamh</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Peataí</string>
     <string name="label_achievements">Gaiscí</string>
     <string name="label_locations">Áiteanna</string>

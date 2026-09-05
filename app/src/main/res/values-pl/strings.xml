@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Punkty życia</string>
     <string name="label_inventory">Ekwipunek</string>
     <string name="label_equipment">Wyposażenie</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Zwierzaki</string>
     <string name="label_achievements">Osiągnięcia</string>
     <string name="label_locations">Lokacje</string>

@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Здоровье</string>
     <string name="label_inventory">Инвентарь</string>
     <string name="label_equipment">Снаряжение</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Питомцы</string>
     <string name="label_achievements">Достижения</string>
     <string name="label_locations">Локации</string>

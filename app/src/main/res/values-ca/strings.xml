@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Hitpoints</string> <!-- untranslated -->
     <string name="label_inventory">Inventari</string>
     <string name="label_equipment">Gear</string> <!-- untranslated -->
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Mascotes</string>
     <string name="label_achievements">Assoliments</string>
     <string name="label_locations">Ubicacions</string>

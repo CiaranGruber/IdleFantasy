@@ -57,6 +57,7 @@
     <string name="label_hitpoints">Salute</string>
     <string name="label_inventory">Inventario</string>
     <string name="label_equipment">Armamenti</string>
+    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
     <string name="label_pets">Compagni</string>
     <string name="label_achievements">Obbiettivi</string>
     <string name="label_locations">Luoghi</string>

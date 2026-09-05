@@ -39,7 +39,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-data class QueuedBanner(val message: String, val onConsumed: () -> Unit)
+// Identity equality on purpose: banners ride a StateFlow, which drops equal values. A data
+// class made two same-text banners "equal", so advancing between them never re-emitted and
+// the display timer never restarted, wedging the banner on screen (issue #1692).
+class QueuedBanner(val message: String, val onConsumed: () -> Unit)
 
 /**
  * App-wide replacement for both Android Toasts and per-screen Snackbars. Enqueuing is a
@@ -54,6 +57,14 @@ object AppBannerCenter {
 
     @Synchronized
     fun enqueue(message: String, onConsumed: () -> Unit = {}) {
+        // Coalesce identical consecutive messages: the text is already (about to be) on
+        // screen, and stacking copies just chains display time (issue #1692). The dropped
+        // copy's consumer still runs so callers' message state clears as usual.
+        val tail = pending.lastOrNull() ?: _current.value
+        if (tail?.message == message) {
+            onConsumed()
+            return
+        }
         pending.addLast(QueuedBanner(message, onConsumed))
         if (_current.value == null) advance()
     }
