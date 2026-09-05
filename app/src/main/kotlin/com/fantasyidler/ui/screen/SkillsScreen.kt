@@ -120,8 +120,13 @@ fun SkillsScreen(
     AppBannerEffect(state.snackbarMessage, viewModel::snackbarConsumed)
     AppBannerEffect(craftSnackState.snackbarMessage, craftingViewModel::snackbarConsumed)
 
-    LaunchedEffect(openSkill) {
-        if (openSkill != null) viewModel.onSkillTapped(openSkill)
+    // onSkillTapped reads uiState.value synchronously, so deep-linking here must wait for isLoading to show correct skill level.
+    var openedInitialSkill by remember { mutableStateOf(false) }
+    LaunchedEffect(openSkill, state.isLoading) {
+        if (openSkill != null && !state.isLoading && !openedInitialSkill) {
+            openedInitialSkill = true
+            viewModel.onSkillTapped(openSkill)
+        }
     }
 
     var showLegend by remember { mutableStateOf(false) }
