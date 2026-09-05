@@ -1835,7 +1835,8 @@
     <string name="monument_touch_title">每日触摸</string>
     <string name="monument_touch_btn">触摸纪念碑</string>
     <string name="monument_touched_today">今日已触摸。纪念碑满足地嗡嗡作响。</string>
-    <string name="monument_touch_blessing">祝福降临于你，持续一小时。</string>
+    <string name="monument_touch_blessing">A blessing settles over you for two hours.</string> <!-- untranslated -->
+    <string name="monument_touch_blessing_extended">The Monument extends your blessing by two hours.</string> <!-- untranslated -->
     <string name="monument_touch_items">纪念碑赐予：%1$s</string>
     <string name="monument_contributed">火焰更加明亮了！</string>
     <string name="monument_flame_lit">永恒之火点燃了！宝库守卫在等待。</string>
@@ -2409,6 +2410,8 @@
     <string name="item_heirloom_frying_pan_desc">A seasoned pan handed down through a family of cooks. Every meal deepens its seasoning.</string> <!-- untranslated -->
     <string name="item_heirloom_lockpick_name">Heirloom Lockpick</string> <!-- untranslated -->
     <string name="item_heirloom_lockpick_desc">A thief\'s pick that has whispered open countless locks. It grows subtler with every job.</string> <!-- untranslated -->
+    <string name="item_midas_band_name">Midas Band</string> <!-- untranslated -->
+    <string name="item_midas_band_desc">A sliver of the Vault Guardian\'s living gold. It drinks in a little of every battle its wearer survives.</string> <!-- untranslated -->
     <string name="item_heirloom_blade_name">Heirloom Blade</string> <!-- untranslated -->
     <string name="item_heirloom_blade_desc">An ancestral blade that wakes a little more with every battle its line survives.</string> <!-- untranslated -->
     <string name="item_heirloom_greathammer_name">Heirloom Greathammer</string> <!-- untranslated -->

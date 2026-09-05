@@ -1835,7 +1835,8 @@
     <string name="monument_touch_title">Toque diario</string>
     <string name="monument_touch_btn">Tocar el Monumento</string>
     <string name="monument_touched_today">Ya tocado hoy. El Monumento ronronea satisfecho.</string>
-    <string name="monument_touch_blessing">Una bendición te envuelve durante una hora.</string>
+    <string name="monument_touch_blessing">A blessing settles over you for two hours.</string> <!-- untranslated -->
+    <string name="monument_touch_blessing_extended">The Monument extends your blessing by two hours.</string> <!-- untranslated -->
     <string name="monument_touch_items">El Monumento otorga: %1$s</string>
     <string name="monument_contributed">¡La llama brilla más!</string>
     <string name="monument_flame_lit">¡La Llama Eterna está encendida! El Guardián de la Cámara te espera.</string>
@@ -2409,6 +2410,8 @@
     <string name="item_heirloom_frying_pan_desc">A seasoned pan handed down through a family of cooks. Every meal deepens its seasoning.</string> <!-- untranslated -->
     <string name="item_heirloom_lockpick_name">Heirloom Lockpick</string> <!-- untranslated -->
     <string name="item_heirloom_lockpick_desc">A thief\'s pick that has whispered open countless locks. It grows subtler with every job.</string> <!-- untranslated -->
+    <string name="item_midas_band_name">Midas Band</string> <!-- untranslated -->
+    <string name="item_midas_band_desc">A sliver of the Vault Guardian\'s living gold. It drinks in a little of every battle its wearer survives.</string> <!-- untranslated -->
     <string name="item_heirloom_blade_name">Heirloom Blade</string> <!-- untranslated -->
     <string name="item_heirloom_blade_desc">An ancestral blade that wakes a little more with every battle its line survives.</string> <!-- untranslated -->
     <string name="item_heirloom_greathammer_name">Heirloom Greathammer</string> <!-- untranslated -->
