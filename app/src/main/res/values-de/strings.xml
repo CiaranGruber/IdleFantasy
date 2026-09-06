@@ -45,7 +45,7 @@
 
     <!-- ===== Common labels ===== -->
     <string name="label_level">Level</string>
-    <string name="label_xp">XP</string>
+    <string name="label_xp">EP</string>
     <string name="label_coins">Münzen</string>
     <string name="label_hp">LP</string>
     <string name="label_attack">Angriff</string>
@@ -797,7 +797,7 @@
     <string name="character_race_elf">Elfe</string>
     <string name="character_race_dwarf">Zwerg</string>
     <string name="character_race_orc">Ork</string>
-    <string name="character_race_halfling">Hobbit</string>
+    <string name="character_race_halfling">Halbling</string>
     <string name="character_race_gnome">Gnom</string>
 
     <!-- ===== CharacterCustomizationSheet ===== -->
@@ -1136,7 +1136,7 @@
     <string name="house_bill_title">Kaufvertrag</string>
     <string name="house_bill_cost">Baukosten: %1$s</string>
     <string name="house_bill_no_changes">Keine ausstehenden Änderungen</string>
-    <string name="house_bill_changes_free">Nicht erworbene Veränderungen</string>
+    <string name="house_bill_changes_free">Nicht gekaufte Änderungen</string>
     <string name="house_bill_open">Rechnung</string>
     <string name="house_bill_new_room">Neuer Raum %1$d</string>
     <string name="house_bill_expand_room">Raum %1$d erweitern (+%2$d Zellen)</string>
@@ -1226,9 +1226,9 @@
     <string name="house_item_barrel_default">Fässer</string>
     <string name="house_item_barrel_light">Helles Fass</string>
     <string name="house_item_barrel_dark">Dunkles Fass</string>
-    <string name="house_item_barrel_storage_default">Fassgestell</string>
-    <string name="house_item_barrel_storage_light">Leichtes Fassgestell</string>
-    <string name="house_item_barrel_storage_dark">Dunkles Fassgestell</string>
+    <string name="house_item_barrel_storage_default">Fassregal</string>
+    <string name="house_item_barrel_storage_light">Leichtes Fassregal</string>
+    <string name="house_item_barrel_storage_dark">Dunkles Fassregal</string>
     <string name="house_item_wardrobe_default">Schrank</string>
     <string name="house_item_wardrobe_light">Heller Schrank</string>
     <string name="house_item_wardrobe_dark">Dunkler Schrank</string>
@@ -1381,11 +1381,11 @@
     <string name="achievement_prestige_first_name">Erster Neustart</string>
     <string name="achievement_prestige_first_desc">Erhöht das Prestige einer beliebigen Fähigkeit zum ersten Mal</string>
     <string name="achievement_prestige_node_first_name">Branching Out</string> <!-- untranslated -->
-    <string name="achievement_prestige_node_first_desc">Kaufe deine erste Verbesserung in einem Prestiege Baum</string>
+    <string name="achievement_prestige_node_first_desc">Kaufe deine erste Verbesserung in einem Prestige Baum</string>
     <string name="achievement_prestige_path_complete_name">Am Ende des Pfades</string>
-    <string name="achievement_prestige_path_complete_desc">Kaufe jede Verbesserung in einem Prestiege Pfad</string>
+    <string name="achievement_prestige_path_complete_desc">Kaufe jede Verbesserung in einem Prestige Pfad</string>
     <string name="achievement_prestige_tree_one_name">Gemeistert</string>
-    <string name="achievement_prestige_tree_one_desc">Kaufe jede Verbesserung in dem Prestiege Baum einer Fähigkeit</string>
+    <string name="achievement_prestige_tree_one_desc">Kaufe jede Verbesserung in dem Prestige Baum einer Fähigkeit</string>
     <string name="achievement_prestige_all_1_name">Tabula Rasa</string>
     <string name="achievement_prestige_all_1_desc">Erhöht das Prestige aller Fähigkeiten mindestens einmal</string>
     <string name="achievement_prestige_all_3_name">Wahres Ansehen</string>
@@ -1720,8 +1720,8 @@
     <string name="armory_source_smithing">Schmieden</string>
     <string name="armory_source_crafting">Handwerk</string>
     <string name="armory_source_fletching">Bogenbau</string>
-    <string name="armory_source_prestige_locked">%1$s (erfordert die Prestiege Boni %2$s und %3$s)</string>
-    <string name="armory_source_prestige_locked_any">%1$s (erfordert den Prestiege Bonus %2$s)</string>
+    <string name="armory_source_prestige_locked">%1$s (erfordert die Prestige Boni %2$s und %3$s)</string>
+    <string name="armory_source_prestige_locked_any">%1$s (erfordert den Prestige Bonus %2$s)</string>
     <string name="armory_source_drop_always">Fallengelassen von %1$s (Immer)</string>
     <string name="armory_source_drop_chance">Fallengelassen von %1$s (%2$s)</string>
     <string name="armory_source_drop">Fallengelassen von %1$s</string>
@@ -1836,7 +1836,7 @@
     <string name="monument_touch_btn">Monument berühren</string>
     <string name="monument_touched_today">Heute bereits berührt. Das Monument summt zufrieden.</string>
     <string name="monument_touch_blessing">Ein Segen legt sich über dich für die nächsten zwei Stunden.</string>
-    <string name="monument_touch_blessing_extended">Das Momument verlängert deinen Segen um zwei Stunden.</string>
+    <string name="monument_touch_blessing_extended">Das Monument verlängert deinen Segen um zwei Stunden.</string>
     <string name="monument_touch_items">Das Monument gewährt: %1$s</string>
     <string name="monument_contributed">Die Flamme lodert heller!</string>
     <string name="monument_flame_lit">Die Ewige Flamme ist entzündet! Der Tresorwächter erwartet euch.</string>
@@ -1861,7 +1861,7 @@
     <!-- Raids and mercenaries -->
     <string name="raid_section_title">Raids</string> <!-- untranslated -->
     <string name="raid_section_desc">Gegner die kein Held alleine bezwingen kann. Heuere zuerst weitere Söldner an.</string>
-    <string name="raid_party_status">"Angeheuerte Söldner: %1$d/%2$d "</string>
+    <string name="raid_party_status">Angeheuerte Söldner: %1$d/%2$d</string>
     <string name="raid_party_title">Raid-Gruppe</string>
     <string name="raid_solo_warning">Raid-Bosse können selbst mit der besten Ausrüstung nicht alleine bezwungen werden. Heuere zuerst weitere Söldner an.</string>
     <string name="raid_no_mercs">Keine angeheuerten Söldner.</string>
@@ -1876,7 +1876,7 @@
     <string name="merc_not_enough_coins">Nicht genügend Münzen, um %1$s anzuheuern.</string>
     <string name="merc_not_available">%1$s ist heute nicht verfügbar.</string>
     <string name="merc_contract_remaining">Vertrag: Noch %1$s übrig</string>
-    <string name="raid_allies_down">Söldern am Boden: %1$d</string>
+    <string name="raid_allies_down">Söldner am Boden: %1$d</string>
     <string name="merc_tier_cheap">Söldner</string>
     <string name="merc_tier_seasoned">Veteran</string>
     <string name="merc_tier_elite">Champion</string>
