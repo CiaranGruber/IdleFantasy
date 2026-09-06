@@ -57,7 +57,7 @@
     <string name="label_hitpoints">Lebenspunkte</string>
     <string name="label_inventory">Inventar</string>
     <string name="label_equipment">Ausrüstung</string>
-    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
+    <string name="label_combat_equipment">Gang</string>
     <string name="label_pets">Haustiere</string>
     <string name="label_achievements">Erfolge</string>
     <string name="label_locations">Orte</string>
@@ -103,7 +103,7 @@
     <string name="label_coming_soon">Bald verfügbar</string>
     <string name="label_time_remaining">Verbleibende Zeit</string>
     <!-- Translator note: compact duration units; English puts the letter(s) right after the number -->
-    <string name="duration_years">%1$dy</string> <!-- untranslated -->
+    <string name="duration_years">%1$dy</string>
     <string name="duration_months">%1$dmo</string>
     <string name="duration_weeks">%1$dw</string>
     <string name="duration_days">%1$dd</string>
@@ -128,7 +128,7 @@
     <string name="label_ready_to_harvest">Bereit für die Ernte</string>
     <string name="label_empty">Leer</string>
     <string name="inventory_sort_quantity">Menge</string>
-    <string name="inventory_sort_az">A-Z</string> <!-- untranslated -->
+    <string name="inventory_sort_az">A-Z</string>
     <string name="inventory_cat_weapons">Waffen</string>
     <string name="inventory_cat_armour">Rüstung</string>
     <string name="inventory_cat_tools">Werkzeuge</string>
@@ -163,7 +163,7 @@
     <string name="label_inactive">Inaktiv</string>
     <string name="label_boost">Verstärkung</string>
     <string name="label_xp_boost">EP-Verstärkung</string>
-    <string name="label_prestige_xp_boost">Prestige XP Boost</string> <!-- untranslated -->
+    <string name="label_prestige_xp_boost">Prestige XP Boost</string>
     <string name="label_weapon">Waffe</string>
     <string name="label_armour">Rüstung</string>
     <string name="label_food">Essen</string>
@@ -309,7 +309,7 @@
     <string name="settings_quest_dots">Quest-Punkte für Fähigkeiten</string>
     <string name="settings_quest_dots_desc">Goldenen Punkt auf Fähigkeiten mit offenen Quests anzeigen.</string>
     <string name="settings_prestige_notifications">Prestige Notification Badges</string> <!-- untranslated -->
-    <string name="settings_prestige_notifications_desc">Show a notification badge on navigation when a skill is ready to prestige</string> <!-- untranslated -->
+    <string name="settings_prestige_notifications_desc">Zeigt ein Benachrichtigungssymbol in der Navigation an, wenn eine Fertigkeit bereit für das Prestige-Level ist.</string>
     <string name="label_switch_character">Charakter wechseln</string>
     <string name="settings_daily_reset_time">Zeit zum Zurücksetzen</string>
     <string name="settings_daily_reset_time_desc">Ortszeit, zu der die täglichen, Gilden- und wöchentlichen Aufgaben zurückgesetzt werden. Eine Änderung dieser Zeit führt niemals zu einem zusätzlichen zurücksetzen.</string>
@@ -476,9 +476,9 @@
     <string name="settings_source_code">Quellcode</string>
 
     <string name="settings_source_open">Öffnen</string>
-    <string name="settings_wiki">Wiki</string> <!-- untranslated -->
+    <string name="settings_wiki">Wiki</string>
 
-    <string name="settings_discord">Discord</string> <!-- untranslated -->
+    <string name="settings_discord">Discord</string>
 
     <string name="settings_exported_ok">Erfolgreich exportiert</string>
     <string name="settings_imported_ok">Erfolgreich importiert</string>
@@ -721,7 +721,7 @@
     <string name="quest_legend_title">Quest-Symbole</string>
     <string name="quest_legend_daily">Tägliche Quest</string>
     <string name="quest_legend_weekly">Wöchentliche Quest</string>
-    <string name="quest_legend_seasonal">Seasonal bounty</string> <!-- untranslated -->
+    <string name="quest_legend_seasonal">Saisonale Ausbeute</string>
     <string name="quest_legend_guild_daily">Gilden-Tagesquest</string>
     <string name="quest_legend_guild">Gildenquest</string>
     <string name="quest_legend_quest">Aufgabe</string>
@@ -744,7 +744,7 @@
     <!-- ===== CraftingScreen ===== -->
     <string name="crafting_no_mats">Mat. fehlt</string>
     <!-- Translator note: %1$d = total quantity, %2$s = item name -->
-    <string name="crafting_produces">= %1$d %2$s</string> <!-- untranslated -->
+    <string name="crafting_produces">= %1$d %2$s</string>
     <string name="crafting_effects">Effekte</string>
     <!-- Translator note: %1$d = total XP -->
     <string name="crafting_xp_total">insgesamt +%1$d EP</string>
@@ -797,7 +797,7 @@
     <string name="character_race_elf">Elfe</string>
     <string name="character_race_dwarf">Zwerg</string>
     <string name="character_race_orc">Ork</string>
-    <string name="character_race_halfling">Halfling</string> <!-- untranslated -->
+    <string name="character_race_halfling">Halbling</string>
     <string name="character_race_gnome">Gnom</string>
 
     <!-- ===== CharacterCustomizationSheet ===== -->
@@ -970,7 +970,7 @@
     <string name="guild_no_dailies">Schließt Gildenmissionen ab, um Tagesaufgaben freizuschalten. (Oder Ihr habt Eure Tagesaufgaben schon erfüllt.)</string>
     <string name="guild_dailies_all_done">Alle heutigen täglichen Aufgaben sind erledigt. Schau nach dem täglichen Reset wieder vorbei.</string>
     <string name="guild_contribute_inventory">Aus Inventar beisteuern (%1$d verfügbar)</string>
-    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
+    <string name="guild_go_to_skill">Gehen zu Fertigkeit</string>
     <string name="guild_quest_desc_gather">%1$s %2$d %3$s für die %4$s.</string>
     <string name="guild_quest_desc_kill">Besiegt %1$d Feinde im %2$s-Kampf.</string>
     <string name="guild_quest_desc_prayer">Vergrabt %1$d Knochen für die %2$s.</string>
@@ -1133,10 +1133,10 @@
     <string name="house_construction_level">Bauen-Level %1$d</string>
     <string name="house_add_room">Raum hinzufügen (%1$s)</string>
     <string name="house_add_room_locked">Raum hinzufügen (Lv %1$d)</string>
-    <string name="house_bill_title">Bill of Sale</string> <!-- untranslated -->
-    <string name="house_bill_cost">Build cost: %1$s</string> <!-- untranslated -->
+    <string name="house_bill_title">Kaufvertrag</string>
+    <string name="house_bill_cost">Baukosten: %1$s</string>
     <string name="house_bill_no_changes">Keine ausstehenden Änderungen</string>
-    <string name="house_bill_changes_free">Unpurchased changes</string> <!-- untranslated -->
+    <string name="house_bill_changes_free">Nicht gekaufte Änderungen</string>
     <string name="house_bill_open">Rechnung</string>
     <string name="house_bill_new_room">Neuer Raum %1$d</string>
     <string name="house_bill_expand_room">Raum %1$d erweitern (+%2$d Zellen)</string>
@@ -1226,9 +1226,9 @@
     <string name="house_item_barrel_default">Fässer</string>
     <string name="house_item_barrel_light">Helles Fass</string>
     <string name="house_item_barrel_dark">Dunkles Fass</string>
-    <string name="house_item_barrel_storage_default">Barrel Rack</string> <!-- untranslated -->
-    <string name="house_item_barrel_storage_light">Light Barrel Rack</string> <!-- untranslated -->
-    <string name="house_item_barrel_storage_dark">Dark Barrel Rack</string> <!-- untranslated -->
+    <string name="house_item_barrel_storage_default">Fassregal</string>
+    <string name="house_item_barrel_storage_light">leichtes Fassregal</string>
+    <string name="house_item_barrel_storage_dark">dunkles Fassregal</string>
     <string name="house_item_wardrobe_default">Schrank</string>
     <string name="house_item_wardrobe_light">Heller Schrank</string>
     <string name="house_item_wardrobe_dark">Dunkler Schrank</string>
