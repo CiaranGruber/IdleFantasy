@@ -57,7 +57,7 @@
     <string name="label_hitpoints">生命值</string>
     <string name="label_inventory">背包</string>
     <string name="label_equipment">装备</string>
-    <string name="label_combat_equipment">Gear</string> <!-- untranslated -->
+    <string name="label_combat_equipment">装备</string>
     <string name="label_pets">宠物</string>
     <string name="label_achievements">成就</string>
     <string name="label_locations">地点</string>
@@ -970,7 +970,7 @@
     <string name="guild_no_dailies">完成公会任务以解锁每日请求。</string>
     <string name="guild_dailies_all_done">今天的所有日常任务都完成了。日常重置后再来吧。</string>
     <string name="guild_contribute_inventory">从背包捐献（可用 %1$d）</string>
-    <string name="guild_go_to_skill">Go to Skill</string> <!-- untranslated -->
+    <string name="guild_go_to_skill">前往技能页</string>
     <string name="guild_quest_desc_gather">为 %4$s %1$s %2$d 个 %3$s。</string>
     <string name="guild_quest_desc_kill">使用 %2$s 战斗击败 %1$d 个敌人。</string>
     <string name="guild_quest_desc_prayer">为 %2$s 掩埋 %1$d 根骸骨。</string>
@@ -1748,8 +1748,8 @@
     <string name="shop_sold_old_equipment">出售旧装备获得 %1$s 金币</string>
     <string name="shop_bulk_sell_total">合计</string>
     <string name="shop_bulk_sell_confirm">全部出售</string>
-    <string name="shop_recent_bulk_sales">Recent bulk sales</string> <!-- untranslated -->
-    <string name="shop_recent_bulk_sales_empty">No bulk sales recorded yet.</string> <!-- untranslated -->
+    <string name="shop_recent_bulk_sales">近期批量售卖</string>
+    <string name="shop_recent_bulk_sales_empty">暂无批量售卖记录。</string>
     <string name="shop_xp_boost_activated">2倍经验增益已激活，持续 %1$d 小时！</string>
     <string name="shop_xp_boost_already_active">双倍经验加成已在生效中。</string>
     <string name="shop_xp_boost_weekly_limit">每周限购一次双倍经验加成。每周重置后可再次购买。</string>
